@@ -35,8 +35,13 @@ Desktop.ini
 .vscode/
 .idea/
 
-# Claude local settings
-.claude/settings.local.json
+# Claude
+.claude/
+
+# Docs
+*.pdf
+CLAUDE.md
 
 # Misc
 command.txt
+nul
