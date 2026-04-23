@@ -26,6 +26,15 @@ models/*.h5
 data/processed/*.pt
 data/processed/*.json
 
+# Temp / intermediate dataset splits
+data/temp/
+notebooks/integrated_datasets/
+
+# Training checkpoints & logs (large binaries, ephemeral)
+notebooks/checkpoints/
+notebooks/checkpoints.json
+notebooks/logs/
+
 # OS files
 Thumbs.db
 Desktop.ini
@@ -45,3 +54,11 @@ CLAUDE.md
 # Misc
 command.txt
 nul
+draft_bab4/4.1_Pemanfaatan_Data_Sekunder.md
+draft_bab4/4.2_Preprocessing_Data.md
+draft_bab4/4.3_Perancangan_Arsitektur_Model.md
+draft_bab4/4.4_Training_dan_Testing_Model.md
+draft_bab4/4.5_Evaluasi_Kinerja_Model.md
+draft_bab4/4.6_Proof_of_Concept.md
+draft_bab4/4.7_Analisis_Sentimen_Desa_Wisata.md
+draft_bab4/tes.md

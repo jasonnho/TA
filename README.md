@@ -80,15 +80,47 @@ Semua code ada di Jupyter notebooks. Jalankan dari direktori `notebooks/`.
 | 13 | MTL_Architecture_Variants | Label smoothing, task dropout, partial sharing |
 | 14 | Evaluation_ErrorAnalysis | Confusion matrix, error analysis, robustness |
 | 15 | Visualization_Interpretability | Learning curves, attention heatmap, t-SNE |
+| 16 | MTL_NoSLD | Ablation: remove SLD subtask |
+| 17 | ClassWeighted_MTL | Class-weighted loss untuk O-label dominance |
+| 18 | Embedding_Analysis | Analisis embedding space MT vs ST |
+| 19 | CrossAttention_O_Cluster_Explanation | Cross-attention & O-token clustering |
+| 20 | MTL_Advantage_Analysis | Per-class F1, multi-aspect, distance analysis MT vs ST |
+
+### Sentiment Analysis Pipeline
+
+Notebooks di folder `sentiment analysis/` untuk scraping, cleaning, dan dashboard analisis sentimen desa wisata.
+
+| Notebook | Deskripsi |
+|----------|-----------|
+| Scrape_GoogleMaps | Scraping review Google Maps via Apify API |
+| Clean_Reviews | Cleaning: slang normalization, stopwords removal (Sastrawi), stemming |
+| SA_AutoLabel | Auto-labeling sentimen (IndoBERT) + aspect detection + export JSON |
+
+**Flow:** `Scrape_GoogleMaps` → `Clean_Reviews` → `SA_AutoLabel` → Dashboard
+
+Dashboard (Dash app) di `sentiment analysis/dashboard/app.py`.
 
 ## Struktur Proyek
 
 ```
 ├── data/
-│   ├── raw/                    # Dataset asli + lexicon
-│   └── processed/              # Data tokenized siap training
-├── models/                     # Model weights & checkpoints
-└── notebooks/                  # Semua code (00-15)
+│   ├── raw/                          # Dataset ABSA asli + lexicon
+│   ├── processed/                    # Data tokenized siap training
+│   └── raw_review/
+│       ├── *.txt                     # Raw review 6 desa awal
+│       ├── Overall_All Data_for_Prediction.xlsx
+│       └── additional/
+│           ├── raw/                  # Hasil scraping mentah (*_raw.csv)
+│           └── cleaned/             # Hasil cleaning (*_reviews.csv, *_full.csv)
+├── models/                           # Model weights & checkpoints
+├── notebooks/                        # ABSA notebooks (00-20)
+├── sentiment analysis/
+│   ├── Scrape_GoogleMaps.ipynb       # Scraping via Apify
+│   ├── Clean_Reviews.ipynb           # Cleaning & preprocessing
+│   ├── SA_AutoLabel.ipynb            # Auto-labeling + aspect detection
+│   ├── dashboard/                    # Dash web app
+│   └── data/                         # Output JSON + CSV untuk dashboard
+└── emc gcn/                          # EMC-GCN baseline (prior research)
 ```
 
 ## Referensi

@@ -1,0 +1,1014 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Design Preview — Dashboard Sentimen Desa Wisata</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #e5e7eb;
+  color: #0f172a;
+  padding: 32px 16px;
+  min-height: 100vh;
+}
+
+.page-title {
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: 28px;
+  font-weight: 800;
+  margin-bottom: 8px;
+  color: #0f172a;
+}
+.page-subtitle {
+  text-align: center;
+  color: #475569;
+  font-size: 14px;
+  margin-bottom: 32px;
+}
+
+.compare-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  max-width: 1700px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1100px) {
+  .compare-grid { grid-template-columns: 1fr; }
+}
+
+/* ─── Preview Frame ─── */
+.preview {
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0,0,0,.18);
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.preview-label {
+  padding: 14px 22px;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.preview-body {
+  flex: 1;
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* ════════════════════════════════════════════════════════════════
+   VARIANT 1: REFINED LIGHT
+   ════════════════════════════════════════════════════════════════ */
+.preview--refined .preview-label {
+  background: linear-gradient(135deg, #0c1e36, #1e3a5f);
+  color: #fbbf24;
+}
+.preview--refined .preview-body {
+  background: #f8fafc;
+  background-image:
+    radial-gradient(circle at 15% 40%, rgba(30,58,95,.04), transparent 55%),
+    radial-gradient(circle at 90% 10%, rgba(245,158,11,.05), transparent 55%);
+}
+
+.refined-header {
+  background: linear-gradient(135deg, #0c1e36 0%, #1a3354 45%, #1e4976 75%, #1b5a8a 100%);
+  color: white;
+  padding: 22px 24px;
+  border-radius: 16px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 12px 32px rgba(12,30,54,.35);
+}
+.refined-header::before {
+  content: '';
+  position: absolute;
+  top: -40px; right: -40px;
+  width: 160px; height: 160px;
+  background: radial-gradient(circle, rgba(245,158,11,.18) 0%, transparent 70%);
+  border-radius: 50%;
+}
+.refined-header h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  position: relative;
+}
+.refined-header p {
+  font-size: 12px;
+  opacity: .7;
+  margin-top: 4px;
+  position: relative;
+}
+
+.refined-nav {
+  background: white;
+  padding: 10px 14px;
+  border-radius: 12px;
+  box-shadow: 0 1px 2px rgba(15,23,42,.04), 0 4px 12px rgba(15,23,42,.06);
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+  border: 1px solid rgba(226,232,240,.8);
+}
+.refined-nav .tab {
+  padding: 7px 14px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #475569;
+  cursor: pointer;
+  transition: all .2s cubic-bezier(.4,0,.2,1);
+}
+.refined-nav .tab.active {
+  background: linear-gradient(135deg, #0c1e36, #1e3a5f);
+  color: white;
+  box-shadow: 0 2px 8px rgba(30,58,95,.35);
+}
+.refined-dropdown {
+  flex: 1;
+  min-width: 140px;
+  padding: 8px 12px;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 10px;
+  background: white;
+  font-size: 12px;
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  flex-wrap: wrap;
+  transition: all .2s cubic-bezier(.4,0,.2,1);
+  cursor: text;
+}
+.refined-dropdown:hover { border-color: #2d6a9f; box-shadow: 0 0 0 3px rgba(30,58,95,.08); }
+.refined-chip {
+  background: linear-gradient(135deg, #eff6ff, #dbeafe);
+  border: 1px solid #bfdbfe;
+  color: #1e3a5f;
+  border-radius: 8px;
+  padding: 2px 8px;
+  font-size: 11px;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+.refined-chip .x { opacity: .5; cursor: pointer; }
+
+.refined-metric {
+  background: white;
+  border-radius: 14px;
+  padding: 16px 18px;
+  box-shadow: 0 1px 2px rgba(15,23,42,.04), 0 4px 12px rgba(15,23,42,.06);
+  border: 1px solid rgba(226,232,240,.6);
+  border-top: 3px solid #10b981;
+  position: relative;
+}
+.refined-metric-label {
+  font-size: 11px;
+  color: #64748b;
+  font-weight: 600;
+  letter-spacing: .5px;
+  text-transform: uppercase;
+}
+.refined-metric-value {
+  font-family: 'Poppins', sans-serif;
+  font-size: 28px;
+  font-weight: 800;
+  color: #0f172a;
+  margin-top: 4px;
+  line-height: 1.1;
+}
+.refined-metric-sub {
+  color: #10b981;
+  font-size: 12px;
+  font-weight: 600;
+  margin-top: 2px;
+}
+
+.refined-card {
+  background: white;
+  border-radius: 14px;
+  padding: 16px;
+  box-shadow: 0 1px 2px rgba(15,23,42,.04), 0 4px 12px rgba(15,23,42,.06);
+  border: 1px solid rgba(226,232,240,.6);
+}
+.refined-card-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 8px;
+}
+
+.refined-insight {
+  background: white;
+  border-radius: 14px;
+  padding: 0;
+  overflow: hidden;
+  box-shadow: 0 1px 2px rgba(15,23,42,.04), 0 4px 12px rgba(15,23,42,.06);
+  border: 1px solid rgba(226,232,240,.6);
+}
+.refined-insight-head {
+  padding: 10px 16px;
+  font-size: 12px;
+  font-weight: 700;
+  color: white;
+  background: linear-gradient(135deg, #10b981, #059669);
+  letter-spacing: .3px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.refined-insight-body {
+  padding: 12px 16px;
+  font-size: 12px;
+  color: #334155;
+  line-height: 1.6;
+}
+.refined-insight-body strong { color: #0f172a; }
+
+.refined-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 22px;
+  background: linear-gradient(135deg, #0c1e36, #1e3a5f 50%, #2d6a9f);
+  color: white;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: .3px;
+  box-shadow: 0 4px 14px rgba(12,30,54,.35), 0 1px 3px rgba(12,30,54,.2);
+  cursor: pointer;
+  transition: all .25s cubic-bezier(.4,0,.2,1);
+  align-self: flex-start;
+  border: none;
+}
+.refined-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(12,30,54,.4), 0 3px 8px rgba(245,158,11,.2);
+}
+.refined-cta .arrow { transition: transform .25s cubic-bezier(.4,0,.2,1); }
+.refined-cta:hover .arrow { transform: translateX(4px); }
+
+.refined-chart {
+  background: white;
+  border-radius: 14px;
+  padding: 12px;
+  box-shadow: 0 1px 2px rgba(15,23,42,.04), 0 4px 12px rgba(15,23,42,.06);
+  border: 1px solid rgba(226,232,240,.6);
+  min-height: 280px;
+}
+
+/* ════════════════════════════════════════════════════════════════
+   VARIANT 2: DARK MODE SLEEK
+   ════════════════════════════════════════════════════════════════ */
+.preview--dark .preview-label {
+  background: linear-gradient(135deg, #030712, #0f172a);
+  color: #22d3ee;
+  box-shadow: inset 0 -1px 0 rgba(34,211,238,.15);
+}
+.preview--dark .preview-body {
+  background: #0a0f1e;
+  background-image:
+    radial-gradient(circle at 20% 30%, rgba(34,211,238,.06), transparent 55%),
+    radial-gradient(circle at 85% 85%, rgba(99,102,241,.06), transparent 55%);
+  color: #e2e8f0;
+}
+
+.dark-header {
+  background: linear-gradient(135deg, #0a0f1e 0%, #0f172a 50%, #1e1b4b 100%);
+  color: white;
+  padding: 22px 24px;
+  border-radius: 16px;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(34,211,238,.15);
+  box-shadow:
+    0 0 40px rgba(34,211,238,.12),
+    inset 0 1px 0 rgba(255,255,255,.04);
+}
+.dark-header::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #22d3ee 40%, #6366f1 60%, transparent);
+}
+.dark-header::after {
+  content: '';
+  position: absolute;
+  top: -60px; right: -60px;
+  width: 200px; height: 200px;
+  background: radial-gradient(circle, rgba(34,211,238,.18) 0%, transparent 70%);
+  border-radius: 50%;
+}
+.dark-header h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  background: linear-gradient(135deg, #ffffff 0%, #94a3b8 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+}
+.dark-header p {
+  font-size: 12px;
+  color: #64748b;
+  margin-top: 4px;
+  position: relative;
+}
+
+.dark-nav {
+  background: rgba(30,41,59,.6);
+  backdrop-filter: blur(20px);
+  padding: 10px 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(148,163,184,.12);
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.dark-nav .tab {
+  padding: 7px 14px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #94a3b8;
+  cursor: pointer;
+  transition: all .2s cubic-bezier(.4,0,.2,1);
+  position: relative;
+}
+.dark-nav .tab.active {
+  color: #22d3ee;
+  background: rgba(34,211,238,.1);
+  box-shadow: inset 0 0 0 1px rgba(34,211,238,.3);
+}
+.dark-nav .tab.active::after {
+  content: '';
+  position: absolute;
+  bottom: -11px; left: 20%; right: 20%;
+  height: 2px;
+  background: #22d3ee;
+  border-radius: 2px;
+  box-shadow: 0 0 8px #22d3ee;
+}
+.dark-dropdown {
+  flex: 1;
+  min-width: 140px;
+  padding: 8px 12px;
+  border: 1px solid rgba(148,163,184,.2);
+  border-radius: 10px;
+  background: rgba(15,23,42,.8);
+  color: #e2e8f0;
+  font-size: 12px;
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  flex-wrap: wrap;
+  transition: all .2s cubic-bezier(.4,0,.2,1);
+}
+.dark-dropdown:hover {
+  border-color: rgba(34,211,238,.4);
+  box-shadow: 0 0 0 3px rgba(34,211,238,.1);
+}
+.dark-chip {
+  background: rgba(34,211,238,.12);
+  border: 1px solid rgba(34,211,238,.3);
+  color: #22d3ee;
+  border-radius: 8px;
+  padding: 2px 8px;
+  font-size: 11px;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+.dark-chip .x { opacity: .6; cursor: pointer; }
+
+.dark-metric {
+  background: rgba(30,41,59,.5);
+  backdrop-filter: blur(20px);
+  border-radius: 14px;
+  padding: 16px 18px;
+  border: 1px solid rgba(148,163,184,.12);
+  border-top: 2px solid #22d3ee;
+  box-shadow: 0 0 24px rgba(34,211,238,.08);
+  position: relative;
+}
+.dark-metric-label {
+  font-size: 11px;
+  color: #64748b;
+  font-weight: 600;
+  letter-spacing: .5px;
+  text-transform: uppercase;
+}
+.dark-metric-value {
+  font-family: 'Poppins', sans-serif;
+  font-size: 28px;
+  font-weight: 800;
+  color: #f1f5f9;
+  margin-top: 4px;
+  line-height: 1.1;
+}
+.dark-metric-sub {
+  color: #34d399;
+  font-size: 12px;
+  font-weight: 600;
+  margin-top: 2px;
+}
+
+.dark-card {
+  background: rgba(30,41,59,.5);
+  backdrop-filter: blur(20px);
+  border-radius: 14px;
+  padding: 16px;
+  border: 1px solid rgba(148,163,184,.12);
+}
+.dark-card-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #f1f5f9;
+  margin-bottom: 8px;
+}
+
+.dark-insight {
+  background: rgba(30,41,59,.5);
+  backdrop-filter: blur(20px);
+  border-radius: 14px;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid rgba(148,163,184,.12);
+  box-shadow: 0 0 24px rgba(34,211,238,.05);
+}
+.dark-insight-head {
+  padding: 10px 16px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #0f172a;
+  background: linear-gradient(135deg, #34d399, #22d3ee);
+  letter-spacing: .3px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.dark-insight-body {
+  padding: 12px 16px;
+  font-size: 12px;
+  color: #cbd5e1;
+  line-height: 1.6;
+}
+.dark-insight-body strong { color: #f1f5f9; }
+
+.dark-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 22px;
+  background: linear-gradient(135deg, #06b6d4, #6366f1);
+  color: white;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: .3px;
+  box-shadow:
+    0 4px 14px rgba(34,211,238,.3),
+    0 0 0 1px rgba(34,211,238,.2),
+    inset 0 1px 0 rgba(255,255,255,.2);
+  cursor: pointer;
+  transition: all .25s cubic-bezier(.4,0,.2,1);
+  align-self: flex-start;
+  border: none;
+}
+.dark-cta:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 12px 28px rgba(34,211,238,.4),
+    0 0 0 1px rgba(34,211,238,.4),
+    inset 0 1px 0 rgba(255,255,255,.2);
+}
+.dark-cta .arrow { transition: transform .25s cubic-bezier(.4,0,.2,1); }
+.dark-cta:hover .arrow { transform: translateX(4px); }
+
+.dark-chart {
+  background: rgba(30,41,59,.5);
+  backdrop-filter: blur(20px);
+  border-radius: 14px;
+  padding: 12px;
+  border: 1px solid rgba(148,163,184,.12);
+  min-height: 280px;
+  box-shadow: 0 0 20px rgba(34,211,238,.06);
+}
+
+/* ════════════════════════════════════════════════════════════════
+   VARIANT 3: SOFT PASTEL MODERN
+   ════════════════════════════════════════════════════════════════ */
+.preview--pastel .preview-label {
+  background: linear-gradient(135deg, #fda4af, #c4b5fd);
+  color: #3c1361;
+}
+.preview--pastel .preview-body {
+  background: #fefcfb;
+  background-image:
+    radial-gradient(circle at 15% 25%, rgba(253,164,175,.12), transparent 55%),
+    radial-gradient(circle at 85% 80%, rgba(196,181,253,.12), transparent 55%);
+}
+
+.pastel-header {
+  background: linear-gradient(135deg, #ffedd5 0%, #fecdd3 40%, #e9d5ff 100%);
+  color: #3f2a56;
+  padding: 24px 26px;
+  border-radius: 22px;
+  position: relative;
+  overflow: hidden;
+  box-shadow:
+    0 12px 40px rgba(244,114,182,.12),
+    inset 0 1px 0 rgba(255,255,255,.6);
+}
+.pastel-header::before {
+  content: '🌼';
+  position: absolute;
+  top: 12px; right: 20px;
+  font-size: 28px;
+  opacity: .7;
+}
+.pastel-header::after {
+  content: '';
+  position: absolute;
+  bottom: -50px; left: -20px;
+  width: 160px; height: 160px;
+  background: radial-gradient(circle, rgba(255,255,255,.4) 0%, transparent 70%);
+  border-radius: 50%;
+}
+.pastel-header h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: -0.3px;
+  position: relative;
+  color: #3c1361;
+}
+.pastel-header p {
+  font-size: 12px;
+  color: #6b4a75;
+  margin-top: 6px;
+  position: relative;
+  font-weight: 500;
+}
+
+.pastel-nav {
+  background: white;
+  padding: 10px 14px;
+  border-radius: 20px;
+  box-shadow:
+    0 4px 20px rgba(244,114,182,.08),
+    0 1px 3px rgba(244,114,182,.06);
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+  border: 1px solid rgba(253,164,175,.2);
+}
+.pastel-nav .tab {
+  padding: 8px 16px;
+  border-radius: 14px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #6b4a75;
+  cursor: pointer;
+  transition: all .25s cubic-bezier(.34,1.56,.64,1);
+}
+.pastel-nav .tab.active {
+  background: linear-gradient(135deg, #c4b5fd, #a7f3d0);
+  color: #3c1361;
+  box-shadow: 0 4px 12px rgba(196,181,253,.4);
+}
+.pastel-dropdown {
+  flex: 1;
+  min-width: 140px;
+  padding: 8px 14px;
+  border: 1.5px solid rgba(167,243,208,.5);
+  border-radius: 16px;
+  background: #f0fdf4;
+  font-size: 12px;
+  color: #3c1361;
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  flex-wrap: wrap;
+  transition: all .2s cubic-bezier(.4,0,.2,1);
+}
+.pastel-dropdown:hover {
+  border-color: #86efac;
+  box-shadow: 0 0 0 4px rgba(167,243,208,.3);
+}
+.pastel-chip {
+  background: linear-gradient(135deg, #a7f3d0, #86efac);
+  color: #14532d;
+  border-radius: 999px;
+  padding: 3px 10px;
+  font-size: 11px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  box-shadow: 0 2px 6px rgba(134,239,172,.3);
+}
+.pastel-chip .x { opacity: .7; cursor: pointer; }
+
+.pastel-metric {
+  background: white;
+  border-radius: 22px;
+  padding: 18px 20px;
+  box-shadow:
+    0 8px 24px rgba(244,114,182,.08),
+    0 1px 3px rgba(244,114,182,.05);
+  border: 1px solid rgba(253,164,175,.15);
+  position: relative;
+  overflow: hidden;
+}
+.pastel-metric::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #86efac, #a7f3d0);
+}
+.pastel-metric-label {
+  font-size: 11px;
+  color: #6b4a75;
+  font-weight: 600;
+  letter-spacing: .5px;
+  text-transform: uppercase;
+}
+.pastel-metric-value {
+  font-family: 'Poppins', sans-serif;
+  font-size: 28px;
+  font-weight: 800;
+  color: #3c1361;
+  margin-top: 6px;
+  line-height: 1.1;
+}
+.pastel-metric-sub {
+  color: #10b981;
+  font-size: 12px;
+  font-weight: 600;
+  margin-top: 4px;
+}
+
+.pastel-card {
+  background: white;
+  border-radius: 22px;
+  padding: 18px;
+  box-shadow:
+    0 8px 24px rgba(244,114,182,.06),
+    0 1px 3px rgba(244,114,182,.05);
+  border: 1px solid rgba(253,164,175,.15);
+}
+.pastel-card-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #3c1361;
+  margin-bottom: 10px;
+}
+
+.pastel-insight {
+  background: white;
+  border-radius: 22px;
+  padding: 0;
+  overflow: hidden;
+  box-shadow:
+    0 8px 24px rgba(134,239,172,.12),
+    0 1px 3px rgba(134,239,172,.08);
+  border: 1px solid rgba(167,243,208,.3);
+}
+.pastel-insight-head {
+  padding: 12px 18px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #14532d;
+  background: linear-gradient(135deg, #a7f3d0, #86efac);
+  letter-spacing: .3px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.pastel-insight-body {
+  padding: 14px 18px;
+  font-size: 12px;
+  color: #6b4a75;
+  line-height: 1.6;
+}
+.pastel-insight-body strong { color: #3c1361; }
+
+.pastel-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 26px;
+  background: linear-gradient(135deg, #a7f3d0, #c4b5fd);
+  color: #3c1361;
+  border-radius: 18px;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: .3px;
+  box-shadow:
+    0 6px 20px rgba(196,181,253,.35),
+    inset 0 1px 0 rgba(255,255,255,.5);
+  cursor: pointer;
+  transition: all .25s cubic-bezier(.34,1.56,.64,1);
+  align-self: flex-start;
+  border: none;
+}
+.pastel-cta:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow:
+    0 14px 28px rgba(196,181,253,.45),
+    inset 0 1px 0 rgba(255,255,255,.5);
+}
+.pastel-cta .arrow { transition: transform .25s cubic-bezier(.34,1.56,.64,1); }
+.pastel-cta:hover .arrow { transform: translateX(4px); }
+
+.pastel-chart {
+  background: white;
+  border-radius: 22px;
+  padding: 14px;
+  box-shadow:
+    0 8px 24px rgba(244,114,182,.08),
+    0 1px 3px rgba(244,114,182,.05);
+  border: 1px solid rgba(253,164,175,.15);
+  min-height: 280px;
+}
+
+/* ─── Footer instruction ─── */
+.footer-note {
+  max-width: 900px;
+  margin: 40px auto 0;
+  background: white;
+  border-radius: 16px;
+  padding: 20px 28px;
+  text-align: center;
+  box-shadow: 0 8px 32px rgba(0,0,0,.06);
+  color: #475569;
+  font-size: 14px;
+  line-height: 1.7;
+  border: 1px solid #e2e8f0;
+}
+.footer-note strong { color: #0f172a; }
+
+.dot-pos { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #10b981; }
+.dot-neg { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #ef4444; }
+.dot-neu { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #6366f1; }
+</style>
+</head>
+<body>
+
+<h1 class="page-title">Design Preview — Dashboard Sentimen Desa Wisata</h1>
+<p class="page-subtitle">3 arah desain untuk di-compare. Scroll di setiap kolom, hover button &amp; dropdown, lihat chart-nya langsung.</p>
+
+<div class="compare-grid">
+
+  <!-- ═══════════════════ VARIANT 1: REFINED LIGHT ═══════════════════ -->
+  <section class="preview preview--refined">
+    <div class="preview-label">
+      <span>Opsi 1 · Refined Light</span>
+      <span style="font-size:11px; font-weight:500; opacity:.8; letter-spacing:.5px;">Profesional</span>
+    </div>
+    <div class="preview-body">
+
+      <div class="refined-header">
+        <h1>Dashboard Analisis Sentimen</h1>
+        <p>Ulasan Desa Wisata Indonesia</p>
+      </div>
+
+      <div class="refined-nav">
+        <div class="tab active">Ringkasan</div>
+        <div class="tab">Detail &amp; Grafik</div>
+        <div class="refined-dropdown">
+          <span class="refined-chip">Cibuntu <span class="x">×</span></span>
+          <span class="refined-chip">Wukirsari <span class="x">×</span></span>
+        </div>
+      </div>
+
+      <div class="refined-metric">
+        <div class="refined-metric-label">Total Review</div>
+        <div class="refined-metric-value">1,234</div>
+        <div class="refined-metric-sub">↑ 78% positif</div>
+      </div>
+
+      <div class="refined-chart">
+        <div class="refined-card-title">Distribusi Sentimen</div>
+        <div id="chart-refined" style="width:100%; height:240px;"></div>
+      </div>
+
+      <div class="refined-insight">
+        <div class="refined-insight-head">
+          <span>✓</span> Yang Paling Disukai
+        </div>
+        <div class="refined-insight-body">
+          <strong>Pemandangan &amp; Alam</strong> paling banyak dipuji dengan <strong>92% positif</strong> dari 234 ulasan. Kebersihan juga dinilai bagus.
+        </div>
+      </div>
+
+      <button class="refined-cta">Lihat Grafik Lengkap <span class="arrow">→</span></button>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════ VARIANT 2: DARK MODE SLEEK ═══════════════════ -->
+  <section class="preview preview--dark">
+    <div class="preview-label">
+      <span>Opsi 2 · Dark Mode Sleek</span>
+      <span style="font-size:11px; font-weight:500; opacity:.7; letter-spacing:.5px;">Futuristik</span>
+    </div>
+    <div class="preview-body">
+
+      <div class="dark-header">
+        <h1>Dashboard Analisis Sentimen</h1>
+        <p>Ulasan Desa Wisata Indonesia</p>
+      </div>
+
+      <div class="dark-nav">
+        <div class="tab active">Ringkasan</div>
+        <div class="tab">Detail &amp; Grafik</div>
+        <div class="dark-dropdown">
+          <span class="dark-chip">Cibuntu <span class="x">×</span></span>
+          <span class="dark-chip">Wukirsari <span class="x">×</span></span>
+        </div>
+      </div>
+
+      <div class="dark-metric">
+        <div class="dark-metric-label">Total Review</div>
+        <div class="dark-metric-value">1,234</div>
+        <div class="dark-metric-sub">↑ 78% positif</div>
+      </div>
+
+      <div class="dark-chart">
+        <div class="dark-card-title">Distribusi Sentimen</div>
+        <div id="chart-dark" style="width:100%; height:240px;"></div>
+      </div>
+
+      <div class="dark-insight">
+        <div class="dark-insight-head">
+          <span>✓</span> Yang Paling Disukai
+        </div>
+        <div class="dark-insight-body">
+          <strong>Pemandangan &amp; Alam</strong> paling banyak dipuji dengan <strong>92% positif</strong> dari 234 ulasan. Kebersihan juga dinilai bagus.
+        </div>
+      </div>
+
+      <button class="dark-cta">Lihat Grafik Lengkap <span class="arrow">→</span></button>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════ VARIANT 3: SOFT PASTEL MODERN ═══════════════════ -->
+  <section class="preview preview--pastel">
+    <div class="preview-label">
+      <span>Opsi 3 · Soft Pastel Modern</span>
+      <span style="font-size:11px; font-weight:500; opacity:.8; letter-spacing:.5px;">Friendly</span>
+    </div>
+    <div class="preview-body">
+
+      <div class="pastel-header">
+        <h1>Dashboard Analisis Sentimen</h1>
+        <p>Ulasan Desa Wisata Indonesia</p>
+      </div>
+
+      <div class="pastel-nav">
+        <div class="tab active">Ringkasan</div>
+        <div class="tab">Detail &amp; Grafik</div>
+        <div class="pastel-dropdown">
+          <span class="pastel-chip">Cibuntu <span class="x">×</span></span>
+          <span class="pastel-chip">Wukirsari <span class="x">×</span></span>
+        </div>
+      </div>
+
+      <div class="pastel-metric">
+        <div class="pastel-metric-label">Total Review</div>
+        <div class="pastel-metric-value">1,234</div>
+        <div class="pastel-metric-sub">↑ 78% positif</div>
+      </div>
+
+      <div class="pastel-chart">
+        <div class="pastel-card-title">Distribusi Sentimen</div>
+        <div id="chart-pastel" style="width:100%; height:240px;"></div>
+      </div>
+
+      <div class="pastel-insight">
+        <div class="pastel-insight-head">
+          <span>✓</span> Yang Paling Disukai
+        </div>
+        <div class="pastel-insight-body">
+          <strong>Pemandangan &amp; Alam</strong> paling banyak dipuji dengan <strong>92% positif</strong> dari 234 ulasan. Kebersihan juga dinilai bagus.
+        </div>
+      </div>
+
+      <button class="pastel-cta">Lihat Grafik Lengkap <span class="arrow">→</span></button>
+
+    </div>
+  </section>
+
+</div>
+
+<div class="footer-note">
+  <strong>Cara memilih:</strong> bandingkan ketiga panel di atas. Perhatikan <span class="dot-pos"></span> warna sentimen, gaya chart, bentuk tombol, dan dropdown. Setelah dapat pilihan, kasih tahu Claude — misalnya: <em>"pilih Opsi 2"</em>, atau <em>"Opsi 1 tapi chart-nya pakai gaya Opsi 2"</em>, atau kombinasi lain.
+</div>
+
+<script>
+/* ─── Shared data ─── */
+const aspects = ['Alam', 'Bersih', 'Layanan', 'Fasilitas', 'Kuliner', 'Akses'];
+const posData = [92, 78, 72, 65, 58, 45];
+const negData = [8, 15, 18, 25, 22, 30];
+const neuData = [0, 7, 10, 10, 20, 25];
+
+/* ─── Variant 1: Refined Light ─── */
+Plotly.newPlot('chart-refined', [
+  { x: aspects, y: posData, type: 'bar', name: 'Positif',
+    marker: { color: '#10b981', line: { width: 0 }, cornerradius: 6 } },
+  { x: aspects, y: negData, type: 'bar', name: 'Negatif',
+    marker: { color: '#ef4444', line: { width: 0 }, cornerradius: 6 } },
+  { x: aspects, y: neuData, type: 'bar', name: 'Netral',
+    marker: { color: '#6366f1', line: { width: 0 }, cornerradius: 6 } }
+], {
+  barmode: 'group',
+  paper_bgcolor: 'rgba(0,0,0,0)',
+  plot_bgcolor: 'rgba(0,0,0,0)',
+  font: { family: 'Inter, sans-serif', size: 11, color: '#334155' },
+  xaxis: { showline: false, zeroline: false, tickfont: { color: '#64748b' } },
+  yaxis: { showline: false, zeroline: false, gridcolor: '#e2e8f0', tickfont: { color: '#64748b' } },
+  legend: { orientation: 'h', yanchor: 'bottom', y: -0.28, xanchor: 'center', x: 0.5, bgcolor: 'rgba(0,0,0,0)' },
+  margin: { t: 10, b: 50, l: 32, r: 10 },
+  hoverlabel: { bgcolor: 'white', bordercolor: '#e2e8f0', font: { family: 'Inter', color: '#0f172a' } }
+}, { displayModeBar: false, responsive: true });
+
+/* ─── Variant 2: Dark Mode Sleek ─── */
+Plotly.newPlot('chart-dark', [
+  { x: aspects, y: posData, type: 'bar', name: 'Positif',
+    marker: { color: '#34d399', line: { width: 0 }, cornerradius: 6 } },
+  { x: aspects, y: negData, type: 'bar', name: 'Negatif',
+    marker: { color: '#fb7185', line: { width: 0 }, cornerradius: 6 } },
+  { x: aspects, y: neuData, type: 'bar', name: 'Netral',
+    marker: { color: '#22d3ee', line: { width: 0 }, cornerradius: 6 } }
+], {
+  barmode: 'group',
+  paper_bgcolor: 'rgba(0,0,0,0)',
+  plot_bgcolor: 'rgba(0,0,0,0)',
+  font: { family: 'Inter, sans-serif', size: 11, color: '#cbd5e1' },
+  xaxis: { showline: false, zeroline: false, tickfont: { color: '#94a3b8' } },
+  yaxis: { showline: false, zeroline: false, gridcolor: 'rgba(148,163,184,.08)', tickfont: { color: '#94a3b8' } },
+  legend: { orientation: 'h', yanchor: 'bottom', y: -0.28, xanchor: 'center', x: 0.5, bgcolor: 'rgba(0,0,0,0)', font: { color: '#cbd5e1' } },
+  margin: { t: 10, b: 50, l: 32, r: 10 },
+  hoverlabel: { bgcolor: '#1e293b', bordercolor: 'rgba(34,211,238,.3)', font: { family: 'Inter', color: '#e2e8f0' } }
+}, { displayModeBar: false, responsive: true });
+
+/* ─── Variant 3: Soft Pastel Modern ─── */
+Plotly.newPlot('chart-pastel', [
+  { x: aspects, y: posData, type: 'bar', name: 'Positif',
+    marker: { color: '#86efac', line: { width: 0 }, cornerradius: 10 } },
+  { x: aspects, y: negData, type: 'bar', name: 'Negatif',
+    marker: { color: '#fda4af', line: { width: 0 }, cornerradius: 10 } },
+  { x: aspects, y: neuData, type: 'bar', name: 'Netral',
+    marker: { color: '#c4b5fd', line: { width: 0 }, cornerradius: 10 } }
+], {
+  barmode: 'group',
+  paper_bgcolor: 'rgba(0,0,0,0)',
+  plot_bgcolor: 'rgba(0,0,0,0)',
+  font: { family: 'Inter, sans-serif', size: 11, color: '#6b4a75' },
+  xaxis: { showline: false, zeroline: false, tickfont: { color: '#8b6f9e' } },
+  yaxis: { showline: false, zeroline: false, gridcolor: '#fde2e4', tickfont: { color: '#8b6f9e' } },
+  legend: { orientation: 'h', yanchor: 'bottom', y: -0.28, xanchor: 'center', x: 0.5, bgcolor: 'rgba(0,0,0,0)' },
+  margin: { t: 10, b: 50, l: 32, r: 10 },
+  hoverlabel: { bgcolor: 'white', bordercolor: '#fecdd3', font: { family: 'Inter', color: '#3c1361' } }
+}, { displayModeBar: false, responsive: true });
+</script>
+
+</body>
+</html>
