@@ -13,7 +13,7 @@ matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 
 import dash
-from dash import dcc, html, Input, Output, dash_table, callback
+from dash import dcc, html, Input, Output, State, dash_table, callback
 import plotly.express as px
 import plotly.graph_objects as go
 
@@ -44,6 +44,41 @@ LABEL_NAME = {0: 'Negatif', 1: 'Positif', 2: 'Netral'}
 COLORS     = {'Positif': '#10b981', 'Negatif': '#ef4444', 'Netral': '#6366f1'}
 COLORS_SOFT = {'Positif': '#34d399', 'Negatif': '#f87171', 'Netral': '#818cf8'}
 DESA_LIST  = sorted(df['nama desa wisata'].dropna().unique().tolist())
+
+# ── Desa images (scanned from assets/images/<desa>/) ─────────────────────────
+IMAGES_DIR = os.path.join(os.path.dirname(__file__), 'assets', 'images')
+IMAGE_EXTS = ('.jpg', '.jpeg', '.png', '.webp')
+
+
+def _scan_desa_images():
+    """Scan assets/images/<desa>/ → dict {desa_key_lower: [web_path, ...]}."""
+    result = {}
+    if not os.path.isdir(IMAGES_DIR):
+        return result
+    for desa_key in os.listdir(IMAGES_DIR):
+        desa_dir = os.path.join(IMAGES_DIR, desa_key)
+        if not os.path.isdir(desa_dir):
+            continue
+        files = sorted(f for f in os.listdir(desa_dir)
+                       if f.lower().endswith(IMAGE_EXTS))
+        result[desa_key.lower()] = [
+            f'/assets/images/{desa_key}/{f}' for f in files
+        ]
+    return result
+
+
+DESA_IMAGES = _scan_desa_images()
+
+
+def _build_carousel_entries(desa_list, is_semua):
+    """Build [(src, caption), ...] for current desa selection."""
+    keys = DESA_LIST if is_semua else [d.lower() for d in desa_list]
+    entries = []
+    for k in keys:
+        for src in DESA_IMAGES.get(k, []):
+            entries.append((src, k.title()))
+    return entries
+
 
 # ── Chart theme constants ────────────────────────────────────────────────────
 THEME_FONT        = 'Inter, sans-serif'
@@ -212,12 +247,12 @@ def make_wordcloud(texts, base_color, light_color):
         return base_color if font_size > 36 else light_color
 
     wc = WordCloud(
-        width=900, height=380,
+        width=500, height=460,
         mode='RGBA', background_color=None,
         color_func=_color_func,
-        max_words=80,
+        max_words=70,
         collocations=False,
-        prefer_horizontal=0.95,
+        prefer_horizontal=0.85,
         min_font_size=11,
         relative_scaling=0.5,
         margin=6,
@@ -284,19 +319,37 @@ def layout_insight():
     """Page 1: Ringkasan insight — padat, informatif, bahasa sederhana."""
     return html.Div(children=[
 
-        # ── ROW 1: Headline Banner ───────────────────────────────────────
-        html.Div(id='headline-banner', className='headline-banner'),
-
-        # ── ROW 2: Verdict + Sentiment Stats (horizontal) ───────────────
+        # ── ROW 1: Carousel + Verdict (with embedded headlines) ─────────
         html.Div(className='verdict-row', children=[
+            html.Div(className='image-carousel-section', id='carousel-section',
+                     children=[
+                dcc.Store(id='carousel-index', data=0),
+                html.Div(className='carousel-frame', children=[
+                    html.Img(id='carousel-img', className='carousel-img',
+                             alt='Foto desa wisata'),
+                    html.Button('‹', id='carousel-prev',
+                                className='carousel-btn carousel-prev',
+                                **{'aria-label': 'Gambar sebelumnya'}),
+                    html.Button('›', id='carousel-next',
+                                className='carousel-btn carousel-next',
+                                **{'aria-label': 'Gambar berikutnya'}),
+                    html.Div(id='carousel-caption',
+                             className='carousel-caption'),
+                    html.Div(id='carousel-counter',
+                             className='carousel-counter'),
+                ]),
+                html.Div(id='carousel-dots', className='carousel-dots'),
+            ]),
             html.Div(id='verdict-left', className='verdict-left'),
-            html.Div(id='verdict-right', className='verdict-right'),
         ]),
 
-        # ── ROW 3: Quick Stats (4 cards) ────────────────────────────────
+        # ── ROW 3: Sentiment Metrics (Positif/Negatif/Netral) ───────────
+        html.Div(id='verdict-right', className='verdict-right verdict-metrics-row'),
+
+        # ── ROW 4: Quick Stats (4 cards) ────────────────────────────────
         html.Div(id='stats-row', className='metrics-row'),
 
-        # ── ROW 4: Praised vs Criticized side-by-side ───────────────────
+        # ── ROW 5: Praised vs Criticized side-by-side ───────────────────
         html.Div(className='praised-criticized-row', children=[
             html.Div(className='insight-card-compact positif', children=[
                 html.Div(className='insight-mega-title', children=[
@@ -316,7 +369,7 @@ def layout_insight():
             ]),
         ]),
 
-        # ── ROW 5: Aspect Grid + Sidebar ────────────────────────────────
+        # ── ROW 6: Aspect Grid + Sidebar ────────────────────────────────
         html.Div(className='bottom-two-col', children=[
             # Left: Aspect health grid
             html.Div(className='section compact', children=[
@@ -333,7 +386,7 @@ def layout_insight():
             ]),
         ]),
 
-        # ── ROW 6: CTA ──────────────────────────────────────────────────
+        # ── ROW 7: CTA ──────────────────────────────────────────────────
         html.Div(className='cta-section', children=[
             dcc.Link('Lihat Grafik & Data Lengkap',
                       href='/detail', className='cta-link'),
@@ -396,22 +449,15 @@ def layout_detail():
                 dcc.Tab(label='Netral', value='Netral',
                         className='tab', selected_className='tab-selected'),
             ]),
-            html.Div(className='chart-row', children=[
-                html.Div(className='chart-card wide', children=[
-                    dcc.RadioItems(
-                        id='word-view-toggle',
-                        options=[
-                            {'label': ' Grafik Batang', 'value': 'bar'},
-                            {'label': ' Word Cloud', 'value': 'wc'},
-                        ],
-                        value='bar', inline=True, className='view-toggle',
-                    ),
-                    dcc.Graph(id='tfidf-bar', config={'displayModeBar': False},
-                              style={'display': 'block'}),
-                    html.Img(id='wordcloud-img', className='wordcloud-img',
-                             style={'display': 'none'}),
+            html.Div(className='chart-row chart-row-triple', children=[
+                html.Div(className='chart-card chart-card-equal', children=[
+                    dcc.Graph(id='tfidf-bar', config={'displayModeBar': False}),
                 ]),
-                html.Div(className='chart-card narrow', children=[
+                html.Div(className='chart-card chart-card-equal', children=[
+                    html.Div('Word Cloud', className='wordcloud-title'),
+                    html.Img(id='wordcloud-img', className='wordcloud-img'),
+                ]),
+                html.Div(className='chart-card chart-card-equal', children=[
                     dcc.Graph(id='bigram-chart', config={'displayModeBar': False}),
                 ]),
             ]),
@@ -519,34 +565,37 @@ app.layout = html.Div(className='page', children=[
     dcc.Location(id='url', refresh=False),
     dcc.Store(id='prev-desa', data=['Semua']),
 
-    # ── Header ────────────────────────────────────────────────────────────
+    # ── Unified Header (title + nav + filter) ─────────────────────────────
     html.Div(className='header', children=[
         html.Div(className='header-accent-bar'),
         html.Div(className='header-inner', children=[
-            html.H1('Dashboard Analisis Sentimen'),
-            html.P('Ulasan Desa Wisata Indonesia — IndoBERT Sentiment Analysis'),
-        ]),
-    ]),
-
-    # ── Nav + Filter bar ──────────────────────────────────────────────────
-    html.Div(className='nav-filter-bar', children=[
-        html.Div(className='nav-tabs', children=[
-            dcc.Link('Ringkasan', href='/', id='nav-insight',
-                      className='nav-link active'),
-            dcc.Link('Detail & Grafik', href='/detail', id='nav-detail',
-                      className='nav-link'),
-        ]),
-        html.Div(className='filter-section', children=[
-            html.Label('Filter Desa Wisata:', className='filter-label'),
-            dcc.Dropdown(
-                id='desa-dropdown',
-                options=[{'label': 'Semua Desa Wisata', 'value': 'Semua'}] +
-                        [{'label': d.title(), 'value': d} for d in DESA_LIST],
-                value=['Semua'],
-                multi=True,
-                className='desa-dropdown modern-dropdown',
-                placeholder='Pilih desa wisata...',
-            ),
+            html.Div(className='header-title-block', children=[
+                html.H1('Dashboard Analisis Sentimen'),
+                html.P('Ulasan Desa Wisata Indonesia — IndoBERT Sentiment Analysis'),
+            ]),
+            html.Div(className='header-controls', children=[
+                html.Div(className='header-nav-tabs', children=[
+                    dcc.Link('Ringkasan', href='/', id='nav-insight',
+                              className='header-nav-link active'),
+                    dcc.Link('Detail & Grafik', href='/detail', id='nav-detail',
+                              className='header-nav-link'),
+                ]),
+                html.Div(className='header-filter', children=[
+                    html.Label('Filter Desa',
+                               className='header-filter-label'),
+                    dcc.Dropdown(
+                        id='desa-dropdown',
+                        options=[{'label': 'Semua Desa Wisata',
+                                  'value': 'Semua'}] +
+                                [{'label': d.title(), 'value': d}
+                                 for d in DESA_LIST],
+                        value=['Semua'],
+                        multi=True,
+                        className='desa-dropdown modern-dropdown',
+                        placeholder='Pilih desa wisata...',
+                    ),
+                ]),
+            ]),
         ]),
     ]),
 
@@ -579,8 +628,8 @@ def display_page(pathname):
 )
 def update_nav_active(pathname):
     if pathname == '/detail':
-        return 'nav-link', 'nav-link active'
-    return 'nav-link active', 'nav-link'
+        return 'header-nav-link', 'header-nav-link active'
+    return 'header-nav-link active', 'header-nav-link'
 
 
 # ── Smart "Semua" toggle ────────────────────────────────────────────────────
@@ -617,7 +666,6 @@ def smart_semua_toggle(current, prev):
 # ══════════════════════════════════════════════════════════════════════════════
 
 @callback(
-    Output('headline-banner', 'children'),
     Output('verdict-left', 'children'),
     Output('verdict-right', 'children'),
     Output('stats-row', 'children'),
@@ -652,29 +700,37 @@ def update_insight_page(desa):
     pct_neg = (n_neg / total * 100) if total else 0
     pct_neu = (n_neu / total * 100) if total else 0
 
-    # ── ROW 1: Headline banner ───────────────────────────────────────────
+    # ── ROW 1: Verdict (with embedded headline chips) ────────────────────
     headline_pos = ins.get('headline_positive', '')
     headline_neg = ins.get('headline_negative', '')
-    banner = [
-        html.Div(className='headline-item positif', children=[
-            html.Span('✓', className='headline-icon positif'),
-            headline_pos,
-        ]) if headline_pos else None,
-        html.Div(className='headline-item negatif', children=[
-            html.Span('⚠', className='headline-icon negatif'),
-            headline_neg,
-        ]) if headline_neg else None,
-    ]
-
-    # ── ROW 2: Verdict left + right ──────────────────────────────────────
     verdict_label, verdict_desc_text, verdict_cls = get_verdict(pct_pos)
 
-    v_left = html.Div(className=f'verdict-left-inner {verdict_cls}', children=[
+    headline_chips = []
+    if headline_pos:
+        headline_chips.append(html.Div(
+            className='verdict-headline-chip positif', children=[
+                html.Span('✓', className='hc-icon'),
+                headline_pos,
+            ]))
+    if headline_neg:
+        headline_chips.append(html.Div(
+            className='verdict-headline-chip negatif', children=[
+                html.Span('!', className='hc-icon'),
+                headline_neg,
+            ]))
+
+    v_left_children = [
         html.Div(verdict_label, className='verdict-text'),
         html.Div(verdict_desc_text, className='verdict-desc'),
         html.Div(f'Total {total:,} ulasan dari {label}',
                  className='verdict-total'),
-    ])
+    ]
+    if headline_chips:
+        v_left_children.append(
+            html.Div(className='verdict-headlines', children=headline_chips))
+
+    v_left = html.Div(className=f'verdict-left-inner {verdict_cls}',
+                       children=v_left_children)
 
     v_right = html.Div(className='verdict-metrics', children=[
         _metric_mini(f'{n_pos:,}', f'{pct_pos:.1f}%', 'Positif', 'positif'),
@@ -737,7 +793,8 @@ def update_insight_page(desa):
                            for kw in kws}
         praised_children.append(_insight_item(
             rank=i, category=cat,
-            count_text=f'{p["count"]:,} ulasan positif',
+            count=p['count'],
+            count_label='ulasan positif',
             keywords=kws,
             positivity_rate=rate,
             sample_reviews=samples,
@@ -752,6 +809,9 @@ def update_insight_page(desa):
     criticized_children = []
     for i, c in enumerate(criticized[:3], 1):
         cat = c['category']
+        info = asp.get(cat, {})
+        total_a = info.get('total', 0)
+        neg_rate = (info.get('Negatif', 0) / total_a * 100) if total_a else 0
         kws = c.get('opinions', [])[:4]
         raw_samples = _pick_sample_reviews(d, cat, 'Negatif', n=3)
         samples = raw_samples if raw_samples else None
@@ -763,8 +823,10 @@ def update_insight_page(desa):
                            for kw in kws}
         criticized_children.append(_insight_item(
             rank=i, category=cat,
-            count_text=f'{c["count"]:,} keluhan',
+            count=c['count'],
+            count_label='keluhan',
             keywords=kws,
+            negativity_rate=neg_rate,
             sample_reviews=samples,
             review_css='negatif',
             keyword_attributions=attributions,
@@ -844,7 +906,6 @@ def update_insight_page(desa):
             html.P('Tidak cukup data.', style={'color': '#a0aec0'}))
 
     return (
-        banner,
         v_left,
         v_right,
         stats,
@@ -917,62 +978,82 @@ def _get_village_attribution(keyword, category, sentiment):
     return villages
 
 
-def _build_keywords_display(keywords, attributions=None):
-    """Render keywords, optionally with custom CSS village attribution tooltips."""
-    if not attributions:
-        return html.Div(f'Kata kunci: {", ".join(keywords)}',
-                        className='insight-item-keywords')
-    children = [html.Span('Kata kunci: ')]
-    for i, kw in enumerate(keywords):
-        villages = attributions.get(kw, [])
+def _build_keywords_display(keywords, attributions=None, css_variant='positif'):
+    """Render keywords as colored chips, optionally with village tooltips."""
+    if not keywords:
+        return None
+    chips = []
+    for kw in keywords:
+        villages = (attributions or {}).get(kw, [])
         if villages:
             tooltip = ', '.join(v.title() for v in villages)
-            children.append(html.Span(
+            chips.append(html.Span(
                 className='keyword-tooltip-wrapper', children=[
-                    html.Span(kw, className='keyword-attributed'),
+                    html.Span(kw, className=f'keyword-chip {css_variant} attributed'),
                     html.Span(f'Desa: {tooltip}',
                               className='keyword-tooltip-content'),
                 ]))
         else:
-            children.append(html.Span(kw))
-        if i < len(keywords) - 1:
-            children.append(', ')
-    return html.Div(children, className='insight-item-keywords')
+            chips.append(html.Span(kw, className=f'keyword-chip {css_variant}'))
+    return html.Div(chips, className='keyword-chips')
 
 
-def _insight_item(rank, category, count_text, keywords, positivity_rate=None,
+def _insight_item(rank, category, count, count_label, keywords,
+                  positivity_rate=None, negativity_rate=None,
                   sample_reviews=None, review_css='positif',
                   keyword_attributions=None):
     """Build one ranked insight item row with expandable reviews."""
-    body_children = [
-        html.Div(category, className='insight-item-category'),
-        html.Div(count_text, className='insight-item-count'),
-        _build_keywords_display(keywords, keyword_attributions)
-        if keywords else None,
-        html.Div(className='insight-item-bar-row', children=[
+    icon = ASPECT_ICONS.get(category, '◈')
+
+    header = html.Div(className='insight-item-header', children=[
+        html.Div(className=f'insight-item-aspect-icon {review_css}',
+                 children=icon),
+        html.Div(className='insight-item-title', children=[
+            html.Div(category, className='insight-item-category'),
+            html.Div(count_label, className='insight-item-sublabel'),
+        ]),
+        html.Div(className=f'insight-item-count-badge {review_css}', children=[
+            html.Div(f'{count:,}', className='insight-item-count-num'),
+        ]),
+    ])
+
+    body_children = [header]
+
+    if positivity_rate is not None:
+        body_children.append(html.Div(className='insight-item-bar-row', children=[
             html.Div(className='mini-bar-track', children=[
                 html.Div(className=f'mini-bar-fill {aspect_health_class(positivity_rate)}',
                          style={'width': f'{positivity_rate}%'}),
             ]),
             html.Span(f'{positivity_rate:.0f}% puas',
                       className='mini-bar-label'),
-        ]) if positivity_rate is not None else None,
-    ]
+        ]))
+    elif negativity_rate is not None:
+        body_children.append(html.Div(className='insight-item-bar-row', children=[
+            html.Div(className='mini-bar-track', children=[
+                html.Div(className='mini-bar-fill health-poor',
+                         style={'width': f'{negativity_rate}%'}),
+            ]),
+            html.Span(f'{negativity_rate:.0f}% negatif',
+                      className='mini-bar-label'),
+        ]))
+
+    if keywords:
+        body_children.append(
+            _build_keywords_display(keywords, keyword_attributions, review_css))
 
     if sample_reviews:
-        # First review shown directly
         first = sample_reviews[0]
         body_children.append(
             _review_quote(first[0], review_css,
                           village_name=first[1] if first[1] else None))
-        # Additional reviews in expandable section
         if len(sample_reviews) > 1:
             extra = [_review_quote(sr[0], review_css,
                                    village_name=sr[1] if sr[1] else None)
                      for sr in sample_reviews[1:]]
             body_children.append(
                 html.Details(className='extra-reviews', children=[
-                    html.Summary(f'Lihat {len(extra)} ulasan lainnya',
+                    html.Summary('Lihat ulasan lainnya',
                                  className='extra-reviews-toggle'),
                     html.Div(extra, className='extra-reviews-list'),
                 ]))
@@ -981,7 +1062,60 @@ def _insight_item(rank, category, count_text, keywords, positivity_rate=None,
         html.Div(str(rank), className=f'insight-item-rank rank-{rank}'),
         html.Div(className='insight-item-body', children=body_children),
     ]
-    return html.Div(className='insight-item', children=children)
+    return html.Div(className=f'insight-item {review_css}', children=children)
+
+
+# ── Carousel: index state + view render ─────────────────────────────────────
+@callback(
+    Output('carousel-index', 'data'),
+    Input('carousel-prev', 'n_clicks'),
+    Input('carousel-next', 'n_clicks'),
+    Input('desa-dropdown', 'value'),
+    State('carousel-index', 'data'),
+    prevent_initial_call=False,
+)
+def update_carousel_index(prev_clicks, next_clicks, desa, idx):
+    from dash import ctx
+    triggered = ctx.triggered_id
+    desa_list, _, is_semua = _normalize_desa(desa)
+    entries = _build_carousel_entries(desa_list, is_semua)
+    total = len(entries)
+    if total == 0:
+        return 0
+    if triggered == 'desa-dropdown':
+        return 0
+    if triggered == 'carousel-prev':
+        return ((idx or 0) - 1) % total
+    if triggered == 'carousel-next':
+        return ((idx or 0) + 1) % total
+    return idx or 0
+
+
+@callback(
+    Output('carousel-img', 'src'),
+    Output('carousel-caption', 'children'),
+    Output('carousel-counter', 'children'),
+    Output('carousel-dots', 'children'),
+    Output('carousel-section', 'style'),
+    Input('desa-dropdown', 'value'),
+    Input('carousel-index', 'data'),
+)
+def update_carousel_view(desa, idx):
+    desa_list, _, is_semua = _normalize_desa(desa)
+    entries = _build_carousel_entries(desa_list, is_semua)
+    total = len(entries)
+    if total == 0:
+        return '', '', '', [], {'display': 'none'}
+    idx = (idx or 0) % total
+    src, caption = entries[idx]
+    counter = f'{idx + 1} / {total}'
+    dots = []
+    if total <= 12:
+        dots = [
+            html.Span(className=f'carousel-dot{" active" if i == idx else ""}')
+            for i in range(total)
+        ]
+    return src, caption, counter, dots, {}
 
 
 # ══════════════════════════════════════════════════════════════════════════════
@@ -1043,13 +1177,14 @@ def update_pie(desa):
         hovertemplate='<b>%{label}</b><br>%{value} ulasan (%{percent})<extra></extra>',
         sort=False,
     )
-    fig = apply_chart_theme(fig, show_legend=False, height=380,
+    fig = apply_chart_theme(fig, show_legend=False, height=420,
                             hide_xaxis=True, hide_yaxis=True)
     fig.update_layout(
-        margin=dict(t=58, b=28, l=28, r=28),
+        title=dict(y=0.98, yanchor='top', pad=dict(t=0, b=12)),
+        margin=dict(t=92, b=42, l=56, r=56),
         annotations=[
-            dict(text=f'<b>{total:,}</b>', x=0.5, y=0.56, showarrow=False,
-                 font=dict(family=THEME_TITLE_FONT, size=34,
+            dict(text=f'<b>{total:,}</b>', x=0.5, y=0.54, showarrow=False,
+                 font=dict(family=THEME_TITLE_FONT, size=32,
                            color=THEME_TITLE_COLOR)),
             dict(text='TOTAL ULASAN', x=0.5, y=0.42, showarrow=False,
                  font=dict(family=THEME_FONT, size=10, color=THEME_AXIS_COLOR)),
@@ -1104,10 +1239,14 @@ def update_aspect_bar(desa):
         legend_title_text='',
         yaxis=dict(autorange='reversed'),
         bargap=0.35,
-        margin=dict(t=58, b=52, l=14, r=40),
+        margin=dict(t=58, b=52, l=14, r=80),
     )
+    fig.update_xaxes(automargin=True)
     # Total count annotation at end of each stacked bar
     totals = {a: asp[a].get('total', 0) for a in aspect_cats}
+    max_total = max(totals.values()) if totals else 0
+    if max_total:
+        fig.update_xaxes(range=[0, max_total * 1.12])
     for a in aspect_cats:
         fig.add_annotation(
             x=totals[a], y=a, xshift=10, text=f'<b>{totals[a]:,}</b>',
@@ -1123,6 +1262,7 @@ def update_aspect_bar(desa):
     Input('aspect-dropdown', 'value'),
 )
 def update_opinion_bar(desa, aspect):
+    import re
     desa_list, single_key, is_semua = _normalize_desa(desa)
     if single_key:
         opinions = opinion_data.get(single_key, {}).get(aspect, {})
@@ -1135,10 +1275,22 @@ def update_opinion_bar(desa, aspect):
         return apply_chart_theme(fig, show_legend=False, height=350,
                                  hide_xaxis=True, hide_yaxis=True)
 
+    # Count real occurrences in reviews matching aspect + sentiment
+    d = filter_df(desa)
+    d_asp = d[d['aspects_str'].str.contains(aspect, na=False)]
+
     rows = []
     for sent in ['Positif', 'Negatif', 'Netral']:
-        for word in opinions.get(sent, [])[:7]:
-            rows.append({'Kata': word, 'Sentimen': sent})
+        words = opinions.get(sent, [])[:12]
+        if not words:
+            continue
+        d_sent = d_asp[d_asp['sentiment'] == sent]
+        text = ' '.join(d_sent['cleaned_review'].dropna().astype(str)).lower()
+        for word in words:
+            pattern = r'\b' + re.escape(word.lower()) + r'\b'
+            freq = len(re.findall(pattern, text))
+            if freq > 0:
+                rows.append({'Kata': word, 'Sentimen': sent, 'Frekuensi': freq})
 
     if not rows:
         fig = go.Figure()
@@ -1147,45 +1299,50 @@ def update_opinion_bar(desa, aspect):
         return apply_chart_theme(fig, show_legend=False, height=350,
                                  hide_xaxis=True, hide_yaxis=True)
 
-    op_df = pd.DataFrame(rows)
-    word_counts = op_df['Kata'].value_counts().reset_index()
-    word_counts.columns = ['Kata', 'Frekuensi']
+    word_counts = (pd.DataFrame(rows)
+                   .sort_values('Frekuensi', ascending=False)
+                   .drop_duplicates(subset=['Kata'], keep='first')
+                   .head(10)
+                   .iloc[::-1]
+                   .reset_index(drop=True))
+    word_counts['Sentimen'] = word_counts['Sentimen'].astype(str)
+    word_counts['Frekuensi'] = word_counts['Frekuensi'].astype(int)
 
-    word_sent = op_df.groupby('Kata')['Sentimen'].first().to_dict()
-    word_counts['Sentimen'] = word_counts['Kata'].map(word_sent)
-    word_counts = word_counts.head(10).iloc[::-1]
-
-    fig = px.bar(
-        word_counts, y='Kata', x='Frekuensi',
-        orientation='h', color='Sentimen', color_discrete_map=COLORS,
+    max_freq = int(word_counts['Frekuensi'].max())
+    fig = go.Figure()
+    for sent in ['Positif', 'Negatif', 'Netral']:
+        sub = word_counts[word_counts['Sentimen'] == sent]
+        if sub.empty:
+            continue
+        fig.add_trace(go.Bar(
+            x=sub['Frekuensi'].tolist(),
+            y=sub['Kata'].tolist(),
+            orientation='h',
+            name=sent,
+            marker=dict(color=COLORS.get(sent, '#475569'),
+                        line=dict(width=0), cornerradius=6),
+            text=sub['Frekuensi'].tolist(),
+            textposition='outside',
+            textfont=dict(family=THEME_FONT, size=11, color=THEME_TITLE_COLOR),
+            hovertemplate='<b>%{y}</b><br>Frekuensi: %{x}<extra></extra>',
+        ))
+    fig.update_layout(
         title=f'Opini — {aspect}',
-        text='Frekuensi',
-    )
-    fig.update_traces(
-        marker=dict(line=dict(width=0), cornerradius=6),
-        textposition='outside',
-        textfont=dict(family=THEME_FONT, size=11, color=THEME_TITLE_COLOR),
-        hovertemplate='<b>%{y}</b><br>Frekuensi: %{x}<extra></extra>',
+        yaxis=dict(categoryorder='array',
+                   categoryarray=word_counts['Kata'].tolist()),
     )
     fig = apply_chart_theme(fig, show_legend=False, height=350,
                             show_yaxis_grid=False, hide_xaxis=True)
-    fig.update_layout(bargap=0.32, margin=dict(t=58, b=30, l=14, r=44))
+    fig.update_layout(
+        bargap=0.32,
+        margin=dict(t=58, b=30, l=14, r=72),
+        xaxis=dict(range=[0, max_freq * 1.22]),
+    )
+    fig.update_xaxes(automargin=True)
     return fig
 
 
-# ── Word Analysis (TF-IDF + Wordcloud toggle) ───────────────────────────────
-@callback(
-    Output('tfidf-bar',     'style'),
-    Output('wordcloud-img', 'style'),
-    Input('word-view-toggle', 'value'),
-)
-def toggle_word_view(view):
-    if view == 'bar':
-        return {'display': 'block'}, {'display': 'none'}
-    return {'display': 'none'}, {'display': 'block', 'width': '100%',
-            'borderRadius': '8px'}
-
-
+# ── Word Analysis (TF-IDF + Wordcloud + Bigrams, side-by-side) ──────────────
 @callback(
     Output('tfidf-bar', 'figure'),
     Input('desa-dropdown',  'value'),
@@ -1207,14 +1364,14 @@ def update_tfidf_bar(desa, sentiment):
         return apply_chart_theme(fig, show_legend=False, height=420,
                                  hide_xaxis=True, hide_yaxis=True)
 
-    kw_df = pd.DataFrame(keywords, columns=['Kata Kunci', 'Skor TF-IDF'])
+    kw_df = pd.DataFrame(keywords[:10], columns=['Kata Kunci', 'Skor TF-IDF'])
     kw_df = kw_df.iloc[::-1]
     color = COLORS.get(sentiment, '#475569')
 
     fig = px.bar(
         kw_df, x='Skor TF-IDF', y='Kata Kunci', orientation='h',
         color_discrete_sequence=[color],
-        title=f'Kata Kunci Teratas (TF-IDF) — {sentiment}',
+        title=f'Kata Kunci Teratas — {sentiment}',
         text='Skor TF-IDF',
     )
     fig.update_traces(
@@ -1224,9 +1381,10 @@ def update_tfidf_bar(desa, sentiment):
         textfont=dict(family=THEME_FONT, size=10, color=THEME_TITLE_COLOR),
         hovertemplate='<b>%{y}</b><br>Skor: %{x:.3f}<extra></extra>',
     )
-    fig = apply_chart_theme(fig, show_legend=False, height=420,
+    fig = apply_chart_theme(fig, show_legend=False, height=380,
                             show_yaxis_grid=False, hide_xaxis=True)
     fig.update_layout(bargap=0.35, margin=dict(t=58, b=30, l=14, r=56))
+    fig.update_xaxes(automargin=True)
     return fig
 
 
@@ -1272,13 +1430,14 @@ def update_bigram(desa, sentiment):
         textfont=dict(family=THEME_FONT, size=11, color=THEME_TITLE_COLOR),
         hovertemplate='<b>%{y}</b><br>Frekuensi: %{x}<extra></extra>',
     )
-    fig = apply_chart_theme(fig, show_legend=False, height=420,
+    fig = apply_chart_theme(fig, show_legend=False, height=380,
                             show_yaxis_grid=False, hide_xaxis=True)
     fig.update_layout(
         yaxis=dict(autorange='reversed'),
         bargap=0.35,
-        margin=dict(t=58, b=30, l=14, r=44),
+        margin=dict(t=58, b=30, l=14, r=56),
     )
+    fig.update_xaxes(automargin=True)
     return fig
 
 
