@@ -1,0 +1,2222 @@
+{
+  "Buluh Cina": {
+    "Pemandangan & Alam": {
+      "total": 19,
+      "Positif": 12,
+      "Negatif": 2,
+      "Netral": 5,
+      "positivity_rate": 63.2
+    },
+    "Kebersihan": {
+      "total": 1,
+      "Positif": 0,
+      "Negatif": 0,
+      "Netral": 1,
+      "positivity_rate": 0.0
+    },
+    "Pelayanan": {
+      "total": 5,
+      "Positif": 4,
+      "Negatif": 0,
+      "Netral": 1,
+      "positivity_rate": 80.0
+    },
+    "Fasilitas": {
+      "total": 3,
+      "Positif": 1,
+      "Negatif": 0,
+      "Netral": 2,
+      "positivity_rate": 33.3
+    },
+    "Harga & Tiket": {
+      "total": 3,
+      "Positif": 1,
+      "Negatif": 0,
+      "Netral": 2,
+      "positivity_rate": 33.3
+    },
+    "Kuliner": {
+      "total": 1,
+      "Positif": 1,
+      "Negatif": 0,
+      "Netral": 0,
+      "positivity_rate": 100.0
+    },
+    "Suasana": {
+      "total": 7,
+      "Positif": 7,
+      "Negatif": 0,
+      "Netral": 0,
+      "positivity_rate": 100.0
+    },
+    "Akses & Lokasi": {
+      "total": 8,
+      "Positif": 3,
+      "Negatif": 0,
+      "Netral": 5,
+      "positivity_rate": 37.5
+    }
+  },
+  "Danau Emtofe": {
+    "Pemandangan & Alam": {
+      "total": 33,
+      "Positif": 25,
+      "Negatif": 1,
+      "Netral": 7,
+      "positivity_rate": 75.8
+    },
+    "Kebersihan": {
+      "total": 2,
+      "Positif": 1,
+      "Negatif": 0,
+      "Netral": 1,
+      "positivity_rate": 50.0
+    },
+    "Fasilitas": {
+      "total": 2,
+      "Positif": 0,
+      "Negatif": 2,
+      "Netral": 0,
+      "positivity_rate": 0.0
+    },
+    "Harga & Tiket": {
+      "total": 2,
+      "Positif": 0,
+      "Negatif": 0,
+      "Netral": 2,
+      "positivity_rate": 0.0
+    },
+    "Suasana": {
+      "total": 2,
+      "Positif": 1,
+      "Negatif": 0,
+      "Netral": 1,
+      "positivity_rate": 50.0
+    },
+    "Akses & Lokasi": {
+      "total": 24,
+      "Positif": 7,
+      "Negatif": 11,
+      "Netral": 6,
+      "positivity_rate": 29.2
+    }
+  },
+  "Danau Napabale": {
+    "Pemandangan & Alam": {
+      "total": 29,
+      "Positif": 26,
+      "Negatif": 0,
+      "Netral": 3,
+      "positivity_rate": 89.7
+    },
+    "Kebersihan": {
+      "total": 3,
+      "Positif": 1,
+      "Negatif": 2,
+      "Netral": 0,
+      "positivity_rate": 33.3
+    },
+    "Fasilitas": {
+      "total": 4,
+      "Positif": 2,
+      "Negatif": 1,
+      "Netral": 1,
+      "positivity_rate": 50.0
+    },
+    "Harga & Tiket": {
+      "total": 3,
+      "Positif": 0,
+      "Negatif": 1,
+      "Netral": 2,
+      "positivity_rate": 0.0
+    },
+    "Suasana": {
+      "total": 1,
+      "Positif": 1,
+      "Negatif": 0,
+      "Netral": 0,
+      "positivity_rate": 100.0
+    },
+    "Akses & Lokasi": {
+      "total": 4,
+      "Positif": 2,
+      "Negatif": 2,
+      "Netral": 0,
+      "positivity_rate": 50.0
+    }
+  },
+  "Danau Paisu": {
+    "Pemandangan & Alam": {
+      "total": 26,
+      "Positif": 22,
+      "Negatif": 0,
+      "Netral": 4,
+      "positivity_rate": 84.6
+    },
+    "Pelayanan": {
+      "total": 3,
+      "Positif": 1,
+      "Negatif": 0,
+      "Netral": 2,
+      "positivity_rate": 33.3
+    },
+    "Fasilitas": {
+      "total": 2,
+      "Positif": 1,
+      "Negatif": 0,
+      "Netral": 1,
+      "positivity_rate": 50.0
+    },
+    "Harga & Tiket": {
+      "total": 4,
+      "Positif": 2,
+      "Negatif": 0,
+      "Netral": 2,
+      "positivity_rate": 50.0
+    },
+    "Suasana": {
+      "total": 4,
+      "Positif": 4,
+      "Negatif": 0,
+      "Netral": 0,
+      "positivity_rate": 100.0
+    },
+    "Akses & Lokasi": {
+      "total": 6,
+      "Positif": 2,
+      "Negatif": 2,
+      "Netral": 2,
+      "positivity_rate": 33.3
+    }
+  },
+  "Desa Sade": {
+    "Pemandangan & Alam": {
+      "total": 3,
+      "Positif": 3,
+      "Negatif": 0,
+      "Netral": 0,
+      "positivity_rate": 100.0
+    },
+    "Kebersihan": {
+      "total": 2,
+      "Positif": 2,
+      "Negatif": 0,
+      "Netral": 0,
+      "positivity_rate": 100.0
+    },
+    "Pelayanan": {
+      "total": 17,
+      "Positif": 14,
+      "Negatif": 0,
+      "Netral": 3,
+      "positivity_rate": 82.4
+    },
+    "Fasilitas": {
+      "total": 3,
+      "Positif": 2,
+      "Negatif": 0,
+      "Netral": 1,
+      "positivity_rate": 66.7
+    },
+    "Harga & Tiket": {
+      "total": 13,
+      "Positif": 5,
+      "Negatif": 1,
+      "Netral": 7,
+      "positivity_rate": 38.5
+    },
+    "Kuliner": {
+      "total": 1,
+      "Positif": 1,
+      "Negatif": 0,
+      "Netral": 0,
+      "positivity_rate": 100.0
+    },
+    "Suasana": {
+      "total": 4,
+      "Positif": 4,
+      "Negatif": 0,
+      "Netral": 0,
+      "positivity_rate": 100.0
+    },
+    "Akses & Lokasi": {
+      "total": 3,
+      "Positif": 1,
+      "Negatif": 2,
+      "Netral": 0,
+      "positivity_rate": 33.3
+    },
+    "Budaya & Tradisi": {
+      "total": 17,
+      "Positif": 10,
+      "Negatif": 0,
+      "Netral": 7,
+      "positivity_rate": 58.8
+    }
+  },
+  "Desa Wisata Budo": {
+    "Pemandangan & Alam": {
+      "total": 23,
+      "Positif": 22,
+      "Negatif": 0,
+      "Netral": 1,
+      "positivity_rate": 95.7
+    },
+    "Kebersihan": {
+      "total": 3,
+      "Positif": 3,
+      "Negatif": 0,
+      "Netral": 0,
+      "positivity_rate": 100.0
+    },
+    "Pelayanan": {
+      "total": 4,
+      "Positif": 4,
+      "Negatif": 0,
+      "Netral": 0,
+      "positivity_rate": 100.0
+    },
+    "Fasilitas": {
+      "total": 6,
+      "Positif": 2,
+      "Negatif": 3,
+      "Netral": 1,
+      "positivity_rate": 33.3
+    },
+    "Harga & Tiket": {
+      "total": 7,
+      "Positif": 4,
+      "Negatif": 0,
+      "Netral": 3,
+      "positivity_rate": 57.1
+    },
+    "Kuliner": {
+      "total": 11,
+      "Positif": 9,
+      "Negatif": 1,
+      "Netral": 1,
+      "positivity_rate": 81.8
+    },
+    "Suasana": {
+      "total": 4,
+      "Positif": 4,
+      "Negatif": 0,
+      "Netral": 0,
+      "positivity_rate": 100.0
+    },
+    "Akses & Lokasi": {
+      "total": 5,
+      "Positif": 5,
+      "Negatif": 0,
+      "Netral": 0,
+      "positivity_rate": 100.0
+    }
+  },
+  "Desa Wisata Olele": {
+    "Pemandangan & Alam": {
+      "total": 34,
+      "Positif": 30,
+      "Negatif": 1,
+      "Netral": 3,
+      "positivity_rate": 88.2
+    },
+    "Kebersihan": {
+      "total": 3,
+      "Positif": 1,
+      "Negatif": 2,
+      "Netral": 0,
+      "positivity_rate": 33.3
+    },
+    "Pelayanan": {
+      "total": 11,
+      "Positif": 10,
+      "Negatif": 1,
+      "Netral": 0,
+      "positivity_rate": 90.9
+    },
+    "Fasilitas": {
+      "total": 2,
+      "Positif": 0,
+      "Negatif": 2,
+      "Netral": 0,
+      "positivity_rate": 0.0
+    },
+    "Harga & Tiket": {
+      "total": 3,
+      "Positif": 2,
+      "Negatif": 0,
+      "Netral": 1,
+      "positivity_rate": 66.7
+    },
+    "Kuliner": {
+      "total": 1,
+      "Positif": 1,
+      "Negatif": 0,
+      "Netral": 0,
+      "positivity_rate": 100.0
+    },
+    "Akses & Lokasi": {
+      "total": 3,
+      "Positif": 0,
+      "Negatif": 1,
+      "Netral": 2,
+      "positivity_rate": 0.0
+    },
+    "Budaya & Tradisi": {
+      "total": 1,
+      "Positif": 1,
+      "Negatif": 0,
+      "Netral": 0,
+      "positivity_rate": 100.0
+    }
+  },
+  "Desa Wisata Pampang": {
+    "Pemandangan & Alam": {
+      "total": 5,
+      "Positif": 5,
+      "Negatif": 0,
+      "Netral": 0,
+      "positivity_rate": 100.0
+    },
+    "Kebersihan": {
+      "total": 4,
+      "Positif": 3,
+      "Negatif": 1,
+      "Netral": 0,
+      "positivity_rate": 75.0
+    },
+    "Pelayanan": {
+      "total": 3,
+      "Positif": 1,
+      "Negatif": 0,
+      "Netral": 2,
+      "positivity_rate": 33.3
+    },
+    "Fasilitas": {
+      "total": 4,
+      "Positif": 3,
+      "Negatif": 0,
+      "Netral": 1,
+      "positivity_rate": 75.0
+    },
+    "Harga & Tiket": {
+      "total": 7,
+      "Positif": 1,
+      "Negatif": 2,
+      "Netral": 4,
+      "positivity_rate": 14.3
+    },
+    "Kuliner": {
+      "total": 5,
+      "Positif": 5,
+      "Negatif": 0,
+      "Netral": 0,
+      "positivity_rate": 100.0
+    },
+    "Akses & Lokasi": {
+      "total": 5,
+      "Positif": 2,
+      "Negatif": 0,
+      "Netral": 3,
+      "positivity_rate": 40.0
+    },
+    "Budaya & Tradisi": {
+      "total": 29,
+      "Positif": 18,
+      "Negatif": 0,
+      "Netral": 11,
+      "positivity_rate": 62.1
+    }
+  },
+  "Desa Wisata Setulang": {
+    "Pemandangan & Alam": {
+      "total": 7,
+      "Positif": 7,
+      "Negatif": 0,
+      "Netral": 0,
+      "positivity_rate": 100.0
+    },
+    "Pelayanan": {
+      "total": 2,
+      "Positif": 2,
+      "Negatif": 0,
+      "Netral": 0,
+      "positivity_rate": 100.0
+    },
+    "Fasilitas": {
+      "total": 1,
+      "Positif": 1,
+      "Negatif": 0,
+      "Netral": 0,
+      "positivity_rate": 100.0
+    },
+    "Kuliner": {
+      "total": 2,
+      "Positif": 1,
+      "Negatif": 0,
+      "Netral": 1,
+      "positivity_rate": 50.0
+    },
+    "Suasana": {
+      "total": 6,
+      "Positif": 6,
+      "Negatif": 0,
+      "Netral": 0,
+      "positivity_rate": 100.0
+    },
+    "Akses & Lokasi": {
+      "total": 3,
+      "Positif": 0,
+      "Negatif": 1,
+      "Netral": 2,
+      "positivity_rate": 0.0
+    },
+    "Budaya & Tradisi": {
+      "total": 10,
+      "Positif": 9,
+      "Negatif": 0,
+      "Netral": 1,
+      "positivity_rate": 90.0
+    }
+  },
+  "Desa Wisata Sungai Sekonyer": {
+    "Pemandangan & Alam": {
+      "total": 3,
+      "Positif": 2,
+      "Negatif": 0,
+      "Netral": 1,
+      "positivity_rate": 66.7
+    },
+    "Pelayanan": {
+      "total": 1,
+      "Positif": 1,
+      "Negatif": 0,
+      "Netral": 0,
+      "positivity_rate": 100.0
+    },
+    "Fasilitas": {
+      "total": 1,
+      "Positif": 1,
+      "Negatif": 0,
+      "Netral": 0,
+      "positivity_rate": 100.0
+    },
+    "Kuliner": {
+      "total": 1,
+      "Positif": 1,
+      "Negatif": 0,
+      "Netral": 0,
+      "positivity_rate": 100.0
+    },
+    "Suasana": {
+      "total": 1,
+      "Positif": 1,
+      "Negatif": 0,
+      "Netral": 0,
+      "positivity_rate": 100.0
+    },
+    "Akses & Lokasi": {
+      "total": 1,
+      "Positif": 1,
+      "Negatif": 0,
+      "Netral": 0,
+      "positivity_rate": 100.0
+    },
+    "Budaya & Tradisi": {
+      "total": 1,
+      "Positif": 0,
+      "Negatif": 0,
+      "Netral": 1,
+      "positivity_rate": 0.0
+    }
+  },
+  "Desa Wisata Sungai Utik": {
+    "Pemandangan & Alam": {
+      "total": 8,
+      "Positif": 6,
+      "Negatif": 0,
+      "Netral": 2,
+      "positivity_rate": 75.0
+    },
+    "Pelayanan": {
+      "total": 5,
+      "Positif": 5,
+      "Negatif": 0,
+      "Netral": 0,
+      "positivity_rate": 100.0
+    },
+    "Suasana": {
+      "total": 4,
+      "Positif": 4,
+      "Negatif": 0,
+      "Netral": 0,
+      "positivity_rate": 100.0
+    },
+    "Akses & Lokasi": {
+      "total": 1,
+      "Positif": 1,
+      "Negatif": 0,
+      "Netral": 0,
+      "positivity_rate": 100.0
+    },
+    "Budaya & Tradisi": {
+      "total": 8,
+      "Positif": 6,
+      "Negatif": 0,
+      "Netral": 2,
+      "positivity_rate": 75.0
+    }
+  },
+  "Desa Wisata Waerebo": {
+    "Pemandangan & Alam": {
+      "total": 17,
+      "Positif": 15,
+      "Negatif": 1,
+      "Netral": 1,
+      "positivity_rate": 88.2
+    },
+    "Kebersihan": {
+      "total": 2,
+      "Positif": 2,
+      "Negatif": 0,
+      "Netral": 0,
+      "positivity_rate": 100.0
+    },
+    "Pelayanan": {
+      "total": 10,
+      "Positif": 7,
+      "Negatif": 1,
+      "Netral": 2,
+      "positivity_rate": 70.0
+    },
+    "Fasilitas": {
+      "total": 5,
+      "Positif": 2,
+      "Negatif": 1,
+      "Netral": 2,
+      "positivity_rate": 40.0
+    },
+    "Harga & Tiket": {
+      "total": 4,
+      "Positif": 1,
+      "Negatif": 0,
+      "Netral": 3,
+      "positivity_rate": 25.0
+    },
+    "Kuliner": {
+      "total": 6,
+      "Positif": 5,
+      "Negatif": 1,
+      "Netral": 0,
+      "positivity_rate": 83.3
+    },
+    "Suasana": {
+      "total": 6,
+      "Positif": 5,
+      "Negatif": 0,
+      "Netral": 1,
+      "positivity_rate": 83.3
+    },
+    "Akses & Lokasi": {
+      "total": 13,
+      "Positif": 2,
+      "Negatif": 7,
+      "Netral": 4,
+      "positivity_rate": 15.4
+    },
+    "Budaya & Tradisi": {
+      "total": 10,
+      "Positif": 9,
+      "Negatif": 0,
+      "Netral": 1,
+      "positivity_rate": 90.0
+    }
+  },
+  "Gampong Nusa": {
+    "Pemandangan & Alam": {
+      "total": 7,
+      "Positif": 6,
+      "Negatif": 0,
+      "Netral": 1,
+      "positivity_rate": 85.7
+    },
+    "Pelayanan": {
+      "total": 8,
+      "Positif": 7,
+      "Negatif": 0,
+      "Netral": 1,
+      "positivity_rate": 87.5
+    },
+    "Fasilitas": {
+      "total": 2,
+      "Positif": 2,
+      "Negatif": 0,
+      "Netral": 0,
+      "positivity_rate": 100.0
+    },
+    "Kuliner": {
+      "total": 1,
+      "Positif": 1,
+      "Negatif": 0,
+      "Netral": 0,
+      "positivity_rate": 100.0
+    },
+    "Suasana": {
+      "total": 2,
+      "Positif": 2,
+      "Negatif": 0,
+      "Netral": 0,
+      "positivity_rate": 100.0
+    },
+    "Akses & Lokasi": {
+      "total": 1,
+      "Positif": 1,
+      "Negatif": 0,
+      "Netral": 0,
+      "positivity_rate": 100.0
+    },
+    "Budaya & Tradisi": {
+      "total": 1,
+      "Positif": 1,
+      "Negatif": 0,
+      "Netral": 0,
+      "positivity_rate": 100.0
+    }
+  },
+  "Kampung Ketupat": {
+    "Pemandangan & Alam": {
+      "total": 5,
+      "Positif": 4,
+      "Negatif": 0,
+      "Netral": 1,
+      "positivity_rate": 80.0
+    },
+    "Kebersihan": {
+      "total": 5,
+      "Positif": 3,
+      "Negatif": 2,
+      "Netral": 0,
+      "positivity_rate": 60.0
+    },
+    "Pelayanan": {
+      "total": 1,
+      "Positif": 0,
+      "Negatif": 1,
+      "Netral": 0,
+      "positivity_rate": 0.0
+    },
+    "Fasilitas": {
+      "total": 10,
+      "Positif": 5,
+      "Negatif": 1,
+      "Netral": 4,
+      "positivity_rate": 50.0
+    },
+    "Harga & Tiket": {
+      "total": 23,
+      "Positif": 7,
+      "Negatif": 8,
+      "Netral": 8,
+      "positivity_rate": 30.4
+    },
+    "Kuliner": {
+      "total": 14,
+      "Positif": 9,
+      "Negatif": 3,
+      "Netral": 2,
+      "positivity_rate": 64.3
+    },
+    "Suasana": {
+      "total": 3,
+      "Positif": 3,
+      "Negatif": 0,
+      "Netral": 0,
+      "positivity_rate": 100.0
+    },
+    "Akses & Lokasi": {
+      "total": 2,
+      "Positif": 2,
+      "Negatif": 0,
+      "Netral": 0,
+      "positivity_rate": 100.0
+    }
+  },
+  "Kampung Marengo Baduy": {
+    "Pemandangan & Alam": {
+      "total": 18,
+      "Positif": 16,
+      "Negatif": 1,
+      "Netral": 1,
+      "positivity_rate": 88.9
+    },
+    "Kebersihan": {
+      "total": 2,
+      "Positif": 1,
+      "Negatif": 1,
+      "Netral": 0,
+      "positivity_rate": 50.0
+    },
+    "Pelayanan": {
+      "total": 7,
+      "Positif": 6,
+      "Negatif": 0,
+      "Netral": 1,
+      "positivity_rate": 85.7
+    },
+    "Fasilitas": {
+      "total": 2,
+      "Positif": 1,
+      "Negatif": 0,
+      "Netral": 1,
+      "positivity_rate": 50.0
+    },
+    "Harga & Tiket": {
+      "total": 3,
+      "Positif": 0,
+      "Negatif": 0,
+      "Netral": 3,
+      "positivity_rate": 0.0
+    },
+    "Suasana": {
+      "total": 11,
+      "Positif": 10,
+      "Negatif": 0,
+      "Netral": 1,
+      "positivity_rate": 90.9
+    },
+    "Akses & Lokasi": {
+      "total": 12,
+      "Positif": 7,
+      "Negatif": 2,
+      "Netral": 3,
+      "positivity_rate": 58.3
+    },
+    "Budaya & Tradisi": {
+      "total": 8,
+      "Positif": 5,
+      "Negatif": 1,
+      "Netral": 2,
+      "positivity_rate": 62.5
+    }
+  },
+  "Kampung Naga": {
+    "Pemandangan & Alam": {
+      "total": 24,
+      "Positif": 20,
+      "Negatif": 0,
+      "Netral": 4,
+      "positivity_rate": 83.3
+    },
+    "Kebersihan": {
+      "total": 2,
+      "Positif": 1,
+      "Negatif": 1,
+      "Netral": 0,
+      "positivity_rate": 50.0
+    },
+    "Pelayanan": {
+      "total": 13,
+      "Positif": 11,
+      "Negatif": 2,
+      "Netral": 0,
+      "positivity_rate": 84.6
+    },
+    "Fasilitas": {
+      "total": 3,
+      "Positif": 1,
+      "Negatif": 0,
+      "Netral": 2,
+      "positivity_rate": 33.3
+    },
+    "Harga & Tiket": {
+      "total": 3,
+      "Positif": 2,
+      "Negatif": 0,
+      "Netral": 1,
+      "positivity_rate": 66.7
+    },
+    "Kuliner": {
+      "total": 4,
+      "Positif": 2,
+      "Negatif": 0,
+      "Netral": 2,
+      "positivity_rate": 50.0
+    },
+    "Suasana": {
+      "total": 15,
+      "Positif": 14,
+      "Negatif": 0,
+      "Netral": 1,
+      "positivity_rate": 93.3
+    },
+    "Akses & Lokasi": {
+      "total": 11,
+      "Positif": 4,
+      "Negatif": 4,
+      "Netral": 3,
+      "positivity_rate": 36.4
+    },
+    "Budaya & Tradisi": {
+      "total": 22,
+      "Positif": 16,
+      "Negatif": 2,
+      "Netral": 4,
+      "positivity_rate": 72.7
+    }
+  },
+  "Kampung Terih": {
+    "Pemandangan & Alam": {
+      "total": 24,
+      "Positif": 22,
+      "Negatif": 0,
+      "Netral": 2,
+      "positivity_rate": 91.7
+    },
+    "Kebersihan": {
+      "total": 1,
+      "Positif": 1,
+      "Negatif": 0,
+      "Netral": 0,
+      "positivity_rate": 100.0
+    },
+    "Pelayanan": {
+      "total": 2,
+      "Positif": 2,
+      "Negatif": 0,
+      "Netral": 0,
+      "positivity_rate": 100.0
+    },
+    "Fasilitas": {
+      "total": 4,
+      "Positif": 2,
+      "Negatif": 1,
+      "Netral": 1,
+      "positivity_rate": 50.0
+    },
+    "Harga & Tiket": {
+      "total": 5,
+      "Positif": 5,
+      "Negatif": 0,
+      "Netral": 0,
+      "positivity_rate": 100.0
+    },
+    "Kuliner": {
+      "total": 19,
+      "Positif": 18,
+      "Negatif": 0,
+      "Netral": 1,
+      "positivity_rate": 94.7
+    },
+    "Suasana": {
+      "total": 9,
+      "Positif": 9,
+      "Negatif": 0,
+      "Netral": 0,
+      "positivity_rate": 100.0
+    },
+    "Akses & Lokasi": {
+      "total": 8,
+      "Positif": 4,
+      "Negatif": 3,
+      "Netral": 1,
+      "positivity_rate": 50.0
+    }
+  },
+  "Kunjir": {
+    "Pemandangan & Alam": {
+      "total": 35,
+      "Positif": 27,
+      "Negatif": 4,
+      "Netral": 4,
+      "positivity_rate": 77.1
+    },
+    "Kebersihan": {
+      "total": 3,
+      "Positif": 0,
+      "Negatif": 3,
+      "Netral": 0,
+      "positivity_rate": 0.0
+    },
+    "Pelayanan": {
+      "total": 1,
+      "Positif": 1,
+      "Negatif": 0,
+      "Netral": 0,
+      "positivity_rate": 100.0
+    },
+    "Fasilitas": {
+      "total": 5,
+      "Positif": 3,
+      "Negatif": 0,
+      "Netral": 2,
+      "positivity_rate": 60.0
+    },
+    "Kuliner": {
+      "total": 5,
+      "Positif": 3,
+      "Negatif": 0,
+      "Netral": 2,
+      "positivity_rate": 60.0
+    },
+    "Suasana": {
+      "total": 5,
+      "Positif": 5,
+      "Negatif": 0,
+      "Netral": 0,
+      "positivity_rate": 100.0
+    },
+    "Akses & Lokasi": {
+      "total": 7,
+      "Positif": 2,
+      "Negatif": 5,
+      "Netral": 0,
+      "positivity_rate": 28.6
+    }
+  },
+  "Mamuju City": {
+    "Pemandangan & Alam": {
+      "total": 51,
+      "Positif": 48,
+      "Negatif": 2,
+      "Netral": 1,
+      "positivity_rate": 94.1
+    },
+    "Kebersihan": {
+      "total": 1,
+      "Positif": 1,
+      "Negatif": 0,
+      "Netral": 0,
+      "positivity_rate": 100.0
+    },
+    "Pelayanan": {
+      "total": 1,
+      "Positif": 1,
+      "Negatif": 0,
+      "Netral": 0,
+      "positivity_rate": 100.0
+    },
+    "Fasilitas": {
+      "total": 3,
+      "Positif": 3,
+      "Negatif": 0,
+      "Netral": 0,
+      "positivity_rate": 100.0
+    },
+    "Harga & Tiket": {
+      "total": 1,
+      "Positif": 1,
+      "Negatif": 0,
+      "Netral": 0,
+      "positivity_rate": 100.0
+    },
+    "Kuliner": {
+      "total": 2,
+      "Positif": 1,
+      "Negatif": 1,
+      "Netral": 0,
+      "positivity_rate": 50.0
+    },
+    "Suasana": {
+      "total": 5,
+      "Positif": 4,
+      "Negatif": 1,
+      "Netral": 0,
+      "positivity_rate": 80.0
+    },
+    "Akses & Lokasi": {
+      "total": 28,
+      "Positif": 10,
+      "Negatif": 13,
+      "Netral": 5,
+      "positivity_rate": 35.7
+    }
+  },
+  "Mangrove Kurau": {
+    "Pemandangan & Alam": {
+      "total": 30,
+      "Positif": 26,
+      "Negatif": 1,
+      "Netral": 3,
+      "positivity_rate": 86.7
+    },
+    "Kebersihan": {
+      "total": 2,
+      "Positif": 1,
+      "Negatif": 0,
+      "Netral": 1,
+      "positivity_rate": 50.0
+    },
+    "Pelayanan": {
+      "total": 1,
+      "Positif": 1,
+      "Negatif": 0,
+      "Netral": 0,
+      "positivity_rate": 100.0
+    },
+    "Fasilitas": {
+      "total": 6,
+      "Positif": 3,
+      "Negatif": 1,
+      "Netral": 2,
+      "positivity_rate": 50.0
+    },
+    "Harga & Tiket": {
+      "total": 2,
+      "Positif": 1,
+      "Negatif": 0,
+      "Netral": 1,
+      "positivity_rate": 50.0
+    },
+    "Suasana": {
+      "total": 5,
+      "Positif": 5,
+      "Negatif": 0,
+      "Netral": 0,
+      "positivity_rate": 100.0
+    },
+    "Akses & Lokasi": {
+      "total": 8,
+      "Positif": 4,
+      "Negatif": 1,
+      "Netral": 3,
+      "positivity_rate": 50.0
+    }
+  },
+  "Nagari Pariangan": {
+    "Pemandangan & Alam": {
+      "total": 48,
+      "Positif": 45,
+      "Negatif": 1,
+      "Netral": 2,
+      "positivity_rate": 93.8
+    },
+    "Kebersihan": {
+      "total": 4,
+      "Positif": 3,
+      "Negatif": 0,
+      "Netral": 1,
+      "positivity_rate": 75.0
+    },
+    "Pelayanan": {
+      "total": 3,
+      "Positif": 3,
+      "Negatif": 0,
+      "Netral": 0,
+      "positivity_rate": 100.0
+    },
+    "Fasilitas": {
+      "total": 2,
+      "Positif": 1,
+      "Negatif": 0,
+      "Netral": 1,
+      "positivity_rate": 50.0
+    },
+    "Harga & Tiket": {
+      "total": 1,
+      "Positif": 0,
+      "Negatif": 0,
+      "Netral": 1,
+      "positivity_rate": 0.0
+    },
+    "Kuliner": {
+      "total": 7,
+      "Positif": 5,
+      "Negatif": 0,
+      "Netral": 2,
+      "positivity_rate": 71.4
+    },
+    "Suasana": {
+      "total": 13,
+      "Positif": 12,
+      "Negatif": 0,
+      "Netral": 1,
+      "positivity_rate": 92.3
+    },
+    "Akses & Lokasi": {
+      "total": 8,
+      "Positif": 2,
+      "Negatif": 4,
+      "Netral": 2,
+      "positivity_rate": 25.0
+    }
+  },
+  "Osing": {
+    "Pemandangan & Alam": {
+      "total": 4,
+      "Positif": 4,
+      "Negatif": 0,
+      "Netral": 0,
+      "positivity_rate": 100.0
+    },
+    "Kebersihan": {
+      "total": 3,
+      "Positif": 0,
+      "Negatif": 3,
+      "Netral": 0,
+      "positivity_rate": 0.0
+    },
+    "Pelayanan": {
+      "total": 9,
+      "Positif": 6,
+      "Negatif": 2,
+      "Netral": 1,
+      "positivity_rate": 66.7
+    },
+    "Fasilitas": {
+      "total": 17,
+      "Positif": 7,
+      "Negatif": 5,
+      "Netral": 5,
+      "positivity_rate": 41.2
+    },
+    "Harga & Tiket": {
+      "total": 7,
+      "Positif": 6,
+      "Negatif": 1,
+      "Netral": 0,
+      "positivity_rate": 85.7
+    },
+    "Kuliner": {
+      "total": 21,
+      "Positif": 16,
+      "Negatif": 0,
+      "Netral": 5,
+      "positivity_rate": 76.2
+    },
+    "Suasana": {
+      "total": 8,
+      "Positif": 7,
+      "Negatif": 0,
+      "Netral": 1,
+      "positivity_rate": 87.5
+    },
+    "Akses & Lokasi": {
+      "total": 5,
+      "Positif": 2,
+      "Negatif": 3,
+      "Netral": 0,
+      "positivity_rate": 40.0
+    },
+    "Budaya & Tradisi": {
+      "total": 16,
+      "Positif": 12,
+      "Negatif": 2,
+      "Netral": 2,
+      "positivity_rate": 75.0
+    }
+  },
+  "Pantai Batu Kuda": {
+    "Pemandangan & Alam": {
+      "total": 32,
+      "Positif": 19,
+      "Negatif": 3,
+      "Netral": 10,
+      "positivity_rate": 59.4
+    },
+    "Kebersihan": {
+      "total": 3,
+      "Positif": 1,
+      "Negatif": 2,
+      "Netral": 0,
+      "positivity_rate": 33.3
+    },
+    "Pelayanan": {
+      "total": 1,
+      "Positif": 1,
+      "Negatif": 0,
+      "Netral": 0,
+      "positivity_rate": 100.0
+    },
+    "Fasilitas": {
+      "total": 4,
+      "Positif": 3,
+      "Negatif": 1,
+      "Netral": 0,
+      "positivity_rate": 75.0
+    },
+    "Harga & Tiket": {
+      "total": 4,
+      "Positif": 1,
+      "Negatif": 2,
+      "Netral": 1,
+      "positivity_rate": 25.0
+    },
+    "Suasana": {
+      "total": 1,
+      "Positif": 1,
+      "Negatif": 0,
+      "Netral": 0,
+      "positivity_rate": 100.0
+    }
+  },
+  "Pentingsari": {
+    "Pemandangan & Alam": {
+      "total": 14,
+      "Positif": 13,
+      "Negatif": 1,
+      "Netral": 0,
+      "positivity_rate": 92.9
+    },
+    "Kebersihan": {
+      "total": 8,
+      "Positif": 6,
+      "Negatif": 0,
+      "Netral": 2,
+      "positivity_rate": 75.0
+    },
+    "Pelayanan": {
+      "total": 19,
+      "Positif": 19,
+      "Negatif": 0,
+      "Netral": 0,
+      "positivity_rate": 100.0
+    },
+    "Fasilitas": {
+      "total": 32,
+      "Positif": 27,
+      "Negatif": 2,
+      "Netral": 3,
+      "positivity_rate": 84.4
+    },
+    "Harga & Tiket": {
+      "total": 1,
+      "Positif": 1,
+      "Negatif": 0,
+      "Netral": 0,
+      "positivity_rate": 100.0
+    },
+    "Kuliner": {
+      "total": 12,
+      "Positif": 12,
+      "Negatif": 0,
+      "Netral": 0,
+      "positivity_rate": 100.0
+    },
+    "Suasana": {
+      "total": 23,
+      "Positif": 23,
+      "Negatif": 0,
+      "Netral": 0,
+      "positivity_rate": 100.0
+    },
+    "Akses & Lokasi": {
+      "total": 11,
+      "Positif": 7,
+      "Negatif": 3,
+      "Netral": 1,
+      "positivity_rate": 63.6
+    },
+    "Budaya & Tradisi": {
+      "total": 1,
+      "Positif": 1,
+      "Negatif": 0,
+      "Netral": 0,
+      "positivity_rate": 100.0
+    }
+  },
+  "Pulau Kemaro": {
+    "Pemandangan & Alam": {
+      "total": 12,
+      "Positif": 11,
+      "Negatif": 1,
+      "Netral": 0,
+      "positivity_rate": 91.7
+    },
+    "Kebersihan": {
+      "total": 10,
+      "Positif": 3,
+      "Negatif": 7,
+      "Netral": 0,
+      "positivity_rate": 30.0
+    },
+    "Fasilitas": {
+      "total": 5,
+      "Positif": 4,
+      "Negatif": 1,
+      "Netral": 0,
+      "positivity_rate": 80.0
+    },
+    "Harga & Tiket": {
+      "total": 7,
+      "Positif": 3,
+      "Negatif": 1,
+      "Netral": 3,
+      "positivity_rate": 42.9
+    },
+    "Kuliner": {
+      "total": 3,
+      "Positif": 2,
+      "Negatif": 0,
+      "Netral": 1,
+      "positivity_rate": 66.7
+    },
+    "Suasana": {
+      "total": 3,
+      "Positif": 3,
+      "Negatif": 0,
+      "Netral": 0,
+      "positivity_rate": 100.0
+    },
+    "Akses & Lokasi": {
+      "total": 11,
+      "Positif": 8,
+      "Negatif": 1,
+      "Netral": 2,
+      "positivity_rate": 72.7
+    },
+    "Budaya & Tradisi": {
+      "total": 7,
+      "Positif": 7,
+      "Negatif": 0,
+      "Netral": 0,
+      "positivity_rate": 100.0
+    }
+  },
+  "Pulau Kumayan Kota": {
+    "Pemandangan & Alam": {
+      "total": 15,
+      "Positif": 13,
+      "Negatif": 1,
+      "Netral": 1,
+      "positivity_rate": 86.7
+    },
+    "Kebersihan": {
+      "total": 10,
+      "Positif": 4,
+      "Negatif": 4,
+      "Netral": 2,
+      "positivity_rate": 40.0
+    },
+    "Pelayanan": {
+      "total": 1,
+      "Positif": 0,
+      "Negatif": 1,
+      "Netral": 0,
+      "positivity_rate": 0.0
+    },
+    "Fasilitas": {
+      "total": 26,
+      "Positif": 12,
+      "Negatif": 5,
+      "Netral": 9,
+      "positivity_rate": 46.2
+    },
+    "Harga & Tiket": {
+      "total": 9,
+      "Positif": 2,
+      "Negatif": 2,
+      "Netral": 5,
+      "positivity_rate": 22.2
+    },
+    "Kuliner": {
+      "total": 1,
+      "Positif": 1,
+      "Negatif": 0,
+      "Netral": 0,
+      "positivity_rate": 100.0
+    },
+    "Suasana": {
+      "total": 9,
+      "Positif": 9,
+      "Negatif": 0,
+      "Netral": 0,
+      "positivity_rate": 100.0
+    },
+    "Akses & Lokasi": {
+      "total": 11,
+      "Positif": 9,
+      "Negatif": 2,
+      "Netral": 0,
+      "positivity_rate": 81.8
+    }
+  },
+  "Pulesari": {
+    "Pemandangan & Alam": {
+      "total": 25,
+      "Positif": 22,
+      "Negatif": 2,
+      "Netral": 1,
+      "positivity_rate": 88.0
+    },
+    "Kebersihan": {
+      "total": 10,
+      "Positif": 8,
+      "Negatif": 1,
+      "Netral": 1,
+      "positivity_rate": 80.0
+    },
+    "Pelayanan": {
+      "total": 28,
+      "Positif": 27,
+      "Negatif": 1,
+      "Netral": 0,
+      "positivity_rate": 96.4
+    },
+    "Fasilitas": {
+      "total": 27,
+      "Positif": 23,
+      "Negatif": 2,
+      "Netral": 2,
+      "positivity_rate": 85.2
+    },
+    "Harga & Tiket": {
+      "total": 6,
+      "Positif": 4,
+      "Negatif": 1,
+      "Netral": 1,
+      "positivity_rate": 66.7
+    },
+    "Kuliner": {
+      "total": 12,
+      "Positif": 8,
+      "Negatif": 3,
+      "Netral": 1,
+      "positivity_rate": 66.7
+    },
+    "Suasana": {
+      "total": 15,
+      "Positif": 15,
+      "Negatif": 0,
+      "Netral": 0,
+      "positivity_rate": 100.0
+    },
+    "Akses & Lokasi": {
+      "total": 12,
+      "Positif": 8,
+      "Negatif": 2,
+      "Netral": 2,
+      "positivity_rate": 66.7
+    }
+  },
+  "Sauwandarek": {
+    "Pemandangan & Alam": {
+      "total": 12,
+      "Positif": 10,
+      "Negatif": 0,
+      "Netral": 2,
+      "positivity_rate": 83.3
+    },
+    "Kebersihan": {
+      "total": 1,
+      "Positif": 1,
+      "Negatif": 0,
+      "Netral": 0,
+      "positivity_rate": 100.0
+    },
+    "Pelayanan": {
+      "total": 1,
+      "Positif": 1,
+      "Negatif": 0,
+      "Netral": 0,
+      "positivity_rate": 100.0
+    },
+    "Fasilitas": {
+      "total": 2,
+      "Positif": 2,
+      "Negatif": 0,
+      "Netral": 0,
+      "positivity_rate": 100.0
+    },
+    "Harga & Tiket": {
+      "total": 1,
+      "Positif": 0,
+      "Negatif": 0,
+      "Netral": 1,
+      "positivity_rate": 0.0
+    },
+    "Suasana": {
+      "total": 1,
+      "Positif": 1,
+      "Negatif": 0,
+      "Netral": 0,
+      "positivity_rate": 100.0
+    },
+    "Akses & Lokasi": {
+      "total": 1,
+      "Positif": 1,
+      "Negatif": 0,
+      "Netral": 0,
+      "positivity_rate": 100.0
+    },
+    "Budaya & Tradisi": {
+      "total": 1,
+      "Positif": 0,
+      "Negatif": 0,
+      "Netral": 1,
+      "positivity_rate": 0.0
+    }
+  },
+  "Setu Babakan": {
+    "Pemandangan & Alam": {
+      "total": 14,
+      "Positif": 8,
+      "Negatif": 5,
+      "Netral": 1,
+      "positivity_rate": 57.1
+    },
+    "Kebersihan": {
+      "total": 4,
+      "Positif": 2,
+      "Negatif": 2,
+      "Netral": 0,
+      "positivity_rate": 50.0
+    },
+    "Pelayanan": {
+      "total": 5,
+      "Positif": 2,
+      "Negatif": 2,
+      "Netral": 1,
+      "positivity_rate": 40.0
+    },
+    "Fasilitas": {
+      "total": 7,
+      "Positif": 3,
+      "Negatif": 3,
+      "Netral": 1,
+      "positivity_rate": 42.9
+    },
+    "Harga & Tiket": {
+      "total": 7,
+      "Positif": 5,
+      "Negatif": 2,
+      "Netral": 0,
+      "positivity_rate": 71.4
+    },
+    "Kuliner": {
+      "total": 21,
+      "Positif": 15,
+      "Negatif": 4,
+      "Netral": 2,
+      "positivity_rate": 71.4
+    },
+    "Suasana": {
+      "total": 4,
+      "Positif": 4,
+      "Negatif": 0,
+      "Netral": 0,
+      "positivity_rate": 100.0
+    },
+    "Akses & Lokasi": {
+      "total": 15,
+      "Positif": 3,
+      "Negatif": 12,
+      "Netral": 0,
+      "positivity_rate": 20.0
+    },
+    "Budaya & Tradisi": {
+      "total": 2,
+      "Positif": 2,
+      "Negatif": 0,
+      "Netral": 0,
+      "positivity_rate": 100.0
+    }
+  },
+  "Tanjung Laut": {
+    "Pemandangan & Alam": {
+      "total": 14,
+      "Positif": 9,
+      "Negatif": 3,
+      "Netral": 2,
+      "positivity_rate": 64.3
+    },
+    "Kebersihan": {
+      "total": 2,
+      "Positif": 1,
+      "Negatif": 1,
+      "Netral": 0,
+      "positivity_rate": 50.0
+    },
+    "Pelayanan": {
+      "total": 4,
+      "Positif": 4,
+      "Negatif": 0,
+      "Netral": 0,
+      "positivity_rate": 100.0
+    },
+    "Fasilitas": {
+      "total": 9,
+      "Positif": 7,
+      "Negatif": 1,
+      "Netral": 1,
+      "positivity_rate": 77.8
+    },
+    "Harga & Tiket": {
+      "total": 8,
+      "Positif": 3,
+      "Negatif": 2,
+      "Netral": 3,
+      "positivity_rate": 37.5
+    },
+    "Kuliner": {
+      "total": 1,
+      "Positif": 1,
+      "Negatif": 0,
+      "Netral": 0,
+      "positivity_rate": 100.0
+    },
+    "Suasana": {
+      "total": 2,
+      "Positif": 2,
+      "Negatif": 0,
+      "Netral": 0,
+      "positivity_rate": 100.0
+    },
+    "Akses & Lokasi": {
+      "total": 20,
+      "Positif": 6,
+      "Negatif": 8,
+      "Netral": 6,
+      "positivity_rate": 30.0
+    },
+    "Budaya & Tradisi": {
+      "total": 1,
+      "Positif": 0,
+      "Negatif": 1,
+      "Netral": 0,
+      "positivity_rate": 0.0
+    }
+  },
+  "Tanjung Rappa Pelangi": {
+    "Pemandangan & Alam": {
+      "total": 31,
+      "Positif": 29,
+      "Negatif": 1,
+      "Netral": 1,
+      "positivity_rate": 93.5
+    },
+    "Kebersihan": {
+      "total": 6,
+      "Positif": 3,
+      "Negatif": 2,
+      "Netral": 1,
+      "positivity_rate": 50.0
+    },
+    "Fasilitas": {
+      "total": 14,
+      "Positif": 10,
+      "Negatif": 1,
+      "Netral": 3,
+      "positivity_rate": 71.4
+    },
+    "Harga & Tiket": {
+      "total": 5,
+      "Positif": 2,
+      "Negatif": 0,
+      "Netral": 3,
+      "positivity_rate": 40.0
+    },
+    "Kuliner": {
+      "total": 2,
+      "Positif": 1,
+      "Negatif": 1,
+      "Netral": 0,
+      "positivity_rate": 50.0
+    },
+    "Suasana": {
+      "total": 5,
+      "Positif": 5,
+      "Negatif": 0,
+      "Netral": 0,
+      "positivity_rate": 100.0
+    },
+    "Akses & Lokasi": {
+      "total": 4,
+      "Positif": 2,
+      "Negatif": 2,
+      "Netral": 0,
+      "positivity_rate": 50.0
+    }
+  },
+  "Tomok": {
+    "Pelayanan": {
+      "total": 2,
+      "Positif": 1,
+      "Negatif": 1,
+      "Netral": 0,
+      "positivity_rate": 50.0
+    },
+    "Fasilitas": {
+      "total": 2,
+      "Positif": 0,
+      "Negatif": 0,
+      "Netral": 2,
+      "positivity_rate": 0.0
+    },
+    "Harga & Tiket": {
+      "total": 5,
+      "Positif": 2,
+      "Negatif": 1,
+      "Netral": 2,
+      "positivity_rate": 40.0
+    },
+    "Kuliner": {
+      "total": 2,
+      "Positif": 1,
+      "Negatif": 0,
+      "Netral": 1,
+      "positivity_rate": 50.0
+    },
+    "Akses & Lokasi": {
+      "total": 3,
+      "Positif": 0,
+      "Negatif": 2,
+      "Netral": 1,
+      "positivity_rate": 0.0
+    }
+  },
+  "kampung blekok": {
+    "Pemandangan & Alam": {
+      "total": 125,
+      "Positif": 105,
+      "Negatif": 9,
+      "Netral": 11,
+      "positivity_rate": 84.0
+    },
+    "Kebersihan": {
+      "total": 12,
+      "Positif": 5,
+      "Negatif": 5,
+      "Netral": 2,
+      "positivity_rate": 41.7
+    },
+    "Pelayanan": {
+      "total": 15,
+      "Positif": 13,
+      "Negatif": 2,
+      "Netral": 0,
+      "positivity_rate": 86.7
+    },
+    "Fasilitas": {
+      "total": 49,
+      "Positif": 24,
+      "Negatif": 10,
+      "Netral": 15,
+      "positivity_rate": 49.0
+    },
+    "Harga & Tiket": {
+      "total": 33,
+      "Positif": 25,
+      "Negatif": 4,
+      "Netral": 4,
+      "positivity_rate": 75.8
+    },
+    "Kuliner": {
+      "total": 14,
+      "Positif": 12,
+      "Negatif": 2,
+      "Netral": 0,
+      "positivity_rate": 85.7
+    },
+    "Suasana": {
+      "total": 18,
+      "Positif": 14,
+      "Negatif": 2,
+      "Netral": 2,
+      "positivity_rate": 77.8
+    },
+    "Akses & Lokasi": {
+      "total": 39,
+      "Positif": 27,
+      "Negatif": 4,
+      "Netral": 8,
+      "positivity_rate": 69.2
+    },
+    "Budaya & Tradisi": {
+      "total": 4,
+      "Positif": 4,
+      "Negatif": 0,
+      "Netral": 0,
+      "positivity_rate": 100.0
+    }
+  },
+  "kete kesu": {
+    "Pemandangan & Alam": {
+      "total": 103,
+      "Positif": 88,
+      "Negatif": 4,
+      "Netral": 11,
+      "positivity_rate": 85.4
+    },
+    "Kebersihan": {
+      "total": 30,
+      "Positif": 18,
+      "Negatif": 8,
+      "Netral": 4,
+      "positivity_rate": 60.0
+    },
+    "Pelayanan": {
+      "total": 23,
+      "Positif": 16,
+      "Negatif": 1,
+      "Netral": 6,
+      "positivity_rate": 69.6
+    },
+    "Fasilitas": {
+      "total": 79,
+      "Positif": 56,
+      "Negatif": 11,
+      "Netral": 12,
+      "positivity_rate": 70.9
+    },
+    "Harga & Tiket": {
+      "total": 80,
+      "Positif": 51,
+      "Negatif": 6,
+      "Netral": 23,
+      "positivity_rate": 63.7
+    },
+    "Kuliner": {
+      "total": 58,
+      "Positif": 49,
+      "Negatif": 4,
+      "Netral": 5,
+      "positivity_rate": 84.5
+    },
+    "Suasana": {
+      "total": 22,
+      "Positif": 19,
+      "Negatif": 1,
+      "Netral": 2,
+      "positivity_rate": 86.4
+    },
+    "Akses & Lokasi": {
+      "total": 92,
+      "Positif": 59,
+      "Negatif": 10,
+      "Netral": 23,
+      "positivity_rate": 64.1
+    },
+    "Budaya & Tradisi": {
+      "total": 254,
+      "Positif": 194,
+      "Negatif": 4,
+      "Netral": 56,
+      "positivity_rate": 76.4
+    }
+  },
+  "penglipuran": {
+    "Pemandangan & Alam": {
+      "total": 126,
+      "Positif": 120,
+      "Negatif": 3,
+      "Netral": 3,
+      "positivity_rate": 95.2
+    },
+    "Kebersihan": {
+      "total": 66,
+      "Positif": 50,
+      "Negatif": 12,
+      "Netral": 4,
+      "positivity_rate": 75.8
+    },
+    "Pelayanan": {
+      "total": 205,
+      "Positif": 186,
+      "Negatif": 4,
+      "Netral": 15,
+      "positivity_rate": 90.7
+    },
+    "Fasilitas": {
+      "total": 149,
+      "Positif": 85,
+      "Negatif": 20,
+      "Netral": 44,
+      "positivity_rate": 57.0
+    },
+    "Harga & Tiket": {
+      "total": 180,
+      "Positif": 105,
+      "Negatif": 19,
+      "Netral": 56,
+      "positivity_rate": 58.3
+    },
+    "Kuliner": {
+      "total": 87,
+      "Positif": 65,
+      "Negatif": 7,
+      "Netral": 15,
+      "positivity_rate": 74.7
+    },
+    "Suasana": {
+      "total": 272,
+      "Positif": 247,
+      "Negatif": 8,
+      "Netral": 17,
+      "positivity_rate": 90.8
+    },
+    "Akses & Lokasi": {
+      "total": 97,
+      "Positif": 63,
+      "Negatif": 14,
+      "Netral": 20,
+      "positivity_rate": 64.9
+    },
+    "Budaya & Tradisi": {
+      "total": 262,
+      "Positif": 208,
+      "Negatif": 2,
+      "Netral": 52,
+      "positivity_rate": 79.4
+    }
+  },
+  "pentingsari": {
+    "Pemandangan & Alam": {
+      "total": 39,
+      "Positif": 36,
+      "Negatif": 0,
+      "Netral": 3,
+      "positivity_rate": 92.3
+    },
+    "Kebersihan": {
+      "total": 11,
+      "Positif": 7,
+      "Negatif": 3,
+      "Netral": 1,
+      "positivity_rate": 63.6
+    },
+    "Pelayanan": {
+      "total": 39,
+      "Positif": 39,
+      "Negatif": 0,
+      "Netral": 0,
+      "positivity_rate": 100.0
+    },
+    "Fasilitas": {
+      "total": 41,
+      "Positif": 35,
+      "Negatif": 1,
+      "Netral": 5,
+      "positivity_rate": 85.4
+    },
+    "Harga & Tiket": {
+      "total": 5,
+      "Positif": 5,
+      "Negatif": 0,
+      "Netral": 0,
+      "positivity_rate": 100.0
+    },
+    "Kuliner": {
+      "total": 14,
+      "Positif": 14,
+      "Negatif": 0,
+      "Netral": 0,
+      "positivity_rate": 100.0
+    },
+    "Suasana": {
+      "total": 64,
+      "Positif": 62,
+      "Negatif": 0,
+      "Netral": 2,
+      "positivity_rate": 96.9
+    },
+    "Akses & Lokasi": {
+      "total": 13,
+      "Positif": 5,
+      "Negatif": 4,
+      "Netral": 4,
+      "positivity_rate": 38.5
+    },
+    "Budaya & Tradisi": {
+      "total": 5,
+      "Positif": 5,
+      "Negatif": 0,
+      "Netral": 0,
+      "positivity_rate": 100.0
+    }
+  },
+  "pujonkidul": {
+    "Pemandangan & Alam": {
+      "total": 461,
+      "Positif": 431,
+      "Negatif": 14,
+      "Netral": 16,
+      "positivity_rate": 93.5
+    },
+    "Kebersihan": {
+      "total": 30,
+      "Positif": 22,
+      "Negatif": 4,
+      "Netral": 4,
+      "positivity_rate": 73.3
+    },
+    "Pelayanan": {
+      "total": 62,
+      "Positif": 50,
+      "Negatif": 9,
+      "Netral": 3,
+      "positivity_rate": 80.6
+    },
+    "Fasilitas": {
+      "total": 316,
+      "Positif": 209,
+      "Negatif": 59,
+      "Netral": 48,
+      "positivity_rate": 66.1
+    },
+    "Harga & Tiket": {
+      "total": 237,
+      "Positif": 168,
+      "Negatif": 19,
+      "Netral": 50,
+      "positivity_rate": 70.9
+    },
+    "Kuliner": {
+      "total": 296,
+      "Positif": 238,
+      "Negatif": 31,
+      "Netral": 27,
+      "positivity_rate": 80.4
+    },
+    "Suasana": {
+      "total": 270,
+      "Positif": 260,
+      "Negatif": 3,
+      "Netral": 7,
+      "positivity_rate": 96.3
+    },
+    "Akses & Lokasi": {
+      "total": 167,
+      "Positif": 67,
+      "Negatif": 71,
+      "Netral": 29,
+      "positivity_rate": 40.1
+    },
+    "Budaya & Tradisi": {
+      "total": 1,
+      "Positif": 1,
+      "Negatif": 0,
+      "Netral": 0,
+      "positivity_rate": 100.0
+    }
+  },
+  "umbul ponggok": {
+    "Pemandangan & Alam": {
+      "total": 97,
+      "Positif": 69,
+      "Negatif": 6,
+      "Netral": 22,
+      "positivity_rate": 71.1
+    },
+    "Kebersihan": {
+      "total": 79,
+      "Positif": 37,
+      "Negatif": 18,
+      "Netral": 24,
+      "positivity_rate": 46.8
+    },
+    "Pelayanan": {
+      "total": 67,
+      "Positif": 60,
+      "Negatif": 2,
+      "Netral": 5,
+      "positivity_rate": 89.6
+    },
+    "Fasilitas": {
+      "total": 330,
+      "Positif": 197,
+      "Negatif": 50,
+      "Netral": 83,
+      "positivity_rate": 59.7
+    },
+    "Harga & Tiket": {
+      "total": 197,
+      "Positif": 126,
+      "Negatif": 21,
+      "Netral": 50,
+      "positivity_rate": 64.0
+    },
+    "Kuliner": {
+      "total": 83,
+      "Positif": 68,
+      "Negatif": 7,
+      "Netral": 8,
+      "positivity_rate": 81.9
+    },
+    "Suasana": {
+      "total": 36,
+      "Positif": 33,
+      "Negatif": 0,
+      "Netral": 3,
+      "positivity_rate": 91.7
+    },
+    "Akses & Lokasi": {
+      "total": 53,
+      "Positif": 35,
+      "Negatif": 7,
+      "Netral": 11,
+      "positivity_rate": 66.0
+    },
+    "Budaya & Tradisi": {
+      "total": 1,
+      "Positif": 1,
+      "Negatif": 0,
+      "Netral": 0,
+      "positivity_rate": 100.0
+    }
+  },
+  "Semua": {
+    "Pemandangan & Alam": {
+      "total": 1573,
+      "Positif": 1376,
+      "Negatif": 67,
+      "Netral": 130,
+      "positivity_rate": 87.5
+    },
+    "Kebersihan": {
+      "total": 325,
+      "Positif": 192,
+      "Negatif": 84,
+      "Netral": 49,
+      "positivity_rate": 59.1
+    },
+    "Pelayanan": {
+      "total": 579,
+      "Positif": 506,
+      "Negatif": 30,
+      "Netral": 43,
+      "positivity_rate": 87.4
+    },
+    "Fasilitas": {
+      "total": 1179,
+      "Positif": 740,
+      "Negatif": 184,
+      "Netral": 255,
+      "positivity_rate": 62.8
+    },
+    "Harga & Tiket": {
+      "total": 876,
+      "Positif": 541,
+      "Negatif": 93,
+      "Netral": 242,
+      "positivity_rate": 61.8
+    },
+    "Kuliner": {
+      "total": 707,
+      "Positif": 566,
+      "Negatif": 65,
+      "Netral": 76,
+      "positivity_rate": 80.1
+    },
+    "Suasana": {
+      "total": 860,
+      "Positif": 806,
+      "Negatif": 15,
+      "Netral": 39,
+      "positivity_rate": 93.7
+    },
+    "Akses & Lokasi": {
+      "total": 715,
+      "Positif": 364,
+      "Negatif": 203,
+      "Netral": 148,
+      "positivity_rate": 50.9
+    },
+    "Budaya & Tradisi": {
+      "total": 662,
+      "Positif": 510,
+      "Negatif": 12,
+      "Netral": 140,
+      "positivity_rate": 77.0
+    }
+  }
+}

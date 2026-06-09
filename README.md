@@ -2,6 +2,9 @@
 
 Aspect-Based Sentiment Analysis (ABSA) pada ulasan desa wisata Indonesia menggunakan arsitektur **Hierarchical Multi-Task Learning** (Wang et al., 2021) yang diadaptasi untuk **IndoBERT**.
 
+> **Status:** Penelitian selesai. ✅
+> **Dashboard live:** https://jaassoonn1-dashboard-sentimen-desa-wisata.hf.space (Hugging Face Spaces)
+
 ## Hasil Utama
 
 | Model | Dataset | F1 |
@@ -98,7 +101,34 @@ Notebooks di folder `sentiment analysis/` untuk scraping, cleaning, dan dashboar
 
 **Flow:** `Scrape_GoogleMaps` → `Clean_Reviews` → `SA_AutoLabel` → Dashboard
 
-Dashboard (Dash app) di `sentiment analysis/dashboard/app.py`.
+### Dashboard
+
+Dashboard interaktif (Dash) di `sentiment analysis/dashboard/app.py`, dengan **mode
+Pengelola** (grafik & tabel analitik) dan **mode Pengunjung** (galeri destinasi +
+ringkasan ramah-pengunjung). Saat runtime hanya membaca CSV/JSON hasil pelabelan —
+tidak menjalankan model.
+
+```bash
+python "sentiment analysis/dashboard/app.py"   # http://localhost:8050
+# tambah --mtl-only untuk memakai output MTL-murni (*_mtl_only.*)
+```
+
+**Live:** https://jaassoonn1-dashboard-sentimen-desa-wisata.hf.space (di-deploy ke
+Hugging Face Spaces via Docker; repo deploy terpisah, lihat `CARA_UPDATE.md` di repo Space).
+
+### Skrip regenerasi data (`scripts/`)
+
+Skrip yang mencerminkan logika cell di `SA_AutoLabel.ipynb` untuk meregenerasi data
+dashboard tanpa menjalankan ulang seluruh notebook:
+
+| Skrip | Output |
+|-------|--------|
+| `scripts/build_phrase_words.py` | `phrase_words.json` (word cloud & bigram per-klausa) |
+| `scripts/build_opinion_words.py` | `opinion_words.json` + refresh `opinions` di `insights_summary.json` (kata kunci per-aspek, ekstraksi per-klausa) |
+
+```bash
+D:/miniconda3/envs/ta_nlp/python.exe scripts/build_opinion_words.py
+```
 
 ## Struktur Proyek
 
@@ -114,11 +144,14 @@ Dashboard (Dash app) di `sentiment analysis/dashboard/app.py`.
 │           └── cleaned/             # Hasil cleaning (*_reviews.csv, *_full.csv)
 ├── models/                           # Model weights & checkpoints
 ├── notebooks/                        # ABSA notebooks (00-20)
+├── scripts/                          # Skrip regenerasi data dashboard
+│   ├── build_phrase_words.py
+│   └── build_opinion_words.py
 ├── sentiment analysis/
 │   ├── Scrape_GoogleMaps.ipynb       # Scraping via Apify
 │   ├── Clean_Reviews.ipynb           # Cleaning & preprocessing
 │   ├── SA_AutoLabel.ipynb            # Auto-labeling + aspect detection
-│   ├── dashboard/                    # Dash web app
+│   ├── dashboard/                    # Dash web app (mode Pengelola & Pengunjung)
 │   └── data/                         # Output JSON + CSV untuk dashboard
 └── emc gcn/                          # EMC-GCN baseline (prior research)
 ```

@@ -1,0 +1,7012 @@
+{
+  "kampung blekok": {
+    "Harga & Tiket": {
+      "Positif": [
+        "tiket",
+        "murah",
+        "harga",
+        "jangkau",
+        "makan",
+        "masuk",
+        "minum",
+        "riah",
+        "pandang",
+        "bersih"
+      ],
+      "Negatif": [
+        "tiket",
+        "beli",
+        "kondisi",
+        "rusak",
+        "layak",
+        "jamin",
+        "asuransi",
+        "selamat",
+        "baik",
+        "manajemen"
+      ],
+      "Netral": [
+        "tiket",
+        "harga",
+        "rupiah",
+        "anak",
+        "kena",
+        "biaya",
+        "jalan",
+        "ribu",
+        "dewasa",
+        "parkir"
+      ]
+    },
+    "Fasilitas": {
+      "Positif": [
+        "parkir",
+        "foto",
+        "luas",
+        "fasilitas",
+        "bersih",
+        "toilet",
+        "nyaman",
+        "lengkap",
+        "kampung",
+        "blekok"
+      ],
+      "Negatif": [
+        "parkir",
+        "fasilitas",
+        "mobil",
+        "jembatan",
+        "kayu",
+        "rusak",
+        "anak",
+        "mangrove",
+        "harap",
+        "sempit"
+      ],
+      "Netral": [
+        "parkir",
+        "mobil",
+        "biaya",
+        "fasilitas",
+        "kena",
+        "sepeda",
+        "motor",
+        "jembatan",
+        "jalan",
+        "kendara"
+      ]
+    },
+    "Pemandangan & Alam": {
+      "Positif": [
+        "pandang",
+        "bagus",
+        "mangrove",
+        "alam",
+        "blekok",
+        "indah",
+        "pantai",
+        "burung",
+        "hutan",
+        "gunung"
+      ],
+      "Negatif": [
+        "mangrove",
+        "parkir",
+        "taman",
+        "pantai",
+        "mobil",
+        "rusak",
+        "salah",
+        "konsevasi",
+        "sayang",
+        "pintu"
+      ],
+      "Netral": [
+        "mangrove",
+        "hutan",
+        "pantai",
+        "burung",
+        "blekok",
+        "unjung",
+        "sedia",
+        "alam",
+        "sungai",
+        "pohon"
+      ]
+    },
+    "Akses & Lokasi": {
+      "Positif": [
+        "mudah",
+        "parkir",
+        "bagus",
+        "kaki",
+        "luas",
+        "pantura",
+        "blekok",
+        "indah",
+        "kampung",
+        "gampang"
+      ],
+      "Negatif": [
+        "jalan",
+        "kaki",
+        "sesal",
+        "capek",
+        "tau",
+        "jamin",
+        "bosan",
+        "rute",
+        "lewat",
+        "hutan"
+      ],
+      "Netral": [
+        "jalan",
+        "blekok",
+        "kampung",
+        "dermaga",
+        "mobil",
+        "pantura",
+        "bawa",
+        "parkir",
+        "masuk",
+        "rumah"
+      ]
+    },
+    "Suasana": {
+      "Positif": [
+        "suasana",
+        "blekok",
+        "nyaman",
+        "sore",
+        "suka",
+        "pandang",
+        "alam",
+        "indah",
+        "asri",
+        "tunggu"
+      ],
+      "Negatif": [
+        "jalan",
+        "beliku",
+        "penuh",
+        "pohon",
+        "magrove",
+        "milir",
+        "angin",
+        "wlp",
+        "panas",
+        "gunung"
+      ],
+      "Netral": [
+        "suasana",
+        "hutan",
+        "mangrove",
+        "pas",
+        "tunggu",
+        "burung",
+        "blekok",
+        "sangkar"
+      ]
+    },
+    "Kuliner": {
+      "Positif": [
+        "makan",
+        "murah",
+        "bagus",
+        "sedia",
+        "kuliner",
+        "souvenir",
+        "rumah",
+        "minum",
+        "view",
+        "warga"
+      ],
+      "Negatif": [
+        "makan",
+        "stand",
+        "jual",
+        "menu",
+        "habis"
+      ]
+    },
+    "Pelayanan": {
+      "Positif": [
+        "ramah",
+        "warga",
+        "masyarakat",
+        "rumah",
+        "layan",
+        "tingkat",
+        "booking",
+        "letak",
+        "klatakan",
+        "lingkung"
+      ],
+      "Negatif": [
+        "sampah",
+        "kelola",
+        "sedia",
+        "titik",
+        "promosi",
+        "tata",
+        "elo",
+        "parkir",
+        "mahal",
+        "tolong"
+      ]
+    },
+    "Kebersihan": {
+      "Positif": [
+        "toilet",
+        "sedia",
+        "bersih",
+        "awat",
+        "parkir",
+        "luas",
+        "mudah",
+        "jangkau",
+        "segi",
+        "fasilitas"
+      ],
+      "Negatif": [
+        "sampah",
+        "toilet",
+        "fungsi",
+        "taman",
+        "plastik",
+        "minus",
+        "sera",
+        "hutannnya",
+        "bau",
+        "kotor"
+      ],
+      "Netral": [
+        "toilet",
+        "hutan",
+        "mangrove",
+        "rawa",
+        "trail",
+        "kala"
+      ]
+    },
+    "Budaya & Tradisi": {
+      "Positif": [
+        "bagus",
+        "lestari",
+        "daya",
+        "keren",
+        "rajin",
+        "makan",
+        "visi",
+        "lingkung",
+        "masyarakat",
+        "tarik"
+      ]
+    }
+  },
+  "Semua": {
+    "Harga & Tiket": {
+      "Positif": [
+        "harga",
+        "tiket",
+        "murah",
+        "jangkau",
+        "makan",
+        "masuk",
+        "riah",
+        "bagus",
+        "ramah",
+        "sewa"
+      ],
+      "Negatif": [
+        "mahal",
+        "tiket",
+        "harga",
+        "bayar",
+        "makan",
+        "kak",
+        "sayang",
+        "lumayan",
+        "biaya",
+        "lokal"
+      ],
+      "Netral": [
+        "tiket",
+        "harga",
+        "ribu",
+        "bayar",
+        "kak",
+        "biaya",
+        "makan",
+        "parkir",
+        "foto",
+        "tarif"
+      ]
+    },
+    "Fasilitas": {
+      "Positif": [
+        "parkir",
+        "foto",
+        "fasilitas",
+        "kolam",
+        "luas",
+        "bagus",
+        "wahana",
+        "air",
+        "sedia",
+        "lengkap"
+      ],
+      "Negatif": [
+        "parkir",
+        "kolam",
+        "mobil",
+        "fasilitas",
+        "foto",
+        "susah",
+        "anak",
+        "jalan",
+        "wahana",
+        "bayar"
+      ],
+      "Netral": [
+        "parkir",
+        "kolam",
+        "ribu",
+        "mobil",
+        "anak",
+        "renang",
+        "wahana",
+        "motor",
+        "tiket",
+        "air"
+      ]
+    },
+    "Pemandangan & Alam": {
+      "Positif": [
+        "pandang",
+        "bagus",
+        "alam",
+        "indah",
+        "view",
+        "sawah",
+        "sejuk",
+        "danau",
+        "gunung",
+        "laut"
+      ],
+      "Negatif": [
+        "danau",
+        "mangrove",
+        "pohon",
+        "dalam",
+        "pantai",
+        "taman",
+        "kalo",
+        "sawah",
+        "kotor",
+        "pas"
+      ],
+      "Netral": [
+        "alam",
+        "danau",
+        "pantai",
+        "air",
+        "alami",
+        "dalam",
+        "hutan",
+        "mangrove",
+        "taman",
+        "laut"
+      ]
+    },
+    "Akses & Lokasi": {
+      "Positif": [
+        "mudah",
+        "bagus",
+        "parkir",
+        "bersih",
+        "nyaman",
+        "jangkau",
+        "kendara",
+        "luas",
+        "foto",
+        "lumayan"
+      ],
+      "Negatif": [
+        "jalan",
+        "akses",
+        "sempit",
+        "mobil",
+        "parkir",
+        "kendara",
+        "rusak",
+        "bus",
+        "sulit",
+        "lumayan"
+      ],
+      "Netral": [
+        "jalan",
+        "akses",
+        "parkir",
+        "kota",
+        "ribu",
+        "mobil",
+        "motor",
+        "jam",
+        "kampung",
+        "jarak"
+      ]
+    },
+    "Suasana": {
+      "Positif": [
+        "suasana",
+        "sejuk",
+        "udara",
+        "asri",
+        "nyaman",
+        "segar",
+        "bersih",
+        "tenang",
+        "indah",
+        "bagus"
+      ],
+      "Negatif": [
+        "sana",
+        "jalan",
+        "panas",
+        "pohon",
+        "minim",
+        "nyaman",
+        "ramai",
+        "bersih",
+        "harga",
+        "polusi"
+      ],
+      "Netral": [
+        "suasana",
+        "ramai",
+        "rapi",
+        "rumah",
+        "bal",
+        "dingin",
+        "gunung",
+        "nikmat",
+        "budaya",
+        "tata"
+      ]
+    },
+    "Kuliner": {
+      "Positif": [
+        "makan",
+        "murah",
+        "harga",
+        "kuliner",
+        "minum",
+        "souvenir",
+        "jangkau",
+        "menu",
+        "jual",
+        "cafe"
+      ],
+      "Negatif": [
+        "makan",
+        "mahal",
+        "cafe",
+        "jual",
+        "harga",
+        "jajan",
+        "warung",
+        "sawah",
+        "kotor",
+        "menu"
+      ],
+      "Netral": [
+        "makan",
+        "cafe",
+        "menu",
+        "sawah",
+        "khas",
+        "harga",
+        "minum",
+        "kuliner",
+        "souvenir",
+        "jual"
+      ]
+    },
+    "Pelayanan": {
+      "Positif": [
+        "ramah",
+        "warga",
+        "masyarakat",
+        "layan",
+        "kelola",
+        "bagus",
+        "bersih",
+        "tugas",
+        "guide",
+        "rumah"
+      ],
+      "Negatif": [
+        "kelola",
+        "warga",
+        "parkir",
+        "tugas",
+        "layan",
+        "guide",
+        "sampah",
+        "mahal",
+        "kolam",
+        "ramai"
+      ],
+      "Netral": [
+        "guide",
+        "warga",
+        "rumah",
+        "masyarakat",
+        "adat",
+        "pakai",
+        "tugas",
+        "kelola",
+        "jual",
+        "bayar"
+      ]
+    },
+    "Kebersihan": {
+      "Positif": [
+        "bersih",
+        "toilet",
+        "mandi",
+        "kamar",
+        "jaga",
+        "sedia",
+        "fasilitas",
+        "rapi",
+        "air",
+        "parkir"
+      ],
+      "Negatif": [
+        "bersih",
+        "sampah",
+        "toilet",
+        "kotor",
+        "kamar",
+        "mandi",
+        "sera",
+        "air",
+        "bayar",
+        "sayang"
+      ],
+      "Netral": [
+        "toilet",
+        "bayar",
+        "mandi",
+        "kamar",
+        "ribu",
+        "air",
+        "kak",
+        "foto",
+        "makan",
+        "fasilitas"
+      ]
+    },
+    "Budaya & Tradisi": {
+      "Positif": [
+        "adat",
+        "budaya",
+        "bal",
+        "rumah",
+        "toraja",
+        "jaga",
+        "kental",
+        "bagus",
+        "tradisional",
+        "bersih"
+      ],
+      "Negatif": [
+        "salah",
+        "kampung",
+        "tangga",
+        "musik",
+        "mahal",
+        "jual",
+        "rumah",
+        "beda",
+        "lombok",
+        "gratis"
+      ],
+      "Netral": [
+        "adat",
+        "rumah",
+        "budaya",
+        "toraja",
+        "sewa",
+        "baju",
+        "bal",
+        "sejarah",
+        "pakai",
+        "foto"
+      ]
+    }
+  },
+  "umbul ponggok": {
+    "Fasilitas": {
+      "Positif": [
+        "kolam",
+        "air",
+        "fasilitas",
+        "foto",
+        "renang",
+        "parkir",
+        "anak",
+        "luas",
+        "ikan",
+        "lengkap"
+      ],
+      "Negatif": [
+        "parkir",
+        "kolam",
+        "anak",
+        "mobil",
+        "susah",
+        "fasilitas",
+        "renang",
+        "air",
+        "foto",
+        "mahal"
+      ],
+      "Netral": [
+        "kolam",
+        "parkir",
+        "anak",
+        "renang",
+        "air",
+        "ribu",
+        "ikan",
+        "mobil",
+        "dalam",
+        "fasilitas"
+      ]
+    },
+    "Kebersihan": {
+      "Positif": [
+        "bersih",
+        "toilet",
+        "kamar",
+        "mandi",
+        "air",
+        "tingkat",
+        "fasilitas",
+        "awat",
+        "nyaman",
+        "makan"
+      ],
+      "Negatif": [
+        "toilet",
+        "bayar",
+        "bersih",
+        "kamar",
+        "mandi",
+        "air",
+        "kotor",
+        "sampah",
+        "baik",
+        "ganti"
+      ],
+      "Netral": [
+        "toilet",
+        "bayar",
+        "mandi",
+        "kamar",
+        "air",
+        "kak",
+        "foto",
+        "fasilitas",
+        "makan",
+        "ribu"
+      ]
+    },
+    "Harga & Tiket": {
+      "Positif": [
+        "harga",
+        "tiket",
+        "murah",
+        "jangkau",
+        "makan",
+        "sewa",
+        "air",
+        "masuk",
+        "bagus",
+        "renang"
+      ],
+      "Negatif": [
+        "mahal",
+        "tiket",
+        "harga",
+        "ukur",
+        "lokal",
+        "biaya",
+        "masuk",
+        "umbul",
+        "warga",
+        "pas"
+      ],
+      "Netral": [
+        "tiket",
+        "ribu",
+        "harga",
+        "kak",
+        "biaya",
+        "foto",
+        "bayar",
+        "kalo",
+        "makan",
+        "air"
+      ]
+    },
+    "Suasana": {
+      "Positif": [
+        "suasana",
+        "air",
+        "sejuk",
+        "nyaman",
+        "udara",
+        "segar",
+        "santai",
+        "dingin",
+        "asri",
+        "keluarga"
+      ],
+      "Netral": [
+        "suasana",
+        "ramai",
+        "milik",
+        "dingin"
+      ]
+    },
+    "Pemandangan & Alam": {
+      "Positif": [
+        "air",
+        "alam",
+        "pandang",
+        "ikan",
+        "foto",
+        "renang",
+        "seru",
+        "dalam",
+        "bagus",
+        "jernih"
+      ],
+      "Negatif": [
+        "dalam",
+        "kalo",
+        "tolong",
+        "ingat",
+        "pohon",
+        "pojok",
+        "rawan",
+        "jatuh",
+        "buah",
+        "lupa"
+      ],
+      "Netral": [
+        "dalam",
+        "air",
+        "meter",
+        "kolam",
+        "alam",
+        "alami",
+        "hati",
+        "umbul",
+        "ponggok",
+        "foto"
+      ]
+    },
+    "Kuliner": {
+      "Positif": [
+        "makan",
+        "murah",
+        "harga",
+        "jangkau",
+        "minum",
+        "air",
+        "jajan",
+        "lumayan",
+        "foto",
+        "jual"
+      ],
+      "Negatif": [
+        "makan",
+        "mahal",
+        "jajan",
+        "pilih",
+        "standar",
+        "kuliner",
+        "ikan",
+        "bengong",
+        "minum",
+        "goreng"
+      ],
+      "Netral": [
+        "makan",
+        "harga",
+        "ribu",
+        "bungkus",
+        "jual",
+        "renang",
+        "anak",
+        "menu",
+        "beli",
+        "ikan"
+      ]
+    },
+    "Pelayanan": {
+      "Positif": [
+        "ramah",
+        "layan",
+        "bagus",
+        "kelola",
+        "tugas",
+        "guide",
+        "foto",
+        "warga",
+        "bersih",
+        "jaga"
+      ],
+      "Negatif": [
+        "kelola",
+        "profesional",
+        "kolam",
+        "rumah",
+        "warga",
+        "ramai",
+        "taman"
+      ],
+      "Netral": [
+        "tugas",
+        "jaga",
+        "unjung",
+        "tenggelam",
+        "bawa",
+        "teman",
+        "asing",
+        "reviewnya",
+        "biarpun",
+        "bahasa"
+      ]
+    },
+    "Akses & Lokasi": {
+      "Positif": [
+        "mudah",
+        "bagus",
+        "parkir",
+        "jangkau",
+        "air",
+        "strategis",
+        "foto",
+        "gampang",
+        "temu",
+        "raya"
+      ],
+      "Negatif": [
+        "jalan",
+        "pakai",
+        "lumayan",
+        "parkir",
+        "air",
+        "susah",
+        "kendara",
+        "kalo",
+        "sempit",
+        "effort"
+      ],
+      "Netral": [
+        "jalan",
+        "motor",
+        "ribu",
+        "sewa",
+        "jam",
+        "ikan",
+        "foto",
+        "harga",
+        "parkir",
+        "pinggir"
+      ]
+    },
+    "Budaya & Tradisi": {
+      "Positif": [
+        "pasar",
+        "tradisional",
+        "penuh",
+        "sensasional"
+      ]
+    }
+  },
+  "pujonkidul": {
+    "Kuliner": {
+      "Positif": [
+        "makan",
+        "murah",
+        "kuliner",
+        "cafe",
+        "menu",
+        "sawah",
+        "harga",
+        "jangkau",
+        "minum",
+        "pilih"
+      ],
+      "Negatif": [
+        "makan",
+        "cafe",
+        "mahal",
+        "sawah",
+        "menu",
+        "jual",
+        "lumayan",
+        "jajan",
+        "harga",
+        "wajar"
+      ],
+      "Netral": [
+        "makan",
+        "cafe",
+        "sawah",
+        "menu",
+        "prasmanan",
+        "ribu",
+        "konsep",
+        "voucher",
+        "tengah",
+        "minum"
+      ]
+    },
+    "Pemandangan & Alam": {
+      "Positif": [
+        "pandang",
+        "bagus",
+        "indah",
+        "alam",
+        "sawah",
+        "view",
+        "gunung",
+        "sejuk",
+        "cafe",
+        "makan"
+      ],
+      "Negatif": [
+        "sawah",
+        "cafe",
+        "panas",
+        "dalam",
+        "pohon",
+        "lumayan",
+        "bayar",
+        "kurang",
+        "kalo",
+        "gunung"
+      ],
+      "Netral": [
+        "sawah",
+        "gunung",
+        "tanam",
+        "alami",
+        "kabupaten",
+        "malang",
+        "hias",
+        "tipis",
+        "alam",
+        "malam"
+      ]
+    },
+    "Pelayanan": {
+      "Positif": [
+        "layan",
+        "ramah",
+        "kelola",
+        "bagus",
+        "masyarakat",
+        "warga",
+        "cepat",
+        "tugas",
+        "parkir",
+        "foto"
+      ],
+      "Negatif": [
+        "tugas",
+        "layan",
+        "parkir",
+        "produk",
+        "warga",
+        "kelola",
+        "temu",
+        "jajan",
+        "umkm",
+        "daya"
+      ],
+      "Netral": [
+        "salut",
+        "tugas",
+        "asal",
+        "warga",
+        "pemdes",
+        "satu",
+        "guide",
+        "bawa",
+        "user",
+        "sambut"
+      ]
+    },
+    "Fasilitas": {
+      "Positif": [
+        "parkir",
+        "foto",
+        "wahana",
+        "luas",
+        "bagus",
+        "fasilitas",
+        "anak",
+        "sedia",
+        "tarik",
+        "murah"
+      ],
+      "Negatif": [
+        "parkir",
+        "jalan",
+        "wahana",
+        "foto",
+        "mobil",
+        "bayar",
+        "susah",
+        "akses",
+        "bus",
+        "antri"
+      ],
+      "Netral": [
+        "parkir",
+        "wahana",
+        "ribu",
+        "motor",
+        "foto",
+        "bayar",
+        "mobil",
+        "anak",
+        "tiket",
+        "kak"
+      ]
+    },
+    "Suasana": {
+      "Positif": [
+        "suasana",
+        "udara",
+        "sejuk",
+        "segar",
+        "nyaman",
+        "asri",
+        "pandang",
+        "bagus",
+        "dingin",
+        "cocok"
+      ],
+      "Negatif": [
+        "minim",
+        "beteduh",
+        "pohon",
+        "bikin",
+        "gerah",
+        "moga",
+        "baik",
+        "depan",
+        "biar",
+        "unjung"
+      ],
+      "Netral": [
+        "suasana",
+        "gunung",
+        "tanam",
+        "kaki",
+        "sawah",
+        "bentang",
+        "luas",
+        "aneka",
+        "ragam",
+        "nikmat"
+      ]
+    },
+    "Akses & Lokasi": {
+      "Positif": [
+        "bagus",
+        "mudah",
+        "parkir",
+        "nyaman",
+        "lebar",
+        "jangkau",
+        "kendara",
+        "sedia",
+        "luas",
+        "keluarga"
+      ],
+      "Negatif": [
+        "jalan",
+        "akses",
+        "sempit",
+        "parkir",
+        "bus",
+        "mobil",
+        "macet",
+        "susah",
+        "motor",
+        "kendara"
+      ],
+      "Netral": [
+        "jalan",
+        "parkir",
+        "akses",
+        "bus",
+        "mobil",
+        "ribu",
+        "sawah",
+        "sedia",
+        "lebar",
+        "motor"
+      ]
+    },
+    "Harga & Tiket": {
+      "Positif": [
+        "harga",
+        "tiket",
+        "murah",
+        "makan",
+        "jangkau",
+        "tukar",
+        "masuk",
+        "riah",
+        "sayur",
+        "wahana"
+      ],
+      "Negatif": [
+        "mahal",
+        "harga",
+        "tiket",
+        "bayar",
+        "makan",
+        "standar",
+        "hati",
+        "sayang",
+        "wajar",
+        "arena"
+      ],
+      "Netral": [
+        "tiket",
+        "harga",
+        "makan",
+        "ribu",
+        "bayar",
+        "tukar",
+        "voucher",
+        "cafe",
+        "wahana",
+        "parkir"
+      ]
+    },
+    "Kebersihan": {
+      "Positif": [
+        "bersih",
+        "toilet",
+        "jaga",
+        "fasilitas",
+        "sedia",
+        "umum",
+        "kamar",
+        "mandi",
+        "musholla",
+        "moga"
+      ],
+      "Negatif": [
+        "toilet",
+        "sampah",
+        "buang",
+        "sayang",
+        "high",
+        "season",
+        "antri",
+        "sudut",
+        "tanda",
+        "kelola"
+      ],
+      "Netral": [
+        "cafe",
+        "ribu",
+        "toilet",
+        "parkir",
+        "teman",
+        "bayar",
+        "pengin",
+        "viewnya",
+        "foto",
+        "sawah"
+      ]
+    },
+    "Budaya & Tradisi": {
+      "Positif": [
+        "kultur",
+        "budaya",
+        "angkat",
+        "ekonomi",
+        "warga"
+      ]
+    }
+  },
+  "pentingsari": {
+    "Fasilitas": {
+      "Positif": [
+        "homestay",
+        "fasilitas",
+        "lengkap",
+        "sedia",
+        "cocok",
+        "outbound",
+        "bagus",
+        "bersih",
+        "milik",
+        "ramah"
+      ],
+      "Negatif": [
+        "liku",
+        "akses",
+        "jalan",
+        "tunjuk",
+        "arah",
+        "parkir",
+        "batas",
+        "salah",
+        "kendala"
+      ],
+      "Netral": [
+        "homestay",
+        "rumah",
+        "inap",
+        "sewa",
+        "warga",
+        "olah",
+        "kopi",
+        "dll",
+        "sana",
+        "fasilitas"
+      ]
+    },
+    "Kuliner": {
+      "Positif": [
+        "makan",
+        "warung",
+        "menu",
+        "sedia",
+        "simbok",
+        "nyaman",
+        "khas",
+        "minum",
+        "murah",
+        "bagus"
+      ]
+    },
+    "Pemandangan & Alam": {
+      "Positif": [
+        "alam",
+        "pohon",
+        "sejuk",
+        "asri",
+        "pandang",
+        "indah",
+        "seru",
+        "suasana",
+        "udara",
+        "sari"
+      ],
+      "Netral": [
+        "kalo",
+        "malam",
+        "mistis",
+        "kerasaaa",
+        "alami",
+        "alam"
+      ]
+    },
+    "Pelayanan": {
+      "Positif": [
+        "ramah",
+        "warga",
+        "masyarakat",
+        "layan",
+        "kelola",
+        "sahabat",
+        "daya",
+        "bagus",
+        "utama",
+        "hidup"
+      ]
+    },
+    "Budaya & Tradisi": {
+      "Positif": [
+        "asyik",
+        "tradisional",
+        "indah",
+        "jogja",
+        "cocok",
+        "gamelan",
+        "arif",
+        "lokal",
+        "lestari",
+        "rasa"
+      ]
+    },
+    "Suasana": {
+      "Positif": [
+        "suasana",
+        "sejuk",
+        "asri",
+        "udara",
+        "nyaman",
+        "segar",
+        "pohon",
+        "tenang",
+        "alam",
+        "dingin"
+      ],
+      "Netral": [
+        "suasana",
+        "rapi",
+        "lereng",
+        "gunung",
+        "tepi",
+        "kuning",
+        "tutup",
+        "material",
+        "erupsi",
+        "roboh"
+      ]
+    },
+    "Kebersihan": {
+      "Positif": [
+        "bersih",
+        "kamar",
+        "mandi",
+        "rapi",
+        "pada",
+        "masyarakat",
+        "camping",
+        "kaki",
+        "asri",
+        "toilet"
+      ],
+      "Negatif": [
+        "kamar",
+        "mandi",
+        "kurang",
+        "batas",
+        "sih",
+        "toilet",
+        "jorok"
+      ],
+      "Netral": [
+        "toilet"
+      ]
+    },
+    "Akses & Lokasi": {
+      "Positif": [
+        "nyaman",
+        "pada",
+        "giat",
+        "outbond",
+        "mudah",
+        "bagus",
+        "cocok",
+        "pekan",
+        "kaki",
+        "pagi"
+      ],
+      "Negatif": [
+        "jalan",
+        "akses",
+        "sulit",
+        "liku",
+        "tunjuk",
+        "arah",
+        "mobil",
+        "papas",
+        "parkir",
+        "batas"
+      ],
+      "Netral": [
+        "rute",
+        "jalan",
+        "pentingsari",
+        "akses",
+        "masuk",
+        "kemah",
+        "outbound",
+        "kaliurang"
+      ]
+    },
+    "Harga & Tiket": {
+      "Positif": [
+        "harga",
+        "jangkau",
+        "murah",
+        "rumah",
+        "warga",
+        "senyum",
+        "unjung",
+        "inap",
+        "jajan",
+        "jual"
+      ]
+    }
+  },
+  "penglipuran": {
+    "Suasana": {
+      "Positif": [
+        "suasana",
+        "bersih",
+        "sejuk",
+        "asri",
+        "nyaman",
+        "udara",
+        "tenang",
+        "bal",
+        "adem",
+        "indah"
+      ],
+      "Negatif": [
+        "sana",
+        "bersih",
+        "polusi",
+        "biarpun",
+        "gerimis",
+        "lumayan",
+        "ramai",
+        "suka",
+        "arsitektur",
+        "waktu"
+      ],
+      "Netral": [
+        "suasana",
+        "ramai",
+        "rumah",
+        "bal",
+        "tata",
+        "dingin",
+        "asli",
+        "khas",
+        "cenderung",
+        "mistis"
+      ]
+    },
+    "Pelayanan": {
+      "Positif": [
+        "ramah",
+        "warga",
+        "masyarakat",
+        "bersih",
+        "rumah",
+        "lokal",
+        "layan",
+        "adat",
+        "tugas",
+        "sambut"
+      ],
+      "Negatif": [
+        "aktivitas",
+        "ganggu",
+        "wisatawan",
+        "kelola",
+        "liar",
+        "kuku",
+        "bersih",
+        "tertib",
+        "warga",
+        "turis"
+      ],
+      "Netral": [
+        "warga",
+        "rumah",
+        "adat",
+        "pakai",
+        "jalan",
+        "loket",
+        "jual",
+        "makan",
+        "foto",
+        "guide"
+      ]
+    },
+    "Harga & Tiket": {
+      "Positif": [
+        "harga",
+        "murah",
+        "tiket",
+        "jangkau",
+        "beli",
+        "makan",
+        "barang",
+        "masuk",
+        "lokal",
+        "durian"
+      ],
+      "Negatif": [
+        "mahal",
+        "tiket",
+        "harga",
+        "makan",
+        "domestik",
+        "kak",
+        "sana",
+        "foto",
+        "bayar",
+        "panas"
+      ],
+      "Netral": [
+        "tiket",
+        "ribu",
+        "harga",
+        "kak",
+        "dewasa",
+        "parkir",
+        "wni",
+        "sewa",
+        "biaya",
+        "anak"
+      ]
+    },
+    "Kuliner": {
+      "Positif": [
+        "makan",
+        "murah",
+        "rumah",
+        "minum",
+        "jual",
+        "souvenir",
+        "khas",
+        "harga",
+        "jajan",
+        "beli"
+      ],
+      "Negatif": [
+        "makan",
+        "mahal",
+        "kak",
+        "jam",
+        "lumayan",
+        "warung",
+        "harga",
+        "ambil",
+        "person",
+        "free"
+      ],
+      "Netral": [
+        "makan",
+        "jual",
+        "rumah",
+        "kuliner",
+        "minum",
+        "souvenir",
+        "bal",
+        "khas",
+        "cafe",
+        "ikan"
+      ]
+    },
+    "Budaya & Tradisi": {
+      "Positif": [
+        "adat",
+        "bal",
+        "budaya",
+        "bersih",
+        "sewa",
+        "baju",
+        "tradisional",
+        "kental",
+        "pakai",
+        "rumah"
+      ],
+      "Negatif": [
+        "mahal",
+        "jual",
+        "rumah"
+      ],
+      "Netral": [
+        "adat",
+        "baju",
+        "sewa",
+        "bal",
+        "rumah",
+        "pakai",
+        "foto",
+        "ribu",
+        "sedia",
+        "harga"
+      ]
+    },
+    "Pemandangan & Alam": {
+      "Positif": [
+        "pandang",
+        "bagus",
+        "indah",
+        "bersih",
+        "view",
+        "alam",
+        "rumah",
+        "foto",
+        "asri",
+        "viewnya"
+      ],
+      "Negatif": [
+        "rumah",
+        "halaman",
+        "coba",
+        "dikit",
+        "daun",
+        "cecer",
+        "kalo",
+        "pas",
+        "nasional",
+        "dalam"
+      ],
+      "Netral": [
+        "alam",
+        "inap",
+        "homestay",
+        "ribu",
+        "kamar",
+        "malam",
+        "include",
+        "sarap",
+        "free",
+        "tiket"
+      ]
+    },
+    "Akses & Lokasi": {
+      "Positif": [
+        "parkir",
+        "bersih",
+        "mudah",
+        "kendara",
+        "foto",
+        "lipur",
+        "bal",
+        "utama",
+        "sedia",
+        "bagus"
+      ],
+      "Negatif": [
+        "jalan",
+        "bus",
+        "parkir",
+        "lipur",
+        "nyaman",
+        "penuh",
+        "klakson",
+        "telolet",
+        "macet",
+        "salah"
+      ],
+      "Netral": [
+        "jalan",
+        "rumah",
+        "warga",
+        "ribu",
+        "akses",
+        "kak",
+        "jadi",
+        "bal",
+        "pagi",
+        "pusat"
+      ]
+    },
+    "Fasilitas": {
+      "Positif": [
+        "parkir",
+        "foto",
+        "luas",
+        "fasilitas",
+        "bagus",
+        "sedia",
+        "bersih",
+        "homestay",
+        "bal",
+        "toilet"
+      ],
+      "Negatif": [
+        "parkir",
+        "foto",
+        "susah",
+        "kak",
+        "cari",
+        "sulit",
+        "panas",
+        "mobil",
+        "ramai",
+        "batas"
+      ],
+      "Netral": [
+        "parkir",
+        "ribu",
+        "tiket",
+        "mobil",
+        "biaya",
+        "motor",
+        "foto",
+        "the",
+        "dewasa",
+        "kak"
+      ]
+    },
+    "Kebersihan": {
+      "Positif": [
+        "bersih",
+        "toilet",
+        "rapi",
+        "jaga",
+        "parkir",
+        "tata",
+        "bal",
+        "sedia",
+        "rumah",
+        "ramah"
+      ],
+      "Negatif": [
+        "bersih",
+        "sampah",
+        "rapi",
+        "foto",
+        "toilet",
+        "pas",
+        "lipur",
+        "sera",
+        "tunggu",
+        "warung"
+      ],
+      "Netral": [
+        "toilet",
+        "umum",
+        "pas",
+        "beli",
+        "karcis",
+        "kebelet",
+        "hee"
+      ]
+    }
+  },
+  "kete kesu": {
+    "Pelayanan": {
+      "Positif": [
+        "ramah",
+        "warga",
+        "masyarakat",
+        "adat",
+        "guide",
+        "bersih",
+        "guyub",
+        "gua",
+        "kubur",
+        "jajah"
+      ],
+      "Negatif": [
+        "jaga",
+        "tulang",
+        "sera"
+      ],
+      "Netral": [
+        "guide",
+        "masyarakat",
+        "lokal",
+        "bayar",
+        "pandu",
+        "goa",
+        "ribu",
+        "sewa",
+        "lampu",
+        "rombong"
+      ]
+    },
+    "Harga & Tiket": {
+      "Positif": [
+        "harga",
+        "murah",
+        "tiket",
+        "jangkau",
+        "toraja",
+        "souvenir",
+        "khas",
+        "toko",
+        "bagus",
+        "belanja"
+      ],
+      "Negatif": [
+        "harga",
+        "mahal",
+        "fasilitas",
+        "tiket",
+        "rada",
+        "kesal",
+        "beda",
+        "tourist",
+        "lokal",
+        "internasional"
+      ],
+      "Netral": [
+        "tiket",
+        "ribu",
+        "harga",
+        "kak",
+        "biaya",
+        "jual",
+        "toraja",
+        "parkir",
+        "atur",
+        "masuk"
+      ]
+    },
+    "Budaya & Tradisi": {
+      "Positif": [
+        "budaya",
+        "adat",
+        "toraja",
+        "rumah",
+        "sejarah",
+        "bagus",
+        "jaga",
+        "lestari",
+        "kental",
+        "indah"
+      ],
+      "Negatif": [
+        "kampung",
+        "beda",
+        "lombok",
+        "gratis",
+        "takut",
+        "makam",
+        "dapat",
+        "salah"
+      ],
+      "Netral": [
+        "adat",
+        "toraja",
+        "rumah",
+        "budaya",
+        "sejarah",
+        "tongkonan",
+        "tinggal",
+        "makam",
+        "ratus",
+        "tahun"
+      ]
+    },
+    "Akses & Lokasi": {
+      "Positif": [
+        "mudah",
+        "bagus",
+        "toraja",
+        "jangkau",
+        "jual",
+        "keren",
+        "foto",
+        "tarik",
+        "salah",
+        "toko"
+      ],
+      "Negatif": [
+        "jalan",
+        "sempit",
+        "akses",
+        "parkir",
+        "teman",
+        "musim",
+        "macet",
+        "tambah",
+        "kendara",
+        "kete"
+      ],
+      "Netral": [
+        "jalan",
+        "akses",
+        "toraja",
+        "toko",
+        "keluarga",
+        "batu",
+        "rumah",
+        "tongkonan",
+        "souvenir",
+        "sejarah"
+      ]
+    },
+    "Kuliner": {
+      "Positif": [
+        "souvenir",
+        "murah",
+        "jual",
+        "toraja",
+        "toko",
+        "harga",
+        "sedia",
+        "souvenirnya",
+        "belanja",
+        "bagus"
+      ],
+      "Negatif": [
+        "jual",
+        "mahal",
+        "parkir",
+        "pusat",
+        "kesu",
+        "toko",
+        "tenun",
+        "barang",
+        "souvenirnya",
+        "harga"
+      ],
+      "Netral": [
+        "souvenir",
+        "khas",
+        "toraja",
+        "rumah",
+        "toko",
+        "paket",
+        "santa",
+        "tongkonan",
+        "viewnya",
+        "hits"
+      ]
+    },
+    "Fasilitas": {
+      "Positif": [
+        "foto",
+        "parkir",
+        "bagus",
+        "fasilitas",
+        "lengkap",
+        "sedia",
+        "luas",
+        "pada",
+        "tarik",
+        "toraja"
+      ],
+      "Negatif": [
+        "parkir",
+        "fasilitas",
+        "batas",
+        "mobil",
+        "sulit",
+        "bayar",
+        "kendara",
+        "minim",
+        "dukung",
+        "waktu"
+      ],
+      "Netral": [
+        "parkir",
+        "mobil",
+        "jual",
+        "souvernir",
+        "tiket",
+        "foto",
+        "motor",
+        "pas",
+        "kak",
+        "tebing"
+      ]
+    },
+    "Pemandangan & Alam": {
+      "Positif": [
+        "pandang",
+        "indah",
+        "alam",
+        "bagus",
+        "toraja",
+        "tongkonan",
+        "rumah",
+        "view",
+        "adat",
+        "budaya"
+      ],
+      "Negatif": [
+        "kultur",
+        "dapat",
+        "ditemoat",
+        "kali",
+        "bosan",
+        "ter",
+        "alamat",
+        "palsu",
+        "kete",
+        "kesu"
+      ],
+      "Netral": [
+        "alam",
+        "toraja",
+        "adat",
+        "rumah",
+        "sawah",
+        "tradisi",
+        "kampung",
+        "tana",
+        "istiadat",
+        "asli"
+      ]
+    },
+    "Suasana": {
+      "Positif": [
+        "suasana",
+        "sejuk",
+        "asri",
+        "udara",
+        "pandang",
+        "indah",
+        "toraja",
+        "segar",
+        "adem",
+        "keliling"
+      ],
+      "Negatif": [
+        "seram",
+        "merinding",
+        "lepas",
+        "kete",
+        "kesu"
+      ],
+      "Netral": [
+        "suasana",
+        "beda",
+        "budaya",
+        "sulsel",
+        "ramai",
+        "parkir"
+      ]
+    },
+    "Kebersihan": {
+      "Positif": [
+        "bersih",
+        "toilet",
+        "jaga",
+        "unjung",
+        "fasilitas",
+        "bangun",
+        "tingkat",
+        "dar",
+        "masuk",
+        "kelola"
+      ],
+      "Negatif": [
+        "toilet",
+        "bersih",
+        "sampah",
+        "umum",
+        "kotor",
+        "jaga",
+        "plastik",
+        "sera",
+        "bayar",
+        "cari"
+      ],
+      "Netral": [
+        "toilet",
+        "umum",
+        "toraja",
+        "tingkat",
+        "daya",
+        "jejer",
+        "tonkonan",
+        "lumbung",
+        "rapi",
+        "benerapa"
+      ]
+    }
+  },
+  "Buluh Cina": {
+    "Pemandangan & Alam": {
+      "Positif": [
+        "alam",
+        "pohon",
+        "taman",
+        "hutan",
+        "anak",
+        "buluh",
+        "cina",
+        "cocok",
+        "gemas",
+        "kenal"
+      ],
+      "Negatif": [
+        "taman",
+        "butuh",
+        "cina",
+        "kelola",
+        "balai",
+        "ksda",
+        "riau",
+        "tahap",
+        "kembang",
+        "lumayan"
+      ],
+      "Netral": [
+        "taman",
+        "alam",
+        "rekreasi",
+        "sungai",
+        "pinggir",
+        "gajah",
+        "buluhcina",
+        "nyebrang",
+        "kampar",
+        "jembatan"
+      ]
+    },
+    "Suasana": {
+      "Positif": [
+        "asri",
+        "suasana",
+        "adem",
+        "gajah",
+        "udara",
+        "dingin",
+        "layak",
+        "pat",
+        "keluarga",
+        "cemara"
+      ]
+    },
+    "Kuliner": {
+      "Positif": [
+        "kopi",
+        "mantap"
+      ]
+    },
+    "Akses & Lokasi": {
+      "Positif": [
+        "pekanbaru",
+        "asri",
+        "sungguh",
+        "ayo",
+        "ramai",
+        "weekend",
+        "gantung",
+        "kokoh",
+        "sepeda",
+        "lupa"
+      ],
+      "Netral": [
+        "jalan",
+        "sungai",
+        "kota",
+        "pekanbaru",
+        "jarak",
+        "pku",
+        "jam",
+        "kendara",
+        "roda",
+        "letak"
+      ]
+    },
+    "Pelayanan": {
+      "Positif": [
+        "ramah",
+        "berangkat",
+        "masyarakat",
+        "kelola",
+        "alam",
+        "scoll",
+        "video",
+        "cuss",
+        "jam",
+        "siang"
+      ],
+      "Netral": [
+        "kelola"
+      ]
+    },
+    "Harga & Tiket": {
+      "Positif": [
+        "harga",
+        "murah"
+      ],
+      "Netral": [
+        "tiket",
+        "ribu",
+        "hari",
+        "weekend",
+        "dewasa",
+        "masuk",
+        "parkir",
+        "sedia",
+        "bayar"
+      ]
+    },
+    "Fasilitas": {
+      "Positif": [
+        "foto",
+        "bagus"
+      ],
+      "Netral": [
+        "gajah",
+        "kolam",
+        "fasilitas",
+        "toilet",
+        "parkir",
+        "sedia",
+        "bayar",
+        "ribu"
+      ]
+    },
+    "Kebersihan": {
+      "Netral": [
+        "fasilitas",
+        "toilet"
+      ]
+    }
+  },
+  "Danau Emtofe": {
+    "Pemandangan & Alam": {
+      "Positif": [
+        "danau",
+        "pandang",
+        "indah",
+        "love",
+        "bukit",
+        "alam",
+        "view",
+        "keren",
+        "bagus",
+        "hijau"
+      ],
+      "Negatif": [
+        "banding",
+        "effort",
+        "jalan",
+        "rusak",
+        "parah"
+      ],
+      "Netral": [
+        "danau",
+        "love",
+        "bukit",
+        "emfote",
+        "pulau",
+        "bentuk",
+        "alami",
+        "teletubies",
+        "jauh",
+        "kenal"
+      ]
+    },
+    "Akses & Lokasi": {
+      "Positif": [
+        "keren",
+        "jam",
+        "kota",
+        "jayapura",
+        "mulus",
+        "asyik"
+      ],
+      "Negatif": [
+        "jalan",
+        "danau",
+        "akses",
+        "rusak",
+        "mobil",
+        "jelek",
+        "baik",
+        "sayang",
+        "lawan",
+        "sulit"
+      ],
+      "Netral": [
+        "jalan",
+        "ribu",
+        "akses",
+        "jam",
+        "kota",
+        "jayapura",
+        "danau",
+        "love",
+        "mobil",
+        "atabar"
+      ]
+    },
+    "Harga & Tiket": {
+      "Netral": [
+        "mobil",
+        "ribu",
+        "tulis",
+        "tiket",
+        "retribusi",
+        "kena"
+      ]
+    },
+    "Kebersihan": {
+      "Positif": [
+        "alami",
+        "toilet"
+      ],
+      "Netral": [
+        "toilet",
+        "ribu"
+      ]
+    },
+    "Fasilitas": {
+      "Negatif": [
+        "jalan",
+        "jembatan",
+        "rusak",
+        "fasilitas"
+      ]
+    },
+    "Suasana": {
+      "Positif": [
+        "pandang",
+        "bagus",
+        "udarax",
+        "segar"
+      ],
+      "Netral": [
+        "suasana",
+        "sepi",
+        "pas",
+        "pasang"
+      ]
+    }
+  },
+  "Danau Napabale": {
+    "Kebersihan": {
+      "Positif": [
+        "kendali"
+      ],
+      "Negatif": [
+        "kurang",
+        "toilet",
+        "awat",
+        "sampah",
+        "parkir",
+        "pinggir",
+        "danau"
+      ]
+    },
+    "Akses & Lokasi": {
+      "Positif": [
+        "danau",
+        "kota",
+        "raha",
+        "air",
+        "asin",
+        "jam",
+        "mulus",
+        "dekat",
+        "napabale",
+        "sampa"
+      ],
+      "Negatif": [
+        "jalan",
+        "akses",
+        "danau",
+        "sulit",
+        "rusak",
+        "kapal",
+        "sedia",
+        "angkut",
+        "ling",
+        "danaut"
+      ]
+    },
+    "Harga & Tiket": {
+      "Negatif": [
+        "harga",
+        "perahu",
+        "ubah",
+        "pas",
+        "turun"
+      ],
+      "Netral": [
+        "ribu",
+        "bayar",
+        "rupiah",
+        "motor",
+        "retribusi",
+        "sampa",
+        "parkir",
+        "harga",
+        "sewa",
+        "kapal"
+      ]
+    },
+    "Fasilitas": {
+      "Positif": [
+        "foto",
+        "tambah",
+        "wahana",
+        "variatif",
+        "ramah",
+        "orang",
+        "suka"
+      ],
+      "Negatif": [
+        "wahana"
+      ],
+      "Netral": [
+        "sampa",
+        "bayar",
+        "parkir",
+        "ribu",
+        "rupiah",
+        "motor"
+      ]
+    },
+    "Pemandangan & Alam": {
+      "Positif": [
+        "danau",
+        "indah",
+        "pandang",
+        "napabale",
+        "laut",
+        "air",
+        "hubung",
+        "puncak",
+        "alam",
+        "tebing"
+      ],
+      "Netral": [
+        "danau",
+        "asin",
+        "laut",
+        "simpan",
+        "sejarah",
+        "adab",
+        "padu",
+        "air",
+        "tawar",
+        "lewat"
+      ]
+    },
+    "Suasana": {
+      "Positif": [
+        "cocok",
+        "santa",
+        "keluarga"
+      ]
+    }
+  },
+  "Danau Paisu": {
+    "Pemandangan & Alam": {
+      "Positif": [
+        "danau",
+        "indah",
+        "jernih",
+        "air",
+        "pandang",
+        "bagus",
+        "segar",
+        "cantik",
+        "paisupok",
+        "foto"
+      ],
+      "Netral": [
+        "danau",
+        "air",
+        "leme",
+        "paisu",
+        "pok",
+        "luk",
+        "panenteng",
+        "pohon",
+        "jalan",
+        "letak"
+      ]
+    },
+    "Suasana": {
+      "Positif": [
+        "suasana",
+        "danau",
+        "tenang",
+        "keliling",
+        "pohon",
+        "jernih",
+        "air",
+        "udara",
+        "baik",
+        "hutan"
+      ]
+    },
+    "Akses & Lokasi": {
+      "Positif": [
+        "perhati",
+        "perintah",
+        "sungguh",
+        "senang",
+        "turis"
+      ],
+      "Negatif": [
+        "jalan",
+        "capek",
+        "akses",
+        "susah"
+      ],
+      "Netral": [
+        "jalan",
+        "saran",
+        "weekday",
+        "danau",
+        "paisupok",
+        "waktu",
+        "tempuh",
+        "jam",
+        "kota",
+        "sala"
+      ]
+    },
+    "Fasilitas": {
+      "Positif": [
+        "sgl",
+        "fasilitas",
+        "dukung"
+      ],
+      "Netral": [
+        "kolam",
+        "buat",
+        "murni",
+        "ajaib",
+        "alam"
+      ]
+    },
+    "Harga & Tiket": {
+      "Positif": [
+        "tiket",
+        "alami",
+        "jangkau"
+      ],
+      "Netral": [
+        "tiket",
+        "harga",
+        "paisupok",
+        "kalo",
+        "foto",
+        "estetik",
+        "sewa",
+        "drone",
+        "ribu",
+        "kano"
+      ]
+    },
+    "Pelayanan": {
+      "Positif": [
+        "jaga",
+        "ramah"
+      ],
+      "Netral": [
+        "masyarakat",
+        "tamu",
+        "asli",
+        "gue",
+        "bogor",
+        "danau",
+        "keluar",
+        "air",
+        "ribu",
+        "rupiah"
+      ]
+    }
+  },
+  "Desa Sade": {
+    "Pelayanan": {
+      "Positif": [
+        "ramah",
+        "warga",
+        "guide",
+        "masyarakat",
+        "guidenya",
+        "lokal",
+        "tradisi",
+        "tenun",
+        "suku",
+        "sasak"
+      ],
+      "Netral": [
+        "guide",
+        "bayar",
+        "sade",
+        "lokal",
+        "sukarela",
+        "asli",
+        "suku",
+        "sasak",
+        "sambut",
+        "duduk"
+      ]
+    },
+    "Fasilitas": {
+      "Positif": [
+        "ikhlas",
+        "tiket",
+        "parkir",
+        "guide",
+        "souvenir",
+        "jual",
+        "mataram",
+        "harga",
+        "murah",
+        "suka"
+      ],
+      "Netral": [
+        "traditional",
+        "village"
+      ]
+    },
+    "Suasana": {
+      "Positif": [
+        "suasana",
+        "tenang",
+        "budaya",
+        "asli",
+        "suku",
+        "sasak",
+        "keliling",
+        "foto",
+        "nyaman",
+        "dagang"
+      ]
+    },
+    "Harga & Tiket": {
+      "Positif": [
+        "harga",
+        "tiket",
+        "ikhlas",
+        "souvenir",
+        "ramah",
+        "jual",
+        "murah",
+        "sade",
+        "duduk",
+        "barang"
+      ],
+      "Negatif": [
+        "harga",
+        "produk",
+        "rajin",
+        "kain",
+        "tenun",
+        "tawar",
+        "terkadang",
+        "tinggi",
+        "banding",
+        "pasar"
+      ],
+      "Netral": [
+        "tiket",
+        "harga",
+        "bayar",
+        "ikhlas",
+        "sade",
+        "biaya",
+        "baju",
+        "sewa",
+        "adat",
+        "foto"
+      ]
+    },
+    "Budaya & Tradisi": {
+      "Positif": [
+        "adat",
+        "budaya",
+        "sade",
+        "rumah",
+        "sejarah",
+        "jaga",
+        "kental",
+        "khas",
+        "lantai",
+        "sasak"
+      ],
+      "Netral": [
+        "adat",
+        "suku",
+        "khas",
+        "sasak",
+        "sade",
+        "tradisional",
+        "rumah",
+        "budaya",
+        "lombok",
+        "sejarah"
+      ]
+    },
+    "Kebersihan": {
+      "Positif": [
+        "sedia",
+        "toilet",
+        "ibadah",
+        "bersih",
+        "jaga"
+      ]
+    },
+    "Akses & Lokasi": {
+      "Positif": [
+        "raya",
+        "mudah",
+        "cari"
+      ],
+      "Negatif": [
+        "panas",
+        "pohon",
+        "kenal",
+        "akar",
+        "sasak",
+        "jaga",
+        "asli",
+        "akses",
+        "jalan",
+        "cenderung"
+      ]
+    },
+    "Kuliner": {
+      "Positif": [
+        "tiket",
+        "parkir",
+        "guide",
+        "ikhlas",
+        "souvenir",
+        "jual",
+        "mataram",
+        "harga",
+        "murah"
+      ]
+    },
+    "Pemandangan & Alam": {
+      "Positif": [
+        "rajin",
+        "alam",
+        "pandu",
+        "produk",
+        "khas",
+        "kain",
+        "tambah",
+        "kenal",
+        "budaya",
+        "suku"
+      ]
+    }
+  },
+  "Desa Wisata Budo": {
+    "Kuliner": {
+      "Positif": [
+        "makan",
+        "murah",
+        "sedia",
+        "minum",
+        "aneka",
+        "harga",
+        "langit",
+        "indak",
+        "ena",
+        "kopi"
+      ],
+      "Negatif": [
+        "pilih",
+        "makan",
+        "batas",
+        "htm",
+        "kak",
+        "parkir",
+        "rumah"
+      ],
+      "Netral": [
+        "kopi"
+      ]
+    },
+    "Pemandangan & Alam": {
+      "Positif": [
+        "pandang",
+        "sunset",
+        "bagus",
+        "indah",
+        "nikmat",
+        "mangrove",
+        "laut",
+        "hutan",
+        "sore",
+        "pulau"
+      ],
+      "Netral": [
+        "kalo",
+        "malam",
+        "lampu",
+        "warna",
+        "warni"
+      ]
+    },
+    "Fasilitas": {
+      "Positif": [
+        "masuk",
+        "parkir",
+        "sedia",
+        "informasi",
+        "budo",
+        "indah",
+        "memilki",
+        "inap",
+        "wisatawan",
+        "nginap"
+      ],
+      "Negatif": [
+        "gazebo",
+        "awat",
+        "kembang",
+        "sedia",
+        "fasilitas",
+        "pilih",
+        "makan",
+        "batas",
+        "htm",
+        "kak"
+      ],
+      "Netral": [
+        "parkir",
+        "halaman",
+        "masyarakat",
+        "biaya"
+      ]
+    },
+    "Harga & Tiket": {
+      "Positif": [
+        "harga",
+        "tiket",
+        "murah",
+        "trjangkau",
+        "kamar",
+        "inap",
+        "bagus",
+        "ramah",
+        "pisang",
+        "goreng"
+      ],
+      "Netral": [
+        "harga",
+        "masuk",
+        "parkir",
+        "sedia",
+        "informasi",
+        "tarif",
+        "tiket"
+      ]
+    },
+    "Suasana": {
+      "Positif": [
+        "suasana",
+        "mangrove",
+        "bagus",
+        "santa",
+        "bareng",
+        "keluarga",
+        "lingkung",
+        "asri",
+        "pohon",
+        "lindung"
+      ]
+    },
+    "Akses & Lokasi": {
+      "Positif": [
+        "bagus",
+        "manado",
+        "strategis",
+        "bandar",
+        "udara",
+        "internasional",
+        "ratulangi",
+        "pusat",
+        "kota",
+        "kurleb"
+      ]
+    },
+    "Pelayanan": {
+      "Positif": [
+        "masyarakat",
+        "ramah",
+        "mudah",
+        "selaim",
+        "inspirasi",
+        "kelola",
+        "kualitas",
+        "layan",
+        "awat"
+      ]
+    },
+    "Kebersihan": {
+      "Positif": [
+        "bersih",
+        "toilet",
+        "nyaman",
+        "rapi",
+        "ramah",
+        "tamah",
+        "duduk",
+        "nilai",
+        "sempurna",
+        "rapij"
+      ]
+    }
+  },
+  "Desa Wisata Olele": {
+    "Pemandangan & Alam": {
+      "Positif": [
+        "laut",
+        "indah",
+        "pandang",
+        "taman",
+        "ikan",
+        "bagus",
+        "air",
+        "olele",
+        "bersih",
+        "karang"
+      ],
+      "Negatif": [
+        "laut",
+        "biota"
+      ],
+      "Netral": [
+        "laut",
+        "taman",
+        "jalan",
+        "perahu",
+        "underwaternya",
+        "kaca",
+        "olele",
+        "tempuh",
+        "waktu",
+        "jam"
+      ]
+    },
+    "Akses & Lokasi": {
+      "Negatif": [
+        "akses",
+        "sulit",
+        "fasilitas",
+        "tunjang",
+        "kamar",
+        "mandi",
+        "kondisi",
+        "buruk"
+      ],
+      "Netral": [
+        "snorkeling",
+        "pinggir",
+        "pantai",
+        "jalan",
+        "kapal",
+        "menit"
+      ]
+    },
+    "Budaya & Tradisi": {
+      "Positif": [
+        "jaga",
+        "lestari",
+        "terumbu",
+        "karang"
+      ]
+    },
+    "Pelayanan": {
+      "Positif": [
+        "guide",
+        "ramah",
+        "warga",
+        "layan",
+        "tour",
+        "telaten",
+        "puas",
+        "total",
+        "bantu",
+        "pokdarwis"
+      ],
+      "Negatif": [
+        "mukim",
+        "padat"
+      ]
+    },
+    "Fasilitas": {
+      "Negatif": [
+        "fasilitas",
+        "susah",
+        "bangun",
+        "akses",
+        "sulit",
+        "tunjang",
+        "kamar",
+        "mandi",
+        "kondisi",
+        "buruk"
+      ]
+    },
+    "Harga & Tiket": {
+      "Positif": [
+        "harga",
+        "murah",
+        "worth"
+      ],
+      "Netral": [
+        "pasti",
+        "harga",
+        "paket",
+        "snorkeling"
+      ]
+    },
+    "Kebersihan": {
+      "Positif": [
+        "bersih",
+        "perhati"
+      ],
+      "Negatif": [
+        "akses",
+        "sulit",
+        "fasilitas",
+        "tunjang",
+        "kamar",
+        "mandi",
+        "kondisi",
+        "buruk",
+        "bersih",
+        "jaga"
+      ]
+    },
+    "Kuliner": {
+      "Positif": [
+        "ramah",
+        "makan"
+      ]
+    }
+  },
+  "Desa Wisata Pampang": {
+    "Budaya & Tradisi": {
+      "Positif": [
+        "tari",
+        "budaya",
+        "dayak",
+        "adat",
+        "indah",
+        "pampang",
+        "suku",
+        "tampil",
+        "wajib",
+        "penuh"
+      ],
+      "Netral": [
+        "tari",
+        "budaya",
+        "dayak",
+        "tunjuk",
+        "adat",
+        "suku",
+        "kalimantan",
+        "minggu",
+        "kenal",
+        "kenyah"
+      ]
+    },
+    "Harga & Tiket": {
+      "Positif": [
+        "tiket",
+        "murah"
+      ],
+      "Negatif": [
+        "tiket",
+        "bayar",
+        "senin",
+        "sabtu",
+        "rasa",
+        "rugi",
+        "bilang",
+        "kasih",
+        "lembar",
+        "mobil"
+      ],
+      "Netral": [
+        "foto",
+        "tiket",
+        "warga",
+        "bayar",
+        "harga",
+        "jepret",
+        "asih",
+        "jelas",
+        "tarif",
+        "bareng"
+      ]
+    },
+    "Akses & Lokasi": {
+      "Positif": [
+        "lembar",
+        "tiket"
+      ],
+      "Netral": [
+        "akses",
+        "jarak",
+        "jalan",
+        "dalam",
+        "kalimantan",
+        "kenal",
+        "budaya",
+        "adat",
+        "istiadat",
+        "suku"
+      ]
+    },
+    "Kebersihan": {
+      "Positif": [
+        "bersih",
+        "toilet",
+        "kamar",
+        "mandi",
+        "baju",
+        "adat",
+        "nenjajakan",
+        "sayur",
+        "segar",
+        "hasil"
+      ],
+      "Negatif": [
+        "sayang",
+        "toilet",
+        "outletnya"
+      ]
+    },
+    "Kuliner": {
+      "Positif": [
+        "jual",
+        "souvenir",
+        "modernisasi",
+        "souvenirnya",
+        "alam",
+        "senang",
+        "tari",
+        "warga",
+        "sana",
+        "pilih"
+      ]
+    },
+    "Pelayanan": {
+      "Positif": [
+        "ramah",
+        "staffnya",
+        "detail",
+        "nenek",
+        "jual",
+        "souvenir",
+        "cekat",
+        "meladenin",
+        "beli"
+      ],
+      "Netral": [
+        "kalo",
+        "warga",
+        "pampang",
+        "tinggal",
+        "dunia"
+      ]
+    },
+    "Fasilitas": {
+      "Positif": [
+        "parkir",
+        "luas",
+        "tenang",
+        "iring",
+        "alat",
+        "musik",
+        "sape",
+        "ditampilka",
+        "tradisional",
+        "sempat"
+      ],
+      "Netral": [
+        "harga",
+        "parkir",
+        "kendara"
+      ]
+    },
+    "Pemandangan & Alam": {
+      "Positif": [
+        "alam",
+        "senang",
+        "tari",
+        "warga",
+        "sana",
+        "pilih",
+        "souvenir",
+        "bagus",
+        "pandang",
+        "kesan"
+      ]
+    }
+  },
+  "Desa Wisata Setulang": {
+    "Fasilitas": {
+      "Positif": [
+        "foto",
+        "ngadem",
+        "indah",
+        "malinau"
+      ]
+    },
+    "Budaya & Tradisi": {
+      "Positif": [
+        "budaya",
+        "adat",
+        "kental",
+        "rumah",
+        "turun",
+        "dayak",
+        "mantap",
+        "lapang",
+        "bersih",
+        "kesan"
+      ],
+      "Netral": [
+        "balai",
+        "adat",
+        "dayak",
+        "ken",
+        "tulang",
+        "malinau"
+      ]
+    },
+    "Akses & Lokasi": {
+      "Negatif": [
+        "jalan",
+        "tulang",
+        "sabar",
+        "lubang"
+      ],
+      "Netral": [
+        "jalan",
+        "waktu",
+        "jam",
+        "kota",
+        "malinau",
+        "rute",
+        "pulau",
+        "sapi",
+        "tulang"
+      ]
+    },
+    "Pemandangan & Alam": {
+      "Positif": [
+        "hutan",
+        "alam",
+        "jaga",
+        "sungai",
+        "budaya",
+        "indah",
+        "pohon",
+        "moga",
+        "flora",
+        "fauna"
+      ]
+    },
+    "Suasana": {
+      "Positif": [
+        "suasana",
+        "alam",
+        "indah",
+        "asri",
+        "pohon",
+        "satu",
+        "arif",
+        "lokal",
+        "lumayan",
+        "bagus"
+      ]
+    },
+    "Pelayanan": {
+      "Positif": [
+        "ramah",
+        "bersih",
+        "masyarakat",
+        "suasana",
+        "asri",
+        "warga"
+      ]
+    },
+    "Kuliner": {
+      "Positif": [
+        "jual",
+        "makan"
+      ],
+      "Netral": [
+        "menu",
+        "lepu"
+      ]
+    }
+  },
+  "Desa Wisata Sungai Sekonyer": {
+    "Akses & Lokasi": {
+      "Positif": [
+        "bagus"
+      ]
+    },
+    "Pemandangan & Alam": {
+      "Positif": [
+        "alam",
+        "sungai",
+        "sekonyer",
+        "budaya",
+        "hutan",
+        "tawar",
+        "lokal",
+        "susur",
+        "tenang",
+        "alami"
+      ],
+      "Netral": [
+        "lestari",
+        "hutan",
+        "wisatawan",
+        "asing",
+        "lokal"
+      ]
+    },
+    "Suasana": {
+      "Positif": [
+        "tengah",
+        "asri",
+        "sungai",
+        "hutan",
+        "udara",
+        "segar",
+        "tambah",
+        "syahdu",
+        "suasana"
+      ]
+    },
+    "Budaya & Tradisi": {
+      "Netral": [
+        "jaga",
+        "lestari"
+      ]
+    },
+    "Kuliner": {
+      "Positif": [
+        "kenal",
+        "gerbang",
+        "utama",
+        "habitat",
+        "alami",
+        "orangutan",
+        "homestay",
+        "nyaman",
+        "makan",
+        "lokal"
+      ]
+    },
+    "Fasilitas": {
+      "Positif": [
+        "fasilitas",
+        "pada",
+        "homestay",
+        "nyaman",
+        "makan",
+        "lokal",
+        "lezat"
+      ]
+    },
+    "Pelayanan": {
+      "Positif": [
+        "masyarakat",
+        "ramah"
+      ]
+    }
+  },
+  "Desa Wisata Sungai Utik": {
+    "Budaya & Tradisi": {
+      "Positif": [
+        "budaya",
+        "unik",
+        "adat",
+        "indah",
+        "luarbiasa",
+        "istiadat",
+        "jaga",
+        "kental",
+        "keren",
+        "ramah"
+      ],
+      "Netral": [
+        "dayak",
+        "adat",
+        "iban",
+        "milik",
+        "budaya",
+        "turun",
+        "suku",
+        "komunitas",
+        "agam",
+        "tradisi"
+      ]
+    },
+    "Suasana": {
+      "Positif": [
+        "suasana",
+        "segar",
+        "damai",
+        "nyaman",
+        "inap",
+        "gunung",
+        "sejuk",
+        "udara",
+        "asri",
+        "teman"
+      ]
+    },
+    "Pemandangan & Alam": {
+      "Positif": [
+        "sungai",
+        "hutan",
+        "jaga",
+        "utik",
+        "suka",
+        "lingkung",
+        "jernih",
+        "pandang",
+        "hijau",
+        "asri"
+      ],
+      "Netral": [
+        "alam",
+        "malam",
+        "rumah",
+        "betang",
+        "acara",
+        "kongkow",
+        "minum",
+        "air",
+        "nira",
+        "hormat"
+      ]
+    },
+    "Pelayanan": {
+      "Positif": [
+        "masyarakat",
+        "ramah",
+        "welcome",
+        "adat",
+        "warga",
+        "tamu",
+        "asri",
+        "indah",
+        "hutan",
+        "lindung"
+      ]
+    },
+    "Akses & Lokasi": {
+      "Positif": [
+        "bagus"
+      ]
+    }
+  },
+  "Desa Wisata Waerebo": {
+    "Pelayanan": {
+      "Positif": [
+        "ramah",
+        "warga",
+        "kelola",
+        "kampung",
+        "betah",
+        "rumah",
+        "hangat",
+        "jaga",
+        "tradisi",
+        "penuh"
+      ],
+      "Negatif": [
+        "mes",
+        "warga",
+        "maksa",
+        "ojek",
+        "tarif",
+        "kak",
+        "orang"
+      ],
+      "Netral": [
+        "warga",
+        "guide",
+        "tutur",
+        "kampung",
+        "waerebo",
+        "sana"
+      ]
+    },
+    "Kuliner": {
+      "Positif": [
+        "kopi",
+        "makan",
+        "turun",
+        "relatif",
+        "beli",
+        "tani",
+        "cangkir",
+        "bubuk",
+        "arabika",
+        "harga"
+      ],
+      "Negatif": [
+        "overprice",
+        "makan",
+        "upgrade"
+      ]
+    },
+    "Pemandangan & Alam": {
+      "Positif": [
+        "alam",
+        "indah",
+        "pandang",
+        "malam",
+        "gunung",
+        "adat",
+        "kaki",
+        "nikmat",
+        "bahagia",
+        "makan"
+      ],
+      "Negatif": [
+        "lupa"
+      ],
+      "Netral": [
+        "jalan",
+        "trecking",
+        "hutan",
+        "tanjak",
+        "suhu",
+        "malam",
+        "dingin"
+      ]
+    },
+    "Akses & Lokasi": {
+      "Positif": [
+        "parkir",
+        "lumayan",
+        "titik",
+        "bagus",
+        "mes",
+        "warga",
+        "maksa",
+        "orang",
+        "senang",
+        "temu"
+      ],
+      "Negatif": [
+        "jalan",
+        "jam",
+        "ojek",
+        "pos",
+        "rusak",
+        "mobil",
+        "hati",
+        "parah",
+        "tanjak",
+        "waerebo"
+      ],
+      "Netral": [
+        "jam",
+        "labu",
+        "bajo",
+        "ojek",
+        "jalan",
+        "denge",
+        "jarak",
+        "trekking",
+        "lumayan",
+        "kota"
+      ]
+    },
+    "Budaya & Tradisi": {
+      "Positif": [
+        "adat",
+        "jaga",
+        "budaya",
+        "indah",
+        "rumah",
+        "unik",
+        "tradisi",
+        "alam",
+        "hidup",
+        "waerebo"
+      ],
+      "Netral": [
+        "salah",
+        "adat",
+        "tinggi"
+      ]
+    },
+    "Harga & Tiket": {
+      "Positif": [
+        "keren",
+        "nginap",
+        "acara",
+        "adat",
+        "grup",
+        "sewa",
+        "tongkat",
+        "kelapa",
+        "muda",
+        "listrik"
+      ],
+      "Netral": [
+        "harga",
+        "biaya",
+        "makan",
+        "malam",
+        "ojek",
+        "grup",
+        "patok",
+        "inap",
+        "sarap",
+        "waerebo"
+      ]
+    },
+    "Kebersihan": {
+      "Positif": [
+        "kamar",
+        "mandi",
+        "air",
+        "segar",
+        "bersih"
+      ]
+    },
+    "Suasana": {
+      "Positif": [
+        "suasana",
+        "damai",
+        "tenang",
+        "rumah",
+        "unjung",
+        "sederhana",
+        "cari",
+        "alam",
+        "budaya",
+        "autentik"
+      ],
+      "Netral": [
+        "suasana",
+        "wairebo"
+      ]
+    },
+    "Fasilitas": {
+      "Positif": [
+        "fasilitas",
+        "bersih",
+        "wae",
+        "rebo",
+        "village",
+        "wajib",
+        "labu",
+        "bajo"
+      ],
+      "Negatif": [
+        "motor",
+        "parkir",
+        "tanjak",
+        "lumayan",
+        "titik",
+        "jalan"
+      ],
+      "Netral": [
+        "parkir",
+        "ojek",
+        "daki",
+        "waerebo",
+        "tinggal",
+        "inap",
+        "sedia"
+      ]
+    }
+  },
+  "Gampong Nusa": {
+    "Suasana": {
+      "Positif": [
+        "keluarga",
+        "cocok",
+        "santa",
+        "udara",
+        "sejuk",
+        "bagus",
+        "berita"
+      ]
+    },
+    "Pemandangan & Alam": {
+      "Positif": [
+        "pandang",
+        "indah",
+        "hijau",
+        "sungai",
+        "sawah",
+        "alam",
+        "gunung",
+        "alir",
+        "viewnya",
+        "more"
+      ],
+      "Netral": [
+        "alami"
+      ]
+    },
+    "Pelayanan": {
+      "Positif": [
+        "ramah",
+        "masyarakat",
+        "warga",
+        "kelola",
+        "aceh",
+        "unjung",
+        "sungai",
+        "alir",
+        "inap",
+        "home"
+      ],
+      "Netral": [
+        "inisiasi",
+        "masyarakat"
+      ]
+    },
+    "Budaya & Tradisi": {
+      "Positif": [
+        "cocok",
+        "tradisional"
+      ]
+    },
+    "Fasilitas": {
+      "Positif": [
+        "great",
+        "village",
+        "life",
+        "sedia",
+        "homestay",
+        "rombong"
+      ]
+    },
+    "Akses & Lokasi": {
+      "Positif": [
+        "alami",
+        "asri"
+      ]
+    },
+    "Kuliner": {
+      "Positif": [
+        "masyarakat",
+        "ramah",
+        "kuliner",
+        "khas",
+        "aceh",
+        "untul"
+      ]
+    }
+  },
+  "Kampung Ketupat": {
+    "Harga & Tiket": {
+      "Positif": [
+        "harga",
+        "tiket",
+        "murah",
+        "jangkau",
+        "cocok",
+        "voucher",
+        "nyantai",
+        "makan",
+        "minum",
+        "ramah"
+      ],
+      "Negatif": [
+        "mahal",
+        "tiket",
+        "bayar",
+        "harga",
+        "mana",
+        "hari",
+        "jumat",
+        "minggu",
+        "unjung",
+        "kampung"
+      ],
+      "Netral": [
+        "tiket",
+        "harga",
+        "bayar",
+        "ribu",
+        "parkir",
+        "masuk",
+        "tukar",
+        "timbang",
+        "revisi",
+        "ketupat"
+      ]
+    },
+    "Pemandangan & Alam": {
+      "Positif": [
+        "pandang",
+        "view",
+        "indah",
+        "bagus",
+        "santai",
+        "sungai",
+        "manfaat",
+        "malam",
+        "asik",
+        "cantik"
+      ],
+      "Netral": [
+        "santa",
+        "kota",
+        "banjarmasin",
+        "sungai"
+      ]
+    },
+    "Suasana": {
+      "Positif": [
+        "suasana",
+        "nyaman",
+        "bersih",
+        "rindang",
+        "sungai",
+        "senang",
+        "ramai",
+        "unjung",
+        "sore",
+        "weekend"
+      ]
+    },
+    "Pelayanan": {
+      "Negatif": [
+        "kenal",
+        "sentra",
+        "produksi",
+        "ketupat",
+        "hari",
+        "warga",
+        "turun",
+        "aktivitas",
+        "kelola",
+        "buruk"
+      ]
+    },
+    "Fasilitas": {
+      "Positif": [
+        "parkir",
+        "luas",
+        "foto",
+        "bagus",
+        "lumayan",
+        "tiket",
+        "kampung",
+        "ketupat",
+        "dominasi",
+        "bangun"
+      ],
+      "Negatif": [
+        "parkir",
+        "motor",
+        "mobil"
+      ],
+      "Netral": [
+        "parkir",
+        "ribu",
+        "fasilitas",
+        "bayar",
+        "harga",
+        "tiket",
+        "motor",
+        "mobil",
+        "revisi",
+        "amfiteater"
+      ]
+    },
+    "Kuliner": {
+      "Positif": [
+        "makan",
+        "minum",
+        "htm",
+        "lengkap",
+        "gratis",
+        "menu",
+        "tenan",
+        "snack",
+        "aksesoris",
+        "jajan"
+      ],
+      "Negatif": [
+        "makan",
+        "kedai",
+        "malam",
+        "toko",
+        "tutup",
+        "bayar",
+        "mahal",
+        "beli",
+        "dalam"
+      ],
+      "Netral": [
+        "makan",
+        "pesan",
+        "sedia",
+        "kios",
+        "dalam"
+      ]
+    },
+    "Kebersihan": {
+      "Positif": [
+        "bersih",
+        "bagus",
+        "sih",
+        "baik",
+        "cermin",
+        "bawa",
+        "makan",
+        "keren",
+        "moga"
+      ],
+      "Negatif": [
+        "toilet",
+        "bahar",
+        "pakai",
+        "qris",
+        "dana",
+        "brimo",
+        "kalo",
+        "susah",
+        "sedia"
+      ]
+    },
+    "Akses & Lokasi": {
+      "Positif": [
+        "keliling",
+        "pas",
+        "lumayan",
+        "senang"
+      ]
+    }
+  },
+  "Kampung Marengo Baduy": {
+    "Suasana": {
+      "Positif": [
+        "suasana",
+        "asri",
+        "tenang",
+        "sejuk",
+        "udara",
+        "tentram",
+        "damai",
+        "lingkung",
+        "bersih",
+        "segar"
+      ],
+      "Netral": [
+        "suasana",
+        "budaya",
+        "tahan",
+        "rapi"
+      ]
+    },
+    "Pemandangan & Alam": {
+      "Positif": [
+        "alam",
+        "asri",
+        "pandang",
+        "budaya",
+        "alami",
+        "unik",
+        "kesan",
+        "warga",
+        "masyarakat",
+        "senang"
+      ],
+      "Negatif": [
+        "lupa"
+      ],
+      "Netral": [
+        "alam",
+        "baduy"
+      ]
+    },
+    "Budaya & Tradisi": {
+      "Positif": [
+        "budaya",
+        "lestari",
+        "culture",
+        "jaga",
+        "generasi",
+        "terus",
+        "pelihara",
+        "adat",
+        "istiadat",
+        "harga"
+      ],
+      "Negatif": [
+        "salah"
+      ],
+      "Netral": [
+        "budaya",
+        "suku",
+        "baduy",
+        "sungguh",
+        "serasa",
+        "lampau",
+        "arif",
+        "lokal",
+        "lestari"
+      ]
+    },
+    "Kebersihan": {
+      "Positif": [
+        "toilet"
+      ],
+      "Negatif": [
+        "sampah",
+        "plastik",
+        "tolong",
+        "perhati",
+        "lingkung",
+        "salur",
+        "lindung"
+      ]
+    },
+    "Akses & Lokasi": {
+      "Positif": [
+        "mudah",
+        "kendara",
+        "umum",
+        "harga",
+        "penuh",
+        "makna",
+        "alaskaki",
+        "nyaman",
+        "kaki",
+        "turun"
+      ],
+      "Negatif": [
+        "perjalananny",
+        "lelah",
+        "parah",
+        "jalan",
+        "akses",
+        "mobil"
+      ],
+      "Netral": [
+        "jalan",
+        "baduy",
+        "lewat",
+        "batu",
+        "jalur",
+        "bilang",
+        "ringan",
+        "rute",
+        "lumayan"
+      ]
+    },
+    "Fasilitas": {
+      "Positif": [
+        "homestay",
+        "inap"
+      ],
+      "Netral": [
+        "jembatan",
+        "gazebo",
+        "baduy",
+        "lebak",
+        "banten"
+      ]
+    },
+    "Harga & Tiket": {
+      "Netral": [
+        "guide",
+        "harga",
+        "tiket",
+        "pas",
+        "jual",
+        "barang",
+        "rajin",
+        "hasil",
+        "tanam",
+        "standar"
+      ]
+    },
+    "Pelayanan": {
+      "Positif": [
+        "masyarakat",
+        "warga",
+        "adat",
+        "ramah",
+        "untung",
+        "guide",
+        "sabar",
+        "alam",
+        "asri",
+        "sederhana"
+      ],
+      "Netral": [
+        "guide",
+        "pas",
+        "tiket",
+        "nge",
+        "tarif",
+        "kak",
+        "nego",
+        "baca",
+        "larang",
+        "atur"
+      ]
+    }
+  },
+  "Kampung Naga": {
+    "Kebersihan": {
+      "Positif": [
+        "therapi",
+        "nyaman",
+        "badan",
+        "enteng"
+      ],
+      "Negatif": [
+        "sayang",
+        "sampah",
+        "kolam",
+        "ikan",
+        "sungai"
+      ]
+    },
+    "Pemandangan & Alam": {
+      "Positif": [
+        "alam",
+        "pandang",
+        "asri",
+        "kampung",
+        "sungai",
+        "indah",
+        "alami",
+        "sawah",
+        "sejuk",
+        "budaya"
+      ],
+      "Netral": [
+        "alam",
+        "adat",
+        "kampung",
+        "tahan",
+        "istiadat",
+        "alami",
+        "eksotik",
+        "turis",
+        "asing",
+        "masjid"
+      ]
+    },
+    "Suasana": {
+      "Positif": [
+        "suasana",
+        "asri",
+        "nyaman",
+        "kampung",
+        "udara",
+        "jaga",
+        "tradisi",
+        "tenang",
+        "sejuk",
+        "segar"
+      ],
+      "Netral": [
+        "suasana",
+        "jaman",
+        "baheula",
+        "rumah",
+        "adat",
+        "tata",
+        "rapi",
+        "parkir",
+        "mobil",
+        "kampung"
+      ]
+    },
+    "Pelayanan": {
+      "Positif": [
+        "ramah",
+        "warga",
+        "masyarakat",
+        "tour",
+        "guide",
+        "jamu",
+        "laki",
+        "hidup",
+        "sederhana",
+        "listrik"
+      ],
+      "Negatif": [
+        "guide",
+        "pas",
+        "sana",
+        "kayak",
+        "bingung",
+        "kampung",
+        "naga",
+        "hambar",
+        "kesan"
+      ]
+    },
+    "Budaya & Tradisi": {
+      "Positif": [
+        "budaya",
+        "adat",
+        "kampung",
+        "suasana",
+        "asri",
+        "sunda",
+        "jaga",
+        "tradisi",
+        "edukasi",
+        "tradisional"
+      ],
+      "Negatif": [
+        "salah",
+        "tangga",
+        "kampung",
+        "tolak",
+        "lpg",
+        "listrik",
+        "effort",
+        "arah",
+        "lewat",
+        "anak"
+      ],
+      "Netral": [
+        "tradisi",
+        "adat",
+        "sunda",
+        "sejarah",
+        "tahan",
+        "hidup",
+        "budaya",
+        "jadi",
+        "arif",
+        "lokal"
+      ]
+    },
+    "Kuliner": {
+      "Positif": [
+        "jajan",
+        "murah",
+        "merah",
+        "beli",
+        "kelapa",
+        "hari",
+        "rbu",
+        "febriani",
+        "valentina",
+        "makan"
+      ],
+      "Netral": [
+        "kedai",
+        "kopi",
+        "bunda",
+        "leseh",
+        "mutiara",
+        "istirahat",
+        "ngopi",
+        "warung"
+      ]
+    },
+    "Akses & Lokasi": {
+      "Positif": [
+        "kampung",
+        "indah",
+        "letak",
+        "kota",
+        "tasik",
+        "lumayan",
+        "budaya",
+        "naga",
+        "pandang",
+        "sawah"
+      ],
+      "Negatif": [
+        "jalan",
+        "tangga",
+        "akses",
+        "parkir",
+        "hati",
+        "kampung",
+        "masuk",
+        "tantang",
+        "turun",
+        "lumayan"
+      ],
+      "Netral": [
+        "jalan",
+        "garut",
+        "kampung",
+        "turun",
+        "tangga",
+        "raya",
+        "tasikmalaya",
+        "naga",
+        "tempuh",
+        "bis"
+      ]
+    },
+    "Fasilitas": {
+      "Positif": [
+        "suasana",
+        "jaman",
+        "baheula",
+        "rumah",
+        "adat",
+        "tata",
+        "rapi",
+        "parkir",
+        "kampung",
+        "kaki"
+      ],
+      "Netral": [
+        "parkir",
+        "hati",
+        "persis",
+        "pinggir",
+        "jalan",
+        "jarak",
+        "akses",
+        "tangga",
+        "curam",
+        "ekstra"
+      ]
+    },
+    "Harga & Tiket": {
+      "Positif": [
+        "tiket",
+        "masuk",
+        "parkir",
+        "gratis",
+        "tour",
+        "guide",
+        "ikhlas"
+      ],
+      "Netral": [
+        "worth",
+        "tiket",
+        "kait",
+        "tarif"
+      ]
+    }
+  },
+  "Kampung Terih": {
+    "Pemandangan & Alam": {
+      "Positif": [
+        "pandang",
+        "view",
+        "bagus",
+        "sunset",
+        "seafood",
+        "cocok",
+        "pantai",
+        "indah",
+        "laut",
+        "lumayan"
+      ],
+      "Netral": [
+        "pantai",
+        "bakau",
+        "jalan",
+        "foto",
+        "jenis",
+        "pohon",
+        "jual",
+        "sea",
+        "food",
+        "atas"
+      ]
+    },
+    "Kuliner": {
+      "Positif": [
+        "makan",
+        "seafood",
+        "kuliner",
+        "murah",
+        "lumayan",
+        "bagus",
+        "harga",
+        "jangkau",
+        "paintball",
+        "warung"
+      ],
+      "Netral": [
+        "makan",
+        "seafood"
+      ]
+    },
+    "Suasana": {
+      "Positif": [
+        "suasana",
+        "asri",
+        "udara",
+        "kampung",
+        "tenang",
+        "bagus",
+        "nyaman",
+        "santa",
+        "pantai",
+        "sangan"
+      ]
+    },
+    "Akses & Lokasi": {
+      "Positif": [
+        "bagus",
+        "indah"
+      ],
+      "Negatif": [
+        "jalan",
+        "paku",
+        "salah",
+        "pondok",
+        "tambah",
+        "laut",
+        "surut",
+        "lelah",
+        "bengkong",
+        "kampung"
+      ],
+      "Netral": [
+        "kampung",
+        "tua",
+        "melayu"
+      ]
+    },
+    "Harga & Tiket": {
+      "Positif": [
+        "harga",
+        "murah",
+        "makan",
+        "sahabat",
+        "masakan",
+        "rekomen",
+        "gonggong",
+        "ikan",
+        "asam",
+        "pedas"
+      ]
+    },
+    "Pelayanan": {
+      "Positif": [
+        "layan",
+        "mantap",
+        "warga",
+        "ramah"
+      ]
+    },
+    "Fasilitas": {
+      "Positif": [
+        "fasilitas",
+        "salah",
+        "terupdate",
+        "ramai",
+        "baik",
+        "nongkrong",
+        "obrol",
+        "pasang",
+        "wahana",
+        "hibur"
+      ],
+      "Negatif": [
+        "temu",
+        "bidang",
+        "kolam",
+        "lumpur",
+        "ering"
+      ],
+      "Netral": [
+        "wahana"
+      ]
+    },
+    "Kebersihan": {
+      "Positif": [
+        "tunjang",
+        "fasilitas",
+        "umum",
+        "toilet",
+        "bersih"
+      ]
+    }
+  },
+  "Kunjir": {
+    "Suasana": {
+      "Positif": [
+        "santa",
+        "nyaman",
+        "keluarga",
+        "pantai",
+        "cocok",
+        "sejuk",
+        "udara",
+        "segar",
+        "indah",
+        "asri"
+      ]
+    },
+    "Pemandangan & Alam": {
+      "Positif": [
+        "pantai",
+        "pandang",
+        "bagus",
+        "indah",
+        "laut",
+        "gunung",
+        "bersih",
+        "nikmat",
+        "cocok",
+        "lumayan"
+      ],
+      "Negatif": [
+        "pantai",
+        "kasihan",
+        "lupa",
+        "laut",
+        "surut"
+      ],
+      "Netral": [
+        "pantai",
+        "laut",
+        "warna",
+        "air",
+        "biru",
+        "ramai",
+        "alami",
+        "terjang",
+        "tsunami",
+        "sulap"
+      ]
+    },
+    "Fasilitas": {
+      "Positif": [
+        "gazebo",
+        "nyaman",
+        "asri",
+        "hadap",
+        "laut",
+        "santai",
+        "cocok",
+        "keluarga",
+        "pasang",
+        "sedia"
+      ],
+      "Netral": [
+        "parkir",
+        "duduk",
+        "biaya",
+        "kendara",
+        "hadap",
+        "laut"
+      ]
+    },
+    "Kuliner": {
+      "Positif": [
+        "warung",
+        "warga",
+        "bakso",
+        "mie",
+        "ayam",
+        "baik",
+        "situ",
+        "pantai",
+        "adem",
+        "makananya"
+      ],
+      "Netral": [
+        "makan",
+        "bakso",
+        "pinggir",
+        "pantai",
+        "gazebo",
+        "warung",
+        "jual",
+        "minum",
+        "standar",
+        "kopi"
+      ]
+    },
+    "Akses & Lokasi": {
+      "Positif": [
+        "bahan",
+        "pesisir",
+        "mudah",
+        "bagus",
+        "vibes",
+        "asa",
+        "bal",
+        "pantai"
+      ],
+      "Negatif": [
+        "jalan",
+        "dampak",
+        "laut",
+        "pantai",
+        "tarik",
+        "konon",
+        "kena",
+        "naik",
+        "air",
+        "tingkat"
+      ]
+    },
+    "Kebersihan": {
+      "Negatif": [
+        "bersih",
+        "sawung",
+        "pantai",
+        "toilet",
+        "urus",
+        "rusak",
+        "tolong",
+        "tingkat",
+        "sampah",
+        "sera"
+      ]
+    },
+    "Pelayanan": {
+      "Positif": [
+        "masyarakat",
+        "kreatif"
+      ]
+    }
+  },
+  "Mamuju City": {
+    "Kebersihan": {
+      "Positif": [
+        "tata",
+        "bagus",
+        "bersih"
+      ]
+    },
+    "Pemandangan & Alam": {
+      "Positif": [
+        "pandang",
+        "indah",
+        "mamuju",
+        "kota",
+        "bagus",
+        "view",
+        "nikmat",
+        "tinggi",
+        "malam",
+        "cantik"
+      ],
+      "Negatif": [
+        "ganggu",
+        "tiang",
+        "listrik",
+        "kabel",
+        "tutup",
+        "hasil",
+        "jepret"
+      ],
+      "Netral": [
+        "kota",
+        "mamuju"
+      ]
+    },
+    "Suasana": {
+      "Positif": [
+        "sejuk",
+        "suasana",
+        "mamuju",
+        "udara",
+        "pandang",
+        "nyaman",
+        "nikmat",
+        "tinggi",
+        "amazing",
+        "view"
+      ],
+      "Negatif": [
+        "pantai",
+        "panas",
+        "pol",
+        "maklum",
+        "kota",
+        "persis",
+        "pinggir",
+        "harga",
+        "latar",
+        "manakarra"
+      ]
+    },
+    "Harga & Tiket": {
+      "Positif": [
+        "segar",
+        "harga",
+        "jangkau"
+      ]
+    },
+    "Akses & Lokasi": {
+      "Positif": [
+        "bagus",
+        "pandang",
+        "mamuju",
+        "atas",
+        "tinggi",
+        "awat",
+        "bertanggungjawab",
+        "moga",
+        "depan",
+        "kelola"
+      ],
+      "Negatif": [
+        "jalan",
+        "mobil",
+        "kendara",
+        "akses",
+        "anak",
+        "terjal",
+        "puncak",
+        "kelok",
+        "awat",
+        "malam"
+      ],
+      "Netral": [
+        "kota",
+        "mamuju",
+        "mobil",
+        "atas",
+        "bukit",
+        "jalan",
+        "ekstrim",
+        "tanjak",
+        "tikung",
+        "tinggi"
+      ]
+    },
+    "Pelayanan": {
+      "Positif": [
+        "layan",
+        "dokter",
+        "ramah",
+        "nyaman"
+      ]
+    },
+    "Kuliner": {
+      "Positif": [
+        "menu",
+        "makan",
+        "tersediah"
+      ],
+      "Negatif": [
+        "cafe",
+        "warung",
+        "kelontong"
+      ]
+    },
+    "Fasilitas": {
+      "Positif": [
+        "gazebo",
+        "sedia",
+        "warung",
+        "jual",
+        "sekitar",
+        "fasilitas",
+        "hibur",
+        "makan",
+        "pesan",
+        "kelapa"
+      ]
+    }
+  },
+  "Mangrove Kurau": {
+    "Pemandangan & Alam": {
+      "Positif": [
+        "mangrove",
+        "hutan",
+        "asri",
+        "boat",
+        "alam",
+        "pulau",
+        "perahu",
+        "edukasi",
+        "keren",
+        "jaga"
+      ],
+      "Negatif": [
+        "mangrove",
+        "hutan",
+        "munjang",
+        "liuk",
+        "konservasi",
+        "pohon",
+        "spesies",
+        "tepi",
+        "pantai",
+        "lumpur"
+      ],
+      "Netral": [
+        "mangrove",
+        "alam",
+        "munjang",
+        "teeletak",
+        "kurau",
+        "bangka",
+        "tengah",
+        "kalo",
+        "hutan",
+        "ajak"
+      ]
+    },
+    "Akses & Lokasi": {
+      "Positif": [
+        "kaki",
+        "senang",
+        "motorboot",
+        "tiket",
+        "pondok",
+        "mdh",
+        "pakai",
+        "boat",
+        "dukung",
+        "perintah"
+      ],
+      "Negatif": [
+        "awat",
+        "jalan",
+        "setapak",
+        "rusak"
+      ],
+      "Netral": [
+        "sepi",
+        "smart",
+        "fishery",
+        "village",
+        "trek",
+        "jalan",
+        "setapak",
+        "penuh",
+        "kenang"
+      ]
+    },
+    "Harga & Tiket": {
+      "Positif": [
+        "boleh",
+        "mancing",
+        "murah",
+        "jam"
+      ],
+      "Netral": [
+        "tiket",
+        "ribu",
+        "rawa",
+        "mangrove",
+        "kapal",
+        "motor"
+      ]
+    },
+    "Fasilitas": {
+      "Positif": [
+        "foto",
+        "parkir",
+        "pada",
+        "terus",
+        "bagus",
+        "jam",
+        "gantung",
+        "dll"
+      ],
+      "Negatif": [
+        "liuk",
+        "jembatan",
+        "kayu",
+        "hutan",
+        "rapuh",
+        "roboh"
+      ],
+      "Netral": [
+        "kolam",
+        "udang",
+        "sistem",
+        "bioplog",
+        "kembang",
+        "fasilitas",
+        "perahu"
+      ]
+    },
+    "Kebersihan": {
+      "Positif": [
+        "kamar",
+        "mandi",
+        "bersih"
+      ],
+      "Netral": [
+        "pondok",
+        "pinggir",
+        "jalan",
+        "akses",
+        "mdh"
+      ]
+    },
+    "Pelayanan": {
+      "Positif": [
+        "segi",
+        "layan",
+        "bilang"
+      ]
+    },
+    "Suasana": {
+      "Positif": [
+        "suasana",
+        "alami",
+        "indah",
+        "nyaman",
+        "sejuk",
+        "letak",
+        "pusat",
+        "kota",
+        "pas",
+        "tenang"
+      ]
+    }
+  },
+  "Nagari Pariangan": {
+    "Pemandangan & Alam": {
+      "Positif": [
+        "pandang",
+        "indah",
+        "sawah",
+        "bagus",
+        "alam",
+        "view",
+        "bukit",
+        "gunung",
+        "sejuk",
+        "suasana"
+      ],
+      "Negatif": [
+        "viewsnya",
+        "mahal",
+        "minangkabauu"
+      ],
+      "Netral": [
+        "gunung",
+        "letak",
+        "pinggang",
+        "marapi",
+        "makan",
+        "bukit",
+        "jejer",
+        "bar",
+        "sensasi"
+      ]
+    },
+    "Suasana": {
+      "Positif": [
+        "suasana",
+        "udara",
+        "sejuk",
+        "indah",
+        "segar",
+        "pandang",
+        "tenang",
+        "bersih",
+        "paru",
+        "dingin"
+      ],
+      "Netral": [
+        "suasana",
+        "alam",
+        "minangkabauu"
+      ]
+    },
+    "Akses & Lokasi": {
+      "Positif": [
+        "bagus",
+        "murah",
+        "riah"
+      ],
+      "Negatif": [
+        "jalan",
+        "akses",
+        "mobil",
+        "sempit",
+        "kendara",
+        "arsitektur",
+        "rumah",
+        "gadang",
+        "asli",
+        "jajar"
+      ],
+      "Netral": [
+        "jalan",
+        "tanjak",
+        "akses"
+      ]
+    },
+    "Pelayanan": {
+      "Positif": [
+        "ramah",
+        "makan",
+        "kantong",
+        "layan",
+        "warga",
+        "indah",
+        "masyarakat"
+      ]
+    },
+    "Kuliner": {
+      "Positif": [
+        "makan",
+        "cafe",
+        "minum",
+        "kawa",
+        "daun",
+        "indah",
+        "sedia",
+        "duduk",
+        "warung",
+        "kopi"
+      ],
+      "Netral": [
+        "makan",
+        "sesuai",
+        "standar",
+        "minum",
+        "khas",
+        "teh",
+        "talua",
+        "kopi",
+        "kawa"
+      ]
+    },
+    "Fasilitas": {
+      "Positif": [
+        "inap",
+        "rekomendasi",
+        "hirup",
+        "udara",
+        "segar",
+        "pagi"
+      ],
+      "Netral": [
+        "parkir",
+        "ayal",
+        "nagari",
+        "pariangan",
+        "nobat",
+        "dunia",
+        "kategori",
+        "worl",
+        "most",
+        "picturesque"
+      ]
+    },
+    "Harga & Tiket": {
+      "Netral": [
+        "cafe",
+        "sedia",
+        "agam",
+        "menu",
+        "makan",
+        "cemilan",
+        "minum",
+        "harga",
+        "standar"
+      ]
+    },
+    "Kebersihan": {
+      "Positif": [
+        "bersih",
+        "wcnya",
+        "sedia",
+        "toilet",
+        "musholah",
+        "tata",
+        "parkir"
+      ],
+      "Netral": [
+        "sedia",
+        "toilet",
+        "mesjid",
+        "recommended",
+        "alam",
+        "sawah",
+        "kaki",
+        "gunung",
+        "rapi",
+        "tinggi"
+      ]
+    }
+  },
+  "Osing": {
+    "Kebersihan": {
+      "Negatif": [
+        "pintu",
+        "toilet",
+        "jebol",
+        "benah",
+        "kamar",
+        "mandi",
+        "rusak",
+        "bersih",
+        "sampah"
+      ]
+    },
+    "Fasilitas": {
+      "Positif": [
+        "kolam",
+        "renang",
+        "bagus",
+        "inap",
+        "mandi",
+        "suasana",
+        "tenang",
+        "jaga",
+        "parkir",
+        "dalam"
+      ],
+      "Negatif": [
+        "kolam",
+        "parkir",
+        "fasilitas",
+        "biar",
+        "bersih",
+        "susah",
+        "mangkrak",
+        "unjung",
+        "dikit",
+        "portal"
+      ],
+      "Netral": [
+        "ribu",
+        "anak",
+        "kolam",
+        "renang",
+        "nyamuk",
+        "tiket",
+        "dewasa",
+        "parkir",
+        "mobil",
+        "kasihan"
+      ]
+    },
+    "Suasana": {
+      "Positif": [
+        "suasana",
+        "udara",
+        "tenang",
+        "sejuk",
+        "asri",
+        "bersih",
+        "bagus",
+        "kolam",
+        "renang",
+        "nyaman"
+      ],
+      "Netral": [
+        "suasana",
+        "sepi"
+      ]
+    },
+    "Pemandangan & Alam": {
+      "Positif": [
+        "pandang",
+        "cantik",
+        "pantai",
+        "sejuk",
+        "rindang",
+        "pohon",
+        "teduh",
+        "suasana",
+        "elo",
+        "alam"
+      ]
+    },
+    "Harga & Tiket": {
+      "Positif": [
+        "harga",
+        "anak",
+        "tiket",
+        "murah",
+        "ramah",
+        "sepoy",
+        "nyamuk",
+        "kasihan",
+        "adat",
+        "parkir"
+      ],
+      "Negatif": [
+        "tiket",
+        "anak",
+        "parkir",
+        "mobil",
+        "kasih",
+        "diskon",
+        "gadikasih",
+        "nota",
+        "uang",
+        "pakai"
+      ]
+    },
+    "Akses & Lokasi": {
+      "Positif": [
+        "bagus",
+        "mnju"
+      ],
+      "Negatif": [
+        "jalan",
+        "anak",
+        "kotor",
+        "nyamuk",
+        "kasihan",
+        "kondisi",
+        "kayak",
+        "harga",
+        "tiket",
+        "parkir"
+      ]
+    },
+    "Kuliner": {
+      "Positif": [
+        "makan",
+        "kuliner",
+        "jajan",
+        "khas",
+        "banyuwangi",
+        "budaya",
+        "nikmat",
+        "musik",
+        "tradisional",
+        "bagus"
+      ],
+      "Netral": [
+        "kuliner",
+        "makan",
+        "jajan",
+        "banyuwangi",
+        "tradisional",
+        "suasana",
+        "warung",
+        "kak",
+        "jon",
+        "harga"
+      ]
+    },
+    "Budaya & Tradisi": {
+      "Positif": [
+        "adat",
+        "budaya",
+        "kental",
+        "bagus",
+        "masyarakat",
+        "ramah",
+        "musik",
+        "osing",
+        "banyuwangi",
+        "istiadat"
+      ],
+      "Negatif": [
+        "sepi",
+        "jarang",
+        "temu",
+        "pilih",
+        "banyuwangi"
+      ],
+      "Netral": [
+        "tradisional",
+        "pasar",
+        "osing",
+        "sedia",
+        "makan",
+        "adat",
+        "istiadat",
+        "lestari",
+        "jaman",
+        "modern"
+      ]
+    },
+    "Pelayanan": {
+      "Positif": [
+        "ramah",
+        "masyarakat",
+        "adat",
+        "sepoy",
+        "warga",
+        "lokal",
+        "kental",
+        "tugas",
+        "kuliah",
+        "osing"
+      ],
+      "Negatif": [
+        "jaga",
+        "parkir",
+        "dalam",
+        "kolam",
+        "renang",
+        "bersih",
+        "kelola",
+        "payah"
+      ],
+      "Netral": [
+        "warga",
+        "jual",
+        "free",
+        "day",
+        "masyarakat"
+      ]
+    }
+  },
+  "Pantai Batu Kuda": {
+    "Pemandangan & Alam": {
+      "Positif": [
+        "pantai",
+        "indah",
+        "pandang",
+        "batu",
+        "kuda",
+        "karang",
+        "bagus",
+        "bentuk",
+        "jadi",
+        "salah"
+      ],
+      "Negatif": [
+        "pantai",
+        "spor",
+        "mandi",
+        "karang",
+        "butuh",
+        "investor",
+        "kelola",
+        "seram",
+        "kalo",
+        "malam"
+      ],
+      "Netral": [
+        "pantai",
+        "batu",
+        "kuda",
+        "air",
+        "milik",
+        "salah",
+        "laut",
+        "kota",
+        "ambon",
+        "unjung"
+      ]
+    },
+    "Harga & Tiket": {
+      "Positif": [
+        "tiket",
+        "gratis",
+        "parkir"
+      ],
+      "Negatif": [
+        "pantai",
+        "air",
+        "mahal",
+        "panas",
+        "surut",
+        "biaya",
+        "retribusi"
+      ],
+      "Netral": [
+        "biaya"
+      ]
+    },
+    "Suasana": {
+      "Positif": [
+        "negeri",
+        "tulehu",
+        "indah",
+        "air",
+        "laut",
+        "jernih",
+        "suasana",
+        "tenang",
+        "cocok",
+        "santa"
+      ]
+    },
+    "Pelayanan": {
+      "Positif": [
+        "indah",
+        "alam",
+        "alami",
+        "ramah",
+        "warga",
+        "jadi",
+        "salah",
+        "pantai",
+        "baik",
+        "malu"
+      ]
+    },
+    "Kebersihan": {
+      "Positif": [
+        "mandi",
+        "kamar",
+        "baik",
+        "lestari",
+        "bak",
+        "sih",
+        "gelap",
+        "senter",
+        "sempak"
+      ],
+      "Negatif": [
+        "kotor",
+        "bersih",
+        "tingkat",
+        "sampah",
+        "plastik",
+        "toilet",
+        "bau",
+        "bak",
+        "air"
+      ]
+    },
+    "Fasilitas": {
+      "Positif": [
+        "parkir",
+        "sedia",
+        "mushola",
+        "bangun",
+        "kolam",
+        "air",
+        "tarik",
+        "unjung",
+        "luas",
+        "musholah"
+      ],
+      "Negatif": [
+        "sayang",
+        "fasilitas",
+        "pada"
+      ]
+    }
+  },
+  "Pentingsari": {
+    "Pelayanan": {
+      "Positif": [
+        "ramah",
+        "warga",
+        "layan",
+        "keren",
+        "masyarakat",
+        "sopan",
+        "kelola",
+        "enakk",
+        "makmur",
+        "baik"
+      ]
+    },
+    "Kebersihan": {
+      "Positif": [
+        "bersih",
+        "kamar",
+        "mandi",
+        "rapi",
+        "pada",
+        "masyarakat",
+        "camping",
+        "kaki",
+        "asri",
+        "toilet"
+      ],
+      "Netral": [
+        "kamar",
+        "mandi",
+        "toilet"
+      ]
+    },
+    "Pemandangan & Alam": {
+      "Positif": [
+        "alam",
+        "pohon",
+        "seru",
+        "asri",
+        "ramah",
+        "cocok",
+        "suasana",
+        "alami",
+        "pandang",
+        "ajar"
+      ],
+      "Negatif": [
+        "diriin",
+        "tenda",
+        "alir",
+        "sungai",
+        "pas",
+        "malam",
+        "serangga",
+        "bikin",
+        "bengul"
+      ]
+    },
+    "Suasana": {
+      "Positif": [
+        "suasana",
+        "asri",
+        "sejuk",
+        "nyaman",
+        "udara",
+        "tenang",
+        "alami",
+        "alam",
+        "natural",
+        "segar"
+      ]
+    },
+    "Fasilitas": {
+      "Positif": [
+        "homestay",
+        "ramah",
+        "parkir",
+        "cocok",
+        "outbound",
+        "joko",
+        "ambar",
+        "makan",
+        "homestaynya",
+        "bersih"
+      ],
+      "Negatif": [
+        "parkir",
+        "batas",
+        "liku",
+        "tingkat",
+        "fasilitas",
+        "dana",
+        "dinas",
+        "pariwisata",
+        "akses",
+        "jalan"
+      ],
+      "Netral": [
+        "inap",
+        "homestay",
+        "amrullah",
+        "yusuf",
+        "rumah",
+        "warga",
+        "olah",
+        "kopi",
+        "dll",
+        "sana"
+      ]
+    },
+    "Akses & Lokasi": {
+      "Positif": [
+        "outbond",
+        "nyaman",
+        "recommended",
+        "kemah",
+        "rute",
+        "lumayan",
+        "tantang",
+        "turun",
+        "pada",
+        "giat"
+      ],
+      "Negatif": [
+        "jalan",
+        "parkir",
+        "batas",
+        "tunjuk",
+        "liku",
+        "kayak",
+        "pendopo",
+        "bus",
+        "kaki",
+        "tambah"
+      ],
+      "Netral": [
+        "rute",
+        "jalan"
+      ]
+    },
+    "Kuliner": {
+      "Positif": [
+        "makan",
+        "warung",
+        "menu",
+        "murah",
+        "nyaman",
+        "khas",
+        "kopi",
+        "reuni",
+        "dll",
+        "bagus"
+      ]
+    },
+    "Budaya & Tradisi": {
+      "Positif": [
+        "cocok",
+        "gamelan",
+        "asyik"
+      ]
+    },
+    "Harga & Tiket": {
+      "Positif": [
+        "harga",
+        "jangkau"
+      ]
+    }
+  },
+  "Pulau Kemaro": {
+    "Akses & Lokasi": {
+      "Positif": [
+        "guncang",
+        "bersih",
+        "perahu",
+        "cocok",
+        "seru",
+        "debur",
+        "ombak",
+        "mudah",
+        "raya",
+        "bagus"
+      ],
+      "Negatif": [
+        "akses",
+        "nyebrang",
+        "sungai",
+        "mus",
+        "ketek"
+      ],
+      "Netral": [
+        "perahu",
+        "jalan",
+        "akses",
+        "pulau",
+        "maro",
+        "jalur",
+        "benteng",
+        "kuto",
+        "besak",
+        "sewa"
+      ]
+    },
+    "Kuliner": {
+      "Positif": [
+        "makan",
+        "seru",
+        "minum",
+        "perjuanl",
+        "belikan",
+        "situ",
+        "bantu",
+        "daya",
+        "tarik",
+        "dalam"
+      ],
+      "Netral": [
+        "makan",
+        "berat",
+        "snack",
+        "minum"
+      ]
+    },
+    "Harga & Tiket": {
+      "Positif": [
+        "harga",
+        "makan",
+        "aksesoris",
+        "jangkau",
+        "pulau",
+        "maro",
+        "kapal",
+        "ketek",
+        "leher",
+        "cekik"
+      ],
+      "Negatif": [
+        "kapal",
+        "harga",
+        "mahal"
+      ],
+      "Netral": [
+        "ribu",
+        "perahu",
+        "kalo",
+        "pulau",
+        "tarif",
+        "sewa",
+        "info",
+        "lebaran",
+        "harga",
+        "tiket"
+      ]
+    },
+    "Budaya & Tradisi": {
+      "Positif": [
+        "sejarah",
+        "ibadat",
+        "foto",
+        "aset",
+        "awat",
+        "hok",
+        "cheng",
+        "bio",
+        "gratis",
+        "lumayan"
+      ]
+    },
+    "Kebersihan": {
+      "Positif": [
+        "bersih",
+        "awat",
+        "jaga",
+        "toilet",
+        "sedia",
+        "fasilitas",
+        "pulau",
+        "tingkat"
+      ],
+      "Negatif": [
+        "sampah",
+        "sera",
+        "toilet",
+        "bersih",
+        "pikir",
+        "selfi",
+        "kotor",
+        "kamar",
+        "mandi",
+        "air"
+      ]
+    },
+    "Pemandangan & Alam": {
+      "Positif": [
+        "pulau",
+        "alam",
+        "indah",
+        "pandang",
+        "maro",
+        "sungai",
+        "mus",
+        "nikmat",
+        "bagus",
+        "view"
+      ],
+      "Negatif": [
+        "selfi",
+        "nyaman",
+        "sungai",
+        "mus",
+        "habis",
+        "selesai",
+        "cap",
+        "gomeh",
+        "resiko",
+        "sampah"
+      ]
+    },
+    "Suasana": {
+      "Positif": [
+        "suasana",
+        "sungai",
+        "mus",
+        "pulau",
+        "maro",
+        "tawar",
+        "tenang",
+        "damai",
+        "cocok",
+        "santa"
+      ]
+    },
+    "Fasilitas": {
+      "Positif": [
+        "foto",
+        "tahun",
+        "bagus",
+        "cocok",
+        "ibadah",
+        "baik",
+        "fasilitas",
+        "epic",
+        "instagrammable"
+      ],
+      "Negatif": [
+        "foto",
+        "batas"
+      ]
+    }
+  },
+  "Pulau Kumayan Kota": {
+    "Fasilitas": {
+      "Positif": [
+        "fasilitas",
+        "parkir",
+        "foto",
+        "luas",
+        "lengkap",
+        "wahana",
+        "anak",
+        "bagus",
+        "perhati",
+        "dengen"
+      ],
+      "Negatif": [
+        "jembatan",
+        "foto",
+        "rusak",
+        "kak",
+        "fasilitas",
+        "hancur",
+        "kayak",
+        "awat",
+        "parkir",
+        "kendara"
+      ],
+      "Netral": [
+        "ribu",
+        "parkir",
+        "motor",
+        "bayar",
+        "fasilitas",
+        "kolam",
+        "kak",
+        "kantin",
+        "sana",
+        "takut"
+      ]
+    },
+    "Suasana": {
+      "Positif": [
+        "suasana",
+        "asri",
+        "bagus",
+        "tenang",
+        "sejuk",
+        "nyaman",
+        "adem",
+        "cocok",
+        "cari",
+        "kebagiaan"
+      ]
+    },
+    "Akses & Lokasi": {
+      "Positif": [
+        "kota",
+        "mudah",
+        "asri",
+        "bengkulu",
+        "rumah",
+        "walu",
+        "tengah",
+        "unik",
+        "awat",
+        "moga"
+      ],
+      "Negatif": [
+        "baik",
+        "segi",
+        "jalan",
+        "sulit"
+      ]
+    },
+    "Harga & Tiket": {
+      "Positif": [
+        "jangkau",
+        "moga",
+        "kdepannya",
+        "tambah",
+        "pungut",
+        "viral",
+        "hehee",
+        "kumayan",
+        "tiket",
+        "gerbang"
+      ],
+      "Negatif": [
+        "mahal",
+        "biaya",
+        "unjung",
+        "putar",
+        "ter",
+        "lapau",
+        "maha",
+        "anak",
+        "tua",
+        "harga"
+      ],
+      "Netral": [
+        "ribu",
+        "tiket",
+        "biaya",
+        "parkir",
+        "perorng",
+        "moga",
+        "dibagusin",
+        "biar",
+        "ramai",
+        "masuk"
+      ]
+    },
+    "Pemandangan & Alam": {
+      "Positif": [
+        "alam",
+        "bagus",
+        "asri",
+        "pandang",
+        "nyaman",
+        "pohon",
+        "keluarga",
+        "rekreasi",
+        "malam",
+        "cocok"
+      ],
+      "Negatif": [
+        "kemarau",
+        "danau",
+        "kering"
+      ],
+      "Netral": [
+        "taman",
+        "air",
+        "wahana",
+        "kota",
+        "bengkulu"
+      ]
+    },
+    "Kebersihan": {
+      "Positif": [
+        "bersih",
+        "fasilitas",
+        "jaga",
+        "buang",
+        "sungai",
+        "muara",
+        "toilet",
+        "pada",
+        "keluarga"
+      ],
+      "Negatif": [
+        "sampah",
+        "sera",
+        "mana",
+        "minim",
+        "toilet",
+        "tolong"
+      ],
+      "Netral": [
+        "ribu",
+        "toilet"
+      ]
+    },
+    "Pelayanan": {
+      "Negatif": [
+        "malam",
+        "warga",
+        "ganggu",
+        "suara",
+        "musik",
+        "keras",
+        "perhati",
+        "kelola"
+      ]
+    },
+    "Kuliner": {
+      "Positif": [
+        "kuliner",
+        "tarik"
+      ]
+    }
+  },
+  "Pulesari": {
+    "Pemandangan & Alam": {
+      "Positif": [
+        "sungai",
+        "seru",
+        "alam",
+        "sejuk",
+        "pulesari",
+        "anak",
+        "suasana",
+        "susur",
+        "ramah",
+        "cocok"
+      ],
+      "Negatif": [
+        "pandu",
+        "sungai",
+        "kaku",
+        "ajak",
+        "canda",
+        "pelosok",
+        "seram",
+        "jalan",
+        "malam"
+      ],
+      "Netral": [
+        "kebun",
+        "salak",
+        "lahan",
+        "parkir",
+        "person",
+        "jalan",
+        "warung",
+        "makan"
+      ]
+    },
+    "Kebersihan": {
+      "Positif": [
+        "sungai",
+        "bersih",
+        "anak",
+        "kamar",
+        "mandi",
+        "outbound",
+        "makan",
+        "sedia",
+        "pulesari",
+        "luas"
+      ],
+      "Negatif": [
+        "kotor",
+        "laba",
+        "habis",
+        "maaf",
+        "bilang",
+        "istirahat",
+        "nyaman",
+        "kayak",
+        "sapu",
+        "sarang"
+      ],
+      "Netral": [
+        "salak",
+        "beli",
+        "ribu",
+        "pondoh",
+        "susur",
+        "sungai",
+        "luassss",
+        "pendopo",
+        "banyakk",
+        "toilet"
+      ]
+    },
+    "Fasilitas": {
+      "Positif": [
+        "sungai",
+        "outbound",
+        "fasilitas",
+        "makan",
+        "seru",
+        "ramah",
+        "pulesari",
+        "anak",
+        "cocok",
+        "bagus"
+      ],
+      "Negatif": [
+        "terima",
+        "logika",
+        "pesan",
+        "foto",
+        "video",
+        "rusa",
+        "tau",
+        "jam",
+        "tanggung",
+        "inisiatif"
+      ],
+      "Netral": [
+        "outbound",
+        "fasilitas",
+        "sungai",
+        "acara",
+        "paket",
+        "dll",
+        "dewi",
+        "turi",
+        "luas",
+        "wahana"
+      ]
+    },
+    "Suasana": {
+      "Positif": [
+        "suasana",
+        "asri",
+        "cocok",
+        "pulesari",
+        "sungai",
+        "alam",
+        "seru",
+        "sejuk",
+        "anak",
+        "ramah"
+      ]
+    },
+    "Harga & Tiket": {
+      "Positif": [
+        "harga",
+        "pulesari",
+        "ramah",
+        "sungai",
+        "fasilitas",
+        "tualang",
+        "royo",
+        "seru",
+        "outbond",
+        "tracking"
+      ],
+      "Negatif": [
+        "sayang",
+        "tambah",
+        "biaya",
+        "paket",
+        "outbond",
+        "info"
+      ],
+      "Netral": [
+        "harga",
+        "banding",
+        "tinggi"
+      ]
+    },
+    "Akses & Lokasi": {
+      "Positif": [
+        "bagus",
+        "outbond",
+        "outbound",
+        "mudah",
+        "ramah",
+        "air",
+        "sejuk",
+        "sedia",
+        "asik",
+        "asri"
+      ],
+      "Negatif": [
+        "jalan",
+        "lumayan",
+        "temu",
+        "liku",
+        "layan",
+        "menu",
+        "makan",
+        "kocek",
+        "paket",
+        "keluar"
+      ],
+      "Netral": [
+        "jalan",
+        "muas",
+        "sungai",
+        "akses",
+        "lebar",
+        "model",
+        "rute",
+        "susur",
+        "alir",
+        "sisi"
+      ]
+    },
+    "Kuliner": {
+      "Positif": [
+        "makan",
+        "sungai",
+        "salak",
+        "ramah",
+        "warga",
+        "anak",
+        "seru",
+        "kebun",
+        "rumah",
+        "outbound"
+      ],
+      "Negatif": [
+        "makan",
+        "kotor",
+        "laba",
+        "minus",
+        "layan",
+        "emosi",
+        "habis",
+        "maaf",
+        "bilang",
+        "istirahat"
+      ],
+      "Netral": [
+        "jalan",
+        "menu",
+        "makan",
+        "standart",
+        "kocek",
+        "paket",
+        "keluar"
+      ]
+    },
+    "Pelayanan": {
+      "Positif": [
+        "ramah",
+        "sungai",
+        "anak",
+        "warga",
+        "seru",
+        "outbond",
+        "makan",
+        "susur",
+        "kelola",
+        "pulesari"
+      ],
+      "Negatif": [
+        "layan",
+        "emosi",
+        "makan"
+      ]
+    }
+  },
+  "Sauwandarek": {
+    "Kebersihan": {
+      "Positif": [
+        "fasilitas",
+        "toilet",
+        "lengkap"
+      ]
+    },
+    "Pemandangan & Alam": {
+      "Positif": [
+        "laut",
+        "indah",
+        "pantai",
+        "sauwandarek",
+        "kampung",
+        "alam",
+        "budaya",
+        "milik",
+        "jernih",
+        "air"
+      ],
+      "Netral": [
+        "alam",
+        "snorkling"
+      ]
+    },
+    "Akses & Lokasi": {
+      "Positif": [
+        "pulang",
+        "darisana",
+        "ombak",
+        "gede"
+      ]
+    },
+    "Pelayanan": {
+      "Positif": [
+        "masyarakat",
+        "ramah"
+      ]
+    },
+    "Fasilitas": {
+      "Positif": [
+        "tata",
+        "fasilitas",
+        "umum",
+        "souvenir",
+        "khas",
+        "raja",
+        "ampat",
+        "tambah",
+        "daya",
+        "tarik"
+      ]
+    },
+    "Budaya & Tradisi": {
+      "Netral": [
+        "budaya",
+        "anak",
+        "salah",
+        "kampung",
+        "mengjarkan",
+        "lestari",
+        "raja",
+        "ampat"
+      ]
+    },
+    "Suasana": {
+      "Positif": [
+        "udara",
+        "segar",
+        "ikan"
+      ]
+    },
+    "Harga & Tiket": {
+      "Netral": [
+        "langka",
+        "milik",
+        "harga",
+        "langit"
+      ]
+    }
+  },
+  "Setu Babakan": {
+    "Akses & Lokasi": {
+      "Positif": [
+        "rumah",
+        "aman",
+        "nyaman",
+        "luas",
+        "mudah",
+        "jangkao",
+        "baik"
+      ],
+      "Negatif": [
+        "jalan",
+        "jelek",
+        "lumpur",
+        "rusak",
+        "lubang",
+        "becek",
+        "kayak",
+        "ambil",
+        "restribusi",
+        "penuh"
+      ]
+    },
+    "Pelayanan": {
+      "Positif": [
+        "tugas",
+        "informatif",
+        "ramah",
+        "jelas",
+        "sopan",
+        "moga",
+        "depan",
+        "layan",
+        "manusiawi",
+        "jaga"
+      ],
+      "Negatif": [
+        "tugas",
+        "songong",
+        "kelola",
+        "buruk"
+      ],
+      "Netral": [
+        "pakai",
+        "tugas",
+        "bebek",
+        "air",
+        "nye",
+        "kaos",
+        "abu",
+        "topi",
+        "ambil",
+        "tiketnye"
+      ]
+    },
+    "Suasana": {
+      "Positif": [
+        "suasana",
+        "asri",
+        "keluarga",
+        "betawi",
+        "lupa",
+        "penat",
+        "tengah",
+        "kota",
+        "sejuk",
+        "cocok"
+      ]
+    },
+    "Harga & Tiket": {
+      "Positif": [
+        "harga",
+        "setu",
+        "murah",
+        "riah",
+        "toge",
+        "goreng",
+        "dll",
+        "ngopi",
+        "adem",
+        "air"
+      ],
+      "Negatif": [
+        "harga",
+        "gua",
+        "betawi",
+        "kecewa",
+        "berat",
+        "makan",
+        "tembak",
+        "gedek",
+        "dagang",
+        "asih"
+      ]
+    },
+    "Kuliner": {
+      "Positif": [
+        "jajan",
+        "makan",
+        "kuliner",
+        "betawi",
+        "cari",
+        "jangkau",
+        "sana",
+        "foto",
+        "setu",
+        "babakan"
+      ],
+      "Negatif": [
+        "makan",
+        "betawi",
+        "harga",
+        "ramai",
+        "jajan",
+        "pinggir",
+        "setu",
+        "gua",
+        "kecewa",
+        "berat"
+      ],
+      "Netral": [
+        "makan",
+        "khas",
+        "betawi",
+        "kalo",
+        "kuliner",
+        "harga",
+        "standar"
+      ]
+    },
+    "Fasilitas": {
+      "Positif": [
+        "sedia",
+        "mushola",
+        "toilet",
+        "gazebo",
+        "parkir",
+        "luas",
+        "fasilitas"
+      ],
+      "Negatif": [
+        "parkir",
+        "bayar",
+        "restribusi",
+        "himbauan",
+        "pungut",
+        "biaya",
+        "masuk",
+        "tukang",
+        "nakal",
+        "nyetop"
+      ],
+      "Netral": [
+        "parkir",
+        "mobil"
+      ]
+    },
+    "Kebersihan": {
+      "Positif": [
+        "toilet",
+        "gazebo",
+        "awat",
+        "tangan"
+      ],
+      "Negatif": [
+        "bersih",
+        "tingkat",
+        "air",
+        "danau",
+        "kotor",
+        "kadang",
+        "sampah",
+        "minyak",
+        "apung"
+      ]
+    },
+    "Pemandangan & Alam": {
+      "Positif": [
+        "danau",
+        "bagus",
+        "pandang",
+        "sunset",
+        "luas",
+        "musim",
+        "syahdu",
+        "tamanya",
+        "murah",
+        "makan"
+      ],
+      "Negatif": [
+        "danau",
+        "kotor",
+        "sepi",
+        "makan",
+        "leseh",
+        "gaenak",
+        "larang",
+        "pancing",
+        "taat",
+        "atur"
+      ],
+      "Netral": [
+        "danau",
+        "rumah",
+        "adat",
+        "betawi",
+        "keliling",
+        "warung",
+        "jenis",
+        "makan"
+      ]
+    },
+    "Budaya & Tradisi": {
+      "Positif": [
+        "budaya",
+        "cagar",
+        "lestari",
+        "seru",
+        "betawi"
+      ]
+    }
+  },
+  "Tanjung Laut": {
+    "Akses & Lokasi": {
+      "Positif": [
+        "jalananny",
+        "bagus",
+        "perhati",
+        "lumayan",
+        "kebun",
+        "merah"
+      ],
+      "Negatif": [
+        "jalan",
+        "akses",
+        "rusak",
+        "jelek",
+        "danau",
+        "tidakbegitu",
+        "masukny",
+        "baik",
+        "nyaman",
+        "kelolasi"
+      ],
+      "Netral": [
+        "jalan",
+        "baik",
+        "jambi",
+        "riuh",
+        "kendara",
+        "tanjung",
+        "kec",
+        "titik",
+        "danau",
+        "tangkas"
+      ]
+    },
+    "Pemandangan & Alam": {
+      "Positif": [
+        "danau",
+        "bagus",
+        "alam",
+        "tangkas",
+        "suasana",
+        "alami",
+        "tenang",
+        "camp",
+        "nuansa",
+        "cantik"
+      ],
+      "Negatif": [
+        "danau",
+        "kayak",
+        "buat",
+        "rusak",
+        "bersih",
+        "sampah",
+        "tabur",
+        "saran",
+        "kelola",
+        "atas"
+      ],
+      "Netral": [
+        "danau",
+        "tangkas",
+        "pohon",
+        "alami",
+        "bangun",
+        "tanjung",
+        "muaro",
+        "jambi",
+        "salah",
+        "alternatife"
+      ]
+    },
+    "Suasana": {
+      "Positif": [
+        "suasana",
+        "alami",
+        "tenang",
+        "asri",
+        "betah",
+        "kaki"
+      ]
+    },
+    "Fasilitas": {
+      "Positif": [
+        "fasilitas",
+        "tarik",
+        "lengkap",
+        "tingkat",
+        "lumayan",
+        "foto",
+        "villa",
+        "seru",
+        "acara",
+        "kemping"
+      ],
+      "Negatif": [
+        "awat",
+        "fasilitas",
+        "mck",
+        "rusak",
+        "air",
+        "mushola",
+        "sedia"
+      ],
+      "Netral": [
+        "homestay",
+        "ribu"
+      ]
+    },
+    "Harga & Tiket": {
+      "Positif": [
+        "tiket",
+        "harga",
+        "jajan",
+        "murah",
+        "jangkau"
+      ],
+      "Negatif": [
+        "kak",
+        "tiket",
+        "harga",
+        "perahu",
+        "indak",
+        "speedboat",
+        "mahal"
+      ],
+      "Netral": [
+        "tiket",
+        "ribu",
+        "baru",
+        "dana",
+        "pemelihraan",
+        "asal",
+        "negara",
+        "beli",
+        "jajan",
+        "toko"
+      ]
+    },
+    "Budaya & Tradisi": {
+      "Negatif": [
+        "musik",
+        "kayak",
+        "cafe",
+        "ganggu",
+        "brisik"
+      ]
+    },
+    "Kebersihan": {
+      "Positif": [
+        "bersih",
+        "kamar",
+        "mandi",
+        "air"
+      ],
+      "Negatif": [
+        "rusak",
+        "danau",
+        "awat",
+        "fasilitas",
+        "mck",
+        "bersih",
+        "sampah",
+        "tabur",
+        "saran",
+        "kelola"
+      ]
+    },
+    "Kuliner": {
+      "Positif": [
+        "cocok",
+        "bawa",
+        "keluarga",
+        "makan"
+      ]
+    },
+    "Pelayanan": {
+      "Positif": [
+        "ramah",
+        "layan",
+        "warga",
+        "tugas",
+        "standby",
+        "cek",
+        "air",
+        "lampu",
+        "oke",
+        "nyaman"
+      ]
+    }
+  },
+  "Tanjung Rappa Pelangi": {
+    "Pemandangan & Alam": {
+      "Positif": [
+        "pandang",
+        "bagus",
+        "indah",
+        "laut",
+        "view",
+        "alam",
+        "pantai",
+        "air",
+        "cocok",
+        "tenang"
+      ],
+      "Negatif": [
+        "kadang",
+        "mati",
+        "lampu",
+        "pas",
+        "malam"
+      ],
+      "Netral": [
+        "kelas",
+        "kota",
+        "the",
+        "best",
+        "hotel"
+      ]
+    },
+    "Fasilitas": {
+      "Positif": [
+        "fasilitas",
+        "cottage",
+        "nginap",
+        "sedia",
+        "parkir",
+        "seru",
+        "kalo",
+        "homestay",
+        "lengkap",
+        "indah"
+      ],
+      "Negatif": [
+        "cottage",
+        "bangun",
+        "pas",
+        "matahari",
+        "terbit"
+      ],
+      "Netral": [
+        "inap",
+        "villa",
+        "rappa",
+        "pelangi",
+        "kota",
+        "ternatefast",
+        "respon",
+        "cepat",
+        "apung",
+        "pantai"
+      ]
+    },
+    "Suasana": {
+      "Positif": [
+        "suasana",
+        "tenang",
+        "cocok",
+        "nikmat",
+        "sunset",
+        "cari",
+        "syahdu",
+        "mantap"
+      ]
+    },
+    "Harga & Tiket": {
+      "Positif": [
+        "jangkau",
+        "air",
+        "harga",
+        "tiket",
+        "mandi",
+        "makan",
+        "restaurant",
+        "wajar",
+        "sewa",
+        "ban"
+      ],
+      "Netral": [
+        "tiket",
+        "ribu",
+        "rupiah",
+        "retribusi",
+        "masuk",
+        "harga",
+        "karcis"
+      ]
+    },
+    "Kuliner": {
+      "Positif": [
+        "air",
+        "harga",
+        "mandi",
+        "makan",
+        "restaurant",
+        "wajar",
+        "sewa",
+        "ban",
+        "perahu",
+        "jangkau"
+      ],
+      "Negatif": [
+        "sulit",
+        "makan",
+        "kota",
+        "mes",
+        "akses",
+        "pakai",
+        "kendara",
+        "darat",
+        "pribadi",
+        "karrna"
+      ]
+    },
+    "Akses & Lokasi": {
+      "Positif": [
+        "seru",
+        "bagus",
+        "tarik",
+        "sewa",
+        "nginap",
+        "malam",
+        "cottage",
+        "bawa",
+        "alat",
+        "panggang"
+      ],
+      "Negatif": [
+        "akses",
+        "kota",
+        "sulit",
+        "pakai",
+        "kendara",
+        "darat",
+        "pribadi",
+        "jalan",
+        "masuk",
+        "rusak"
+      ]
+    },
+    "Kebersihan": {
+      "Positif": [
+        "kamar",
+        "mandi",
+        "bersih",
+        "moga",
+        "rappa",
+        "pelangi",
+        "awat",
+        "proper",
+        "toilet",
+        "sedia"
+      ],
+      "Negatif": [
+        "bersih",
+        "kamar",
+        "minus",
+        "air",
+        "sayang",
+        "mandi",
+        "trjangkau"
+      ],
+      "Netral": [
+        "kamar",
+        "mandi",
+        "toilet",
+        "pisah"
+      ]
+    }
+  },
+  "Tomok": {
+    "Harga & Tiket": {
+      "Positif": [
+        "tiket",
+        "murah",
+        "jangkau",
+        "kapal",
+        "fery",
+        "pulang",
+        "jam",
+        "tomok",
+        "beli",
+        "kios"
+      ],
+      "Negatif": [
+        "bayar",
+        "total",
+        "perintah",
+        "tertib",
+        "tiket"
+      ],
+      "Netral": [
+        "rata",
+        "biaya",
+        "tiket",
+        "rate",
+        "harga",
+        "bayar",
+        "unjung",
+        "makan",
+        "kena"
+      ]
+    },
+    "Akses & Lokasi": {
+      "Negatif": [
+        "jalan",
+        "pusat",
+        "belanja",
+        "minim",
+        "tunjuk",
+        "rute",
+        "situs",
+        "sempit",
+        "isi",
+        "jual"
+      ],
+      "Netral": [
+        "samosir",
+        "jalan",
+        "tunjuk",
+        "tari",
+        "sigale",
+        "gale",
+        "jual",
+        "baju",
+        "aksesoris",
+        "khas"
+      ]
+    },
+    "Kuliner": {
+      "Positif": [
+        "toko",
+        "souvenir"
+      ],
+      "Netral": [
+        "giat",
+        "budaya",
+        "batak",
+        "souvenir",
+        "khas",
+        "samosir"
+      ]
+    },
+    "Pelayanan": {
+      "Positif": [
+        "tugas",
+        "ramah"
+      ],
+      "Negatif": [
+        "temu",
+        "guide"
+      ]
+    },
+    "Fasilitas": {
+      "Netral": [
+        "parkir",
+        "mobil",
+        "minus",
+        "kena",
+        "tarif",
+        "ribu"
+      ]
+    }
+  }
+}

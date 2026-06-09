@@ -1,130 +1,302 @@
 {
-  "Osing": {
-    "total_reviews": 91,
+  "Buluh Cina": {
+    "total_reviews": 88,
     "sentiment_pct": {
-      "Positif": 52.7,
-      "Negatif": 22.0,
-      "Netral": 25.3
+      "Positif": 84.1,
+      "Negatif": 5.7,
+      "Netral": 10.2
     },
     "top_praised": [
       {
-        "category": "Budaya & Tradisi",
-        "count": 21,
+        "category": "Suasana",
+        "count": 33,
         "opinions": [
-          "banyuwangi",
-          "osing",
-          "adat",
-          "budaya",
-          "khas"
+          "asri",
+          "adem",
+          "gajah",
+          "tenang",
+          "nyaman"
+        ]
+      },
+      {
+        "category": "Pemandangan & Alam",
+        "count": 27,
+        "opinions": [
+          "alam",
+          "danau",
+          "gajah",
+          "pohon",
+          "sungai"
+        ]
+      },
+      {
+        "category": "Akses & Lokasi",
+        "count": 12,
+        "opinions": [
+          "motor",
+          "jalan",
+          "pekanbaru",
+          "pakai",
+          "mobil"
+        ]
+      }
+    ],
+    "top_criticized": [
+      {
+        "category": "Pemandangan & Alam",
+        "count": 3,
+        "opinions": [
+          "alam",
+          "niat",
+          "dengar",
+          "suara",
+          "taman"
         ]
       },
       {
         "category": "Pelayanan",
+        "count": 2,
+        "opinions": [
+          "moga",
+          "timbang",
+          "kelola",
+          "tim"
+        ]
+      },
+      {
+        "category": "Akses & Lokasi",
+        "count": 2,
+        "opinions": [
+          "dar",
+          "saran",
+          "tolong",
+          "jauh",
+          "speaker"
+        ]
+      }
+    ],
+    "distinctive_keywords": [
+      "gajah",
+      "asri",
+      "alam",
+      "adem",
+      "bagus"
+    ],
+    "headline_positive": "Pengunjung memuji Suasana dan Pemandangan & Alam",
+    "headline_negative": "Keluhan utama terkait Pemandangan & Alam dan Pelayanan"
+  },
+  "Danau Emtofe": {
+    "total_reviews": 100,
+    "sentiment_pct": {
+      "Positif": 78.0,
+      "Negatif": 14.0,
+      "Netral": 8.0
+    },
+    "top_praised": [
+      {
+        "category": "Pemandangan & Alam",
+        "count": 33,
+        "opinions": [
+          "danau",
+          "pandang",
+          "indah",
+          "love",
+          "jalan"
+        ]
+      },
+      {
+        "category": "Akses & Lokasi",
         "count": 14,
         "opinions": [
-          "ramah",
-          "adat",
-          "masyarakat",
-          "banyuwangi",
-          "makan"
+          "jalan",
+          "mobil",
+          "jam",
+          "kota",
+          "jayapura"
         ]
       },
       {
         "category": "Suasana",
-        "count": 14,
+        "count": 10,
         "opinions": [
-          "suasana",
-          "nyaman",
-          "makan",
           "bagus",
-          "banyuwangi"
+          "jalan",
+          "santai",
+          "pandang",
+          "cocok"
+        ]
+      }
+    ],
+    "top_criticized": [
+      {
+        "category": "Akses & Lokasi",
+        "count": 11,
+        "opinions": [
+          "jalan",
+          "danau",
+          "akses",
+          "rusak",
+          "bagus"
+        ]
+      },
+      {
+        "category": "Pemandangan & Alam",
+        "count": 2,
+        "opinions": [
+          "jalan",
+          "banding",
+          "effort",
+          "rusak",
+          "parah"
+        ]
+      },
+      {
+        "category": "Fasilitas",
+        "count": 2,
+        "opinions": [
+          "jalan",
+          "jembatan",
+          "rusak",
+          "fasilitas"
+        ]
+      }
+    ],
+    "distinctive_keywords": [
+      "indah",
+      "jalan",
+      "keren",
+      "danau",
+      "bagus"
+    ],
+    "headline_positive": "Pengunjung memuji Pemandangan & Alam dan Akses & Lokasi",
+    "headline_negative": "Keluhan utama terkait Akses & Lokasi dan Pemandangan & Alam"
+  },
+  "Danau Napabale": {
+    "total_reviews": 95,
+    "sentiment_pct": {
+      "Positif": 87.4,
+      "Negatif": 8.4,
+      "Netral": 4.2
+    },
+    "top_praised": [
+      {
+        "category": "Pemandangan & Alam",
+        "count": 34,
+        "opinions": [
+          "danau",
+          "indah",
+          "pandang",
+          "napabale",
+          "laut"
+        ]
+      },
+      {
+        "category": "Suasana",
+        "count": 8,
+        "opinions": [
+          "tenang",
+          "nyaman",
+          "santa",
+          "indah",
+          "keluarga"
+        ]
+      },
+      {
+        "category": "Kebersihan",
+        "count": 7,
+        "opinions": [
+          "bersih",
+          "danau",
+          "jernih",
+          "lupa",
+          "bawa"
         ]
       }
     ],
     "top_criticized": [
       {
         "category": "Kebersihan",
-        "count": 9,
+        "count": 2,
         "opinions": [
-          "kotor",
-          "ribu",
+          "kurang",
+          "toilet",
           "awat",
-          "kolam",
-          "tiket"
+          "sampah",
+          "parkir"
         ]
       },
       {
         "category": "Fasilitas",
-        "count": 5,
+        "count": 2,
         "opinions": [
-          "kolam",
-          "ribu",
-          "kotor",
-          "renang",
-          "tiket"
+          "depan",
+          "kelola",
+          "warlok",
+          "uang",
+          "parkir"
         ]
       },
       {
-        "category": "Budaya & Tradisi",
-        "count": 5,
+        "category": "Kuliner",
+        "count": 2,
         "opinions": [
-          "ribu",
-          "adat",
-          "banyuwangi",
-          "tarik",
-          "kotor"
+          "makan",
+          "akses",
+          "sulit",
+          "jual",
+          "minum"
         ]
       }
     ],
     "distinctive_keywords": [
-      "osing",
-      "banyuwangi",
+      "indah",
+      "danau",
+      "keren",
       "bagus",
-      "ramah",
-      "adat"
+      "pandang"
     ],
-    "headline_positive": "Pengunjung memuji Budaya & Tradisi dan Pelayanan",
+    "headline_positive": "Pengunjung memuji Pemandangan & Alam dan Suasana",
     "headline_negative": "Keluhan utama terkait Kebersihan dan Fasilitas"
   },
-  "Pentingsari": {
-    "total_reviews": 121,
+  "Danau Paisu": {
+    "total_reviews": 110,
     "sentiment_pct": {
-      "Positif": 85.1,
-      "Negatif": 4.1,
-      "Netral": 10.7
+      "Positif": 88.2,
+      "Negatif": 6.4,
+      "Netral": 5.5
     },
     "top_praised": [
-      {
-        "category": "Suasana",
-        "count": 52,
-        "opinions": [
-          "asri",
-          "ramah",
-          "suasana",
-          "sejuk",
-          "nyaman"
-        ]
-      },
-      {
-        "category": "Pelayanan",
-        "count": 38,
-        "opinions": [
-          "ramah",
-          "asri",
-          "duduk",
-          "alam",
-          "pentingsari"
-        ]
-      },
       {
         "category": "Pemandangan & Alam",
         "count": 31,
         "opinions": [
-          "ramah",
-          "alam",
-          "malam",
-          "rumah",
-          "asri"
+          "danau",
+          "indah",
+          "air",
+          "jernih",
+          "pandang"
+        ]
+      },
+      {
+        "category": "Suasana",
+        "count": 19,
+        "opinions": [
+          "air",
+          "danau",
+          "segar",
+          "jernih",
+          "indah"
+        ]
+      },
+      {
+        "category": "Akses & Lokasi",
+        "count": 9,
+        "opinions": [
+          "jalan",
+          "danau",
+          "air",
+          "unjung",
+          "bangga"
         ]
       }
     ],
@@ -134,10 +306,1656 @@
         "count": 2,
         "opinions": [
           "jalan",
+          "capek",
+          "akses",
+          "susah"
+        ]
+      },
+      {
+        "category": "Pemandangan & Alam",
+        "count": 1,
+        "opinions": [
+          "danau",
+          "alam"
+        ]
+      },
+      {
+        "category": "Kebersihan",
+        "count": 1,
+        "opinions": [
+          "jaga",
+          "bersih",
+          "buang",
+          "sampah",
+          "sembarang"
+        ]
+      }
+    ],
+    "distinctive_keywords": [
+      "indah",
+      "bagus",
+      "danau",
+      "air",
+      "keren"
+    ],
+    "headline_positive": "Pengunjung memuji Pemandangan & Alam dan Suasana",
+    "headline_negative": "Keluhan utama terkait Akses & Lokasi dan Pemandangan & Alam"
+  },
+  "Desa Sade": {
+    "total_reviews": 90,
+    "sentiment_pct": {
+      "Positif": 82.2,
+      "Negatif": 3.3,
+      "Netral": 14.4
+    },
+    "top_praised": [
+      {
+        "category": "Pelayanan",
+        "count": 30,
+        "opinions": [
+          "ramah",
+          "warga",
+          "guide",
+          "lokal",
+          "sade"
+        ]
+      },
+      {
+        "category": "Budaya & Tradisi",
+        "count": 29,
+        "opinions": [
+          "adat",
+          "budaya",
+          "sade",
+          "tradisional",
+          "rumah"
+        ]
+      },
+      {
+        "category": "Suasana",
+        "count": 12,
+        "opinions": [
+          "suasana",
+          "tenang",
+          "nyaman",
+          "asli",
+          "suku"
+        ]
+      }
+    ],
+    "top_criticized": [
+      {
+        "category": "Akses & Lokasi",
+        "count": 3,
+        "opinions": [
+          "sade",
+          "tinggal",
+          "diskriminatif",
+          "panas",
+          "pohon"
+        ]
+      },
+      {
+        "category": "Harga & Tiket",
+        "count": 2,
+        "opinions": [
+          "sade",
+          "tenun",
+          "pulau",
+          "lombok",
+          "guide"
+        ]
+      },
+      {
+        "category": "Budaya & Tradisi",
+        "count": 2,
+        "opinions": [
+          "sade",
+          "pulau",
+          "lombok",
+          "guide",
+          "lokal"
+        ]
+      }
+    ],
+    "distinctive_keywords": [
+      "ramah",
+      "bagus",
+      "lombok",
+      "sade",
+      "adat"
+    ],
+    "headline_positive": "Pengunjung memuji Pelayanan dan Budaya & Tradisi",
+    "headline_negative": "Keluhan utama terkait Akses & Lokasi dan Harga & Tiket"
+  },
+  "Desa Wisata Budo": {
+    "total_reviews": 99,
+    "sentiment_pct": {
+      "Positif": 91.9,
+      "Negatif": 3.0,
+      "Netral": 5.1
+    },
+    "top_praised": [
+      {
+        "category": "Pemandangan & Alam",
+        "count": 29,
+        "opinions": [
+          "sunset",
+          "pandang",
+          "indah",
+          "mangrove",
+          "bagus"
+        ]
+      },
+      {
+        "category": "Suasana",
+        "count": 21,
+        "opinions": [
+          "suasana",
+          "nyaman",
+          "bagus",
+          "santa",
+          "sejuk"
+        ]
+      },
+      {
+        "category": "Kuliner",
+        "count": 17,
+        "opinions": [
+          "makan",
+          "minum",
+          "tani",
+          "murah",
+          "sedia"
+        ]
+      }
+    ],
+    "top_criticized": [
+      {
+        "category": "Fasilitas",
+        "count": 3,
+        "opinions": [
+          "gazebo",
+          "awat",
+          "kembang",
+          "sedia",
+          "fasilitas"
+        ]
+      },
+      {
+        "category": "Kuliner",
+        "count": 3,
+        "opinions": [
+          "makan",
+          "bili",
+          "jual",
+          "beli",
+          "kopi"
+        ]
+      },
+      {
+        "category": "Harga & Tiket",
+        "count": 1,
+        "opinions": [
+          "harga",
+          "langit",
+          "makan",
+          "indak",
+          "ena"
+        ]
+      }
+    ],
+    "distinctive_keywords": [
+      "bagus",
+      "indah",
+      "keren",
+      "pandang",
+      "sunset"
+    ],
+    "headline_positive": "Pengunjung memuji Pemandangan & Alam dan Suasana",
+    "headline_negative": "Keluhan utama terkait Fasilitas dan Kuliner"
+  },
+  "Desa Wisata Olele": {
+    "total_reviews": 124,
+    "sentiment_pct": {
+      "Positif": 94.4,
+      "Negatif": 2.4,
+      "Netral": 3.2
+    },
+    "top_praised": [
+      {
+        "category": "Pemandangan & Alam",
+        "count": 47,
+        "opinions": [
+          "laut",
+          "indah",
+          "pandang",
+          "pantai",
+          "taman"
+        ]
+      },
+      {
+        "category": "Pelayanan",
+        "count": 15,
+        "opinions": [
+          "ramah",
+          "guide",
+          "warga",
+          "layan",
+          "tour"
+        ]
+      },
+      {
+        "category": "Kebersihan",
+        "count": 11,
+        "opinions": [
+          "bersih",
+          "awat",
+          "laut",
+          "taman",
+          "variasi"
+        ]
+      }
+    ],
+    "top_criticized": [
+      {
+        "category": "Kebersihan",
+        "count": 3,
+        "opinions": [
+          "sampah",
+          "akses",
+          "sulit",
+          "fasilitas",
+          "tunjang"
+        ]
+      },
+      {
+        "category": "Pemandangan & Alam",
+        "count": 2,
+        "opinions": [
+          "laut",
+          "biota",
+          "taman",
+          "terumbu",
+          "karang"
+        ]
+      },
+      {
+        "category": "Fasilitas",
+        "count": 2,
+        "opinions": [
+          "fasilitas",
+          "susah",
+          "bangun",
+          "akses",
+          "sulit"
+        ]
+      }
+    ],
+    "distinctive_keywords": [
+      "indah",
+      "keren",
+      "laut",
+      "bagus",
+      "ikan"
+    ],
+    "headline_positive": "Pengunjung memuji Pemandangan & Alam dan Pelayanan",
+    "headline_negative": "Keluhan utama terkait Kebersihan dan Pemandangan & Alam"
+  },
+  "Desa Wisata Pampang": {
+    "total_reviews": 128,
+    "sentiment_pct": {
+      "Positif": 69.5,
+      "Negatif": 6.2,
+      "Netral": 24.2
+    },
+    "top_praised": [
+      {
+        "category": "Budaya & Tradisi",
+        "count": 38,
+        "opinions": [
+          "tari",
+          "budaya",
+          "dayak",
+          "adat",
+          "suku"
+        ]
+      },
+      {
+        "category": "Pelayanan",
+        "count": 11,
+        "opinions": [
+          "ramah",
+          "warga",
+          "unjung",
+          "sambut",
+          "souvenir"
+        ]
+      },
+      {
+        "category": "Kuliner",
+        "count": 11,
+        "opinions": [
+          "souvenir",
+          "jual",
+          "tari",
+          "khas",
+          "makan"
+        ]
+      }
+    ],
+    "top_criticized": [
+      {
+        "category": "Harga & Tiket",
+        "count": 2,
+        "opinions": [
+          "tiket",
+          "bayar",
+          "senin",
+          "sabtu",
+          "rasa"
+        ]
+      },
+      {
+        "category": "Kuliner",
+        "count": 2,
+        "opinions": [
+          "makan",
+          "bangun",
+          "rumah",
+          "kios",
+          "jual"
+        ]
+      },
+      {
+        "category": "Kebersihan",
+        "count": 1,
+        "opinions": [
+          "sayang",
+          "toilet",
+          "outletnya"
+        ]
+      }
+    ],
+    "distinctive_keywords": [
+      "budaya",
+      "bagus",
+      "keren",
+      "dayak",
+      "tari"
+    ],
+    "headline_positive": "Pengunjung memuji Budaya & Tradisi dan Pelayanan",
+    "headline_negative": "Keluhan utama terkait Harga & Tiket dan Kuliner"
+  },
+  "Desa Wisata Setulang": {
+    "total_reviews": 94,
+    "sentiment_pct": {
+      "Positif": 81.9,
+      "Negatif": 5.3,
+      "Netral": 12.8
+    },
+    "top_praised": [
+      {
+        "category": "Pemandangan & Alam",
+        "count": 18,
+        "opinions": [
+          "alam",
+          "alami",
+          "tulang",
+          "hutan",
+          "olen"
+        ]
+      },
+      {
+        "category": "Suasana",
+        "count": 17,
+        "opinions": [
+          "nyaman",
+          "asri",
+          "indah",
+          "suasana",
+          "alam"
+        ]
+      },
+      {
+        "category": "Budaya & Tradisi",
+        "count": 15,
+        "opinions": [
+          "budaya",
+          "adat",
+          "alam",
+          "kental",
+          "nilai"
+        ]
+      }
+    ],
+    "top_criticized": [
+      {
+        "category": "Kebersihan",
+        "count": 2,
+        "opinions": [
+          "bersih",
+          "rumah",
+          "lapang"
+        ]
+      },
+      {
+        "category": "Kuliner",
+        "count": 1,
+        "opinions": [
+          "sulit",
+          "cari",
+          "makan",
+          "lokal"
+        ]
+      },
+      {
+        "category": "Akses & Lokasi",
+        "count": 1,
+        "opinions": [
+          "jalan",
+          "tulang",
+          "sabar",
+          "lubang"
+        ]
+      }
+    ],
+    "distinctive_keywords": [
+      "mantap",
+      "bagus",
+      "tulang",
+      "indah",
+      "budaya"
+    ],
+    "headline_positive": "Pengunjung memuji Pemandangan & Alam dan Suasana",
+    "headline_negative": "Keluhan utama terkait Kebersihan dan Kuliner"
+  },
+  "Desa Wisata Sungai Sekonyer": {
+    "total_reviews": 34,
+    "sentiment_pct": {
+      "Positif": 61.8,
+      "Negatif": 5.9,
+      "Netral": 32.4
+    },
+    "top_praised": [
+      {
+        "category": "Pemandangan & Alam",
+        "count": 6,
+        "opinions": [
+          "alam",
+          "sungai",
+          "sekonyer",
+          "hutan",
+          "budaya"
+        ]
+      },
+      {
+        "category": "Suasana",
+        "count": 4,
+        "opinions": [
+          "asri",
+          "tengah",
+          "sungai",
+          "hutan",
+          "tambah"
+        ]
+      },
+      {
+        "category": "Akses & Lokasi",
+        "count": 4,
+        "opinions": [
+          "jalan",
+          "bagus",
+          "susur",
+          "sungai",
+          "sekonyer"
+        ]
+      }
+    ],
+    "top_criticized": [],
+    "distinctive_keywords": [
+      "senang",
+      "awat",
+      "moga",
+      "indah",
+      "asri"
+    ],
+    "headline_positive": "Pengunjung memuji Pemandangan & Alam dan Suasana",
+    "headline_negative": ""
+  },
+  "Desa Wisata Sungai Utik": {
+    "total_reviews": 52,
+    "sentiment_pct": {
+      "Positif": 82.7,
+      "Negatif": 3.8,
+      "Netral": 13.5
+    },
+    "top_praised": [
+      {
+        "category": "Pemandangan & Alam",
+        "count": 16,
+        "opinions": [
+          "sungai",
+          "hutan",
+          "utik",
+          "adat",
+          "jaga"
+        ]
+      },
+      {
+        "category": "Budaya & Tradisi",
+        "count": 12,
+        "opinions": [
+          "adat",
+          "budaya",
+          "hutan",
+          "indah",
+          "masyarakat"
+        ]
+      },
+      {
+        "category": "Pelayanan",
+        "count": 9,
+        "opinions": [
+          "masyarakat",
+          "ramah",
+          "iban",
+          "adat",
+          "welcome"
+        ]
+      }
+    ],
+    "top_criticized": [
+      {
+        "category": "Budaya & Tradisi",
+        "count": 1,
+        "opinions": [
+          "tarik",
+          "hutan",
+          "sungai",
+          "jaga"
+        ]
+      }
+    ],
+    "distinctive_keywords": [
+      "budaya",
+      "bagus",
+      "keren",
+      "sungai",
+      "rumah"
+    ],
+    "headline_positive": "Pengunjung memuji Pemandangan & Alam dan Budaya & Tradisi",
+    "headline_negative": "Keluhan utama terkait Budaya & Tradisi"
+  },
+  "Desa Wisata Waerebo": {
+    "total_reviews": 103,
+    "sentiment_pct": {
+      "Positif": 78.6,
+      "Negatif": 8.7,
+      "Netral": 12.6
+    },
+    "top_praised": [
+      {
+        "category": "Pemandangan & Alam",
+        "count": 27,
+        "opinions": [
+          "alam",
+          "indah",
+          "malam",
+          "pandang",
+          "jalan"
+        ]
+      },
+      {
+        "category": "Suasana",
+        "count": 20,
+        "opinions": [
+          "nyaman",
+          "suasana",
+          "tenang",
+          "damai",
+          "suhu"
+        ]
+      },
+      {
+        "category": "Budaya & Tradisi",
+        "count": 20,
+        "opinions": [
+          "adat",
+          "jaga",
+          "rumah",
+          "budaya",
+          "kak"
+        ]
+      }
+    ],
+    "top_criticized": [
+      {
+        "category": "Akses & Lokasi",
+        "count": 7,
+        "opinions": [
+          "jalan",
+          "jam",
+          "ojek",
+          "pos",
+          "rusak"
+        ]
+      },
+      {
+        "category": "Kuliner",
+        "count": 4,
+        "opinions": [
+          "makan",
+          "overprice",
+          "upgrade",
+          "denge",
+          "inap"
+        ]
+      },
+      {
+        "category": "Budaya & Tradisi",
+        "count": 3,
+        "opinions": [
+          "foto",
+          "upacara",
+          "diliarang",
+          "ambil",
+          "video"
+        ]
+      }
+    ],
+    "distinctive_keywords": [
+      "bagus",
+      "indah",
+      "keren",
+      "jalan",
+      "alam"
+    ],
+    "headline_positive": "Pengunjung memuji Pemandangan & Alam dan Suasana",
+    "headline_negative": "Keluhan utama terkait Akses & Lokasi dan Kuliner"
+  },
+  "Gampong Nusa": {
+    "total_reviews": 49,
+    "sentiment_pct": {
+      "Positif": 83.7,
+      "Negatif": 0.0,
+      "Netral": 16.3
+    },
+    "top_praised": [
+      {
+        "category": "Pemandangan & Alam",
+        "count": 10,
+        "opinions": [
+          "pandang",
+          "indah",
+          "sawah",
+          "gunung",
+          "alam"
+        ]
+      },
+      {
+        "category": "Pelayanan",
+        "count": 9,
+        "opinions": [
+          "ramah",
+          "masyarakat",
+          "warga",
+          "gampong",
+          "nusa"
+        ]
+      },
+      {
+        "category": "Kebersihan",
+        "count": 7,
+        "opinions": [
+          "bersih",
+          "kampung",
+          "view",
+          "sawah",
+          "gunung"
+        ]
+      }
+    ],
+    "top_criticized": [],
+    "distinctive_keywords": [
+      "nusa",
+      "aceh",
+      "indah",
+      "ramah",
+      "gampong"
+    ],
+    "headline_positive": "Pengunjung memuji Pemandangan & Alam dan Pelayanan",
+    "headline_negative": ""
+  },
+  "Kampung Ketupat": {
+    "total_reviews": 85,
+    "sentiment_pct": {
+      "Positif": 70.6,
+      "Negatif": 21.2,
+      "Netral": 8.2
+    },
+    "top_praised": [
+      {
+        "category": "Kuliner",
+        "count": 20,
+        "opinions": [
+          "makan",
+          "minum",
+          "kuliner",
+          "kampung",
+          "jual"
+        ]
+      },
+      {
+        "category": "Harga & Tiket",
+        "count": 19,
+        "opinions": [
+          "gratis",
+          "harga",
+          "murah",
+          "tiket",
+          "makan"
+        ]
+      },
+      {
+        "category": "Suasana",
+        "count": 18,
+        "opinions": [
+          "nyaman",
+          "suasana",
+          "bagus",
+          "santa",
+          "sungai"
+        ]
+      }
+    ],
+    "top_criticized": [
+      {
+        "category": "Harga & Tiket",
+        "count": 11,
+        "opinions": [
+          "mahal",
+          "harga",
+          "bayar",
+          "tiket",
+          "ribu"
+        ]
+      },
+      {
+        "category": "Kuliner",
+        "count": 7,
+        "opinions": [
+          "makan",
+          "mahal",
+          "harga",
+          "ribu",
+          "larang"
+        ]
+      },
+      {
+        "category": "Kebersihan",
+        "count": 4,
+        "opinions": [
+          "bersih",
+          "ribu",
+          "toilet",
+          "harga",
+          "tiket"
+        ]
+      }
+    ],
+    "distinctive_keywords": [
+      "bagus",
+      "makan",
+      "murah",
+      "lumayan",
+      "tarik"
+    ],
+    "headline_positive": "Pengunjung memuji Kuliner dan Harga & Tiket",
+    "headline_negative": "Keluhan utama terkait Harga & Tiket dan Kuliner"
+  },
+  "Kampung Marengo Baduy": {
+    "total_reviews": 131,
+    "sentiment_pct": {
+      "Positif": 74.0,
+      "Negatif": 14.5,
+      "Netral": 11.5
+    },
+    "top_praised": [
+      {
+        "category": "Pemandangan & Alam",
+        "count": 30,
+        "opinions": [
+          "alam",
+          "asri",
+          "alami",
+          "sejuk",
+          "budaya"
+        ]
+      },
+      {
+        "category": "Suasana",
+        "count": 30,
+        "opinions": [
+          "asri",
+          "sejuk",
+          "suasana",
+          "alam",
+          "nyaman"
+        ]
+      },
+      {
+        "category": "Pelayanan",
+        "count": 17,
+        "opinions": [
+          "ramah",
+          "duduk",
+          "masyarakat",
+          "alam",
+          "warga"
+        ]
+      }
+    ],
+    "top_criticized": [
+      {
+        "category": "Budaya & Tradisi",
+        "count": 5,
+        "opinions": [
+          "guide",
           "pas",
-          "kemah",
+          "nge",
+          "tarif",
+          "kak"
+        ]
+      },
+      {
+        "category": "Akses & Lokasi",
+        "count": 4,
+        "opinions": [
+          "jalan",
+          "pavorit",
+          "jauh",
+          "hingar",
+          "bingar"
+        ]
+      },
+      {
+        "category": "Pemandangan & Alam",
+        "count": 3,
+        "opinions": [
+          "alam",
+          "sampah",
+          "lupa",
+          "lindung",
+          "bayar"
+        ]
+      }
+    ],
+    "distinctive_keywords": [
+      "baduy",
+      "alam",
+      "budaya",
+      "asri",
+      "seru"
+    ],
+    "headline_positive": "Pengunjung memuji Pemandangan & Alam dan Suasana",
+    "headline_negative": "Keluhan utama terkait Budaya & Tradisi dan Akses & Lokasi"
+  },
+  "Kampung Naga": {
+    "total_reviews": 116,
+    "sentiment_pct": {
+      "Positif": 87.9,
+      "Negatif": 4.3,
+      "Netral": 7.8
+    },
+    "top_praised": [
+      {
+        "category": "Suasana",
+        "count": 56,
+        "opinions": [
+          "asri",
+          "suasana",
+          "sejuk",
+          "tenang",
+          "nyaman"
+        ]
+      },
+      {
+        "category": "Budaya & Tradisi",
+        "count": 39,
+        "opinions": [
+          "kampung",
+          "adat",
+          "budaya",
+          "tradisi",
+          "naga"
+        ]
+      },
+      {
+        "category": "Pemandangan & Alam",
+        "count": 37,
+        "opinions": [
+          "alam",
+          "kampung",
+          "alami",
+          "pandang",
+          "asri"
+        ]
+      }
+    ],
+    "top_criticized": [
+      {
+        "category": "Akses & Lokasi",
+        "count": 5,
+        "opinions": [
+          "jalan",
+          "tangga",
+          "akses",
+          "parkir",
+          "hati"
+        ]
+      },
+      {
+        "category": "Pelayanan",
+        "count": 3,
+        "opinions": [
+          "guide",
+          "pas",
+          "sana",
+          "kayak",
+          "bingung"
+        ]
+      },
+      {
+        "category": "Budaya & Tradisi",
+        "count": 2,
+        "opinions": [
+          "salah",
+          "tangga",
+          "kampung",
+          "tolak",
+          "lpg"
+        ]
+      }
+    ],
+    "distinctive_keywords": [
+      "kampung",
+      "asri",
+      "ramah",
+      "budaya",
+      "bagus"
+    ],
+    "headline_positive": "Pengunjung memuji Suasana dan Budaya & Tradisi",
+    "headline_negative": "Keluhan utama terkait Akses & Lokasi dan Pelayanan"
+  },
+  "Kampung Terih": {
+    "total_reviews": 134,
+    "sentiment_pct": {
+      "Positif": 88.8,
+      "Negatif": 6.7,
+      "Netral": 4.5
+    },
+    "top_praised": [
+      {
+        "category": "Pemandangan & Alam",
+        "count": 34,
+        "opinions": [
+          "laut",
+          "pantai",
+          "kampung",
+          "seafood",
+          "sunset"
+        ]
+      },
+      {
+        "category": "Kuliner",
+        "count": 32,
+        "opinions": [
+          "makan",
+          "seafood",
+          "kuliner",
+          "murah",
+          "laut"
+        ]
+      },
+      {
+        "category": "Suasana",
+        "count": 27,
+        "opinions": [
+          "suasana",
+          "asri",
+          "nyaman",
+          "kampung",
+          "pantai"
+        ]
+      }
+    ],
+    "top_criticized": [
+      {
+        "category": "Kebersihan",
+        "count": 3,
+        "opinions": [
+          "tarik",
+          "awat",
+          "buang",
+          "kotor",
+          "mana"
+        ]
+      },
+      {
+        "category": "Akses & Lokasi",
+        "count": 3,
+        "opinions": [
+          "jalan",
+          "paku",
+          "salah",
+          "pondok",
+          "tambah"
+        ]
+      },
+      {
+        "category": "Pemandangan & Alam",
+        "count": 2,
+        "opinions": [
+          "laut",
+          "altar",
+          "jorok",
+          "daya",
+          "tarik"
+        ]
+      }
+    ],
+    "distinctive_keywords": [
+      "bagus",
+      "kampung",
+      "makan",
+      "mantap",
+      "seafood"
+    ],
+    "headline_positive": "Pengunjung memuji Pemandangan & Alam dan Kuliner",
+    "headline_negative": "Keluhan utama terkait Kebersihan dan Akses & Lokasi"
+  },
+  "Kunjir": {
+    "total_reviews": 126,
+    "sentiment_pct": {
+      "Positif": 82.5,
+      "Negatif": 7.1,
+      "Netral": 10.3
+    },
+    "top_praised": [
+      {
+        "category": "Pemandangan & Alam",
+        "count": 41,
+        "opinions": [
+          "pantai",
+          "bagus",
+          "pandang",
+          "laut",
+          "indah"
+        ]
+      },
+      {
+        "category": "Suasana",
+        "count": 23,
+        "opinions": [
+          "nyaman",
+          "pantai",
+          "santai",
+          "santa",
+          "keluarga"
+        ]
+      },
+      {
+        "category": "Akses & Lokasi",
+        "count": 9,
+        "opinions": [
+          "jalan",
+          "pantai",
+          "bagus",
+          "duduk",
+          "mtor"
+        ]
+      }
+    ],
+    "top_criticized": [
+      {
+        "category": "Kebersihan",
+        "count": 5,
+        "opinions": [
+          "bersih",
+          "sawung",
+          "urus",
+          "pantai",
+          "toilet"
+        ]
+      },
+      {
+        "category": "Akses & Lokasi",
+        "count": 5,
+        "opinions": [
+          "jalan",
+          "dampak",
+          "laut",
+          "pantai",
+          "tarik"
+        ]
+      },
+      {
+        "category": "Pemandangan & Alam",
+        "count": 4,
+        "opinions": [
+          "pantai",
+          "kasihan",
+          "alam",
+          "lupa",
+          "laut"
+        ]
+      }
+    ],
+    "distinctive_keywords": [
+      "indah",
+      "bagus",
+      "pantai",
+      "nyaman",
+      "pandang"
+    ],
+    "headline_positive": "Pengunjung memuji Pemandangan & Alam dan Suasana",
+    "headline_negative": "Keluhan utama terkait Kebersihan dan Akses & Lokasi"
+  },
+  "Mamuju City": {
+    "total_reviews": 145,
+    "sentiment_pct": {
+      "Positif": 81.4,
+      "Negatif": 8.3,
+      "Netral": 10.3
+    },
+    "top_praised": [
+      {
+        "category": "Pemandangan & Alam",
+        "count": 59,
+        "opinions": [
+          "pandang",
+          "mamuju",
+          "indah",
+          "kota",
+          "view"
+        ]
+      },
+      {
+        "category": "Akses & Lokasi",
+        "count": 17,
+        "opinions": [
+          "jalan",
+          "hati",
+          "motor",
+          "kota",
+          "bagus"
+        ]
+      },
+      {
+        "category": "Kebersihan",
+        "count": 12,
+        "opinions": [
+          "awat",
+          "bersih",
+          "bagus",
+          "pindah",
+          "kumuh"
+        ]
+      }
+    ],
+    "top_criticized": [
+      {
+        "category": "Akses & Lokasi",
+        "count": 13,
+        "opinions": [
+          "jalan",
+          "mobil",
+          "kendara",
+          "akses",
+          "anak"
+        ]
+      },
+      {
+        "category": "Pemandangan & Alam",
+        "count": 3,
+        "opinions": [
+          "minim",
+          "terang",
+          "tunjuk",
+          "jalan",
+          "malam"
+        ]
+      },
+      {
+        "category": "Kebersihan",
+        "count": 2,
+        "opinions": [
+          "awat",
+          "kotor"
+        ]
+      }
+    ],
+    "distinctive_keywords": [
+      "mamuju",
+      "indah",
+      "kota",
+      "kota mamuju",
+      "pandang"
+    ],
+    "headline_positive": "Pengunjung memuji Pemandangan & Alam dan Akses & Lokasi",
+    "headline_negative": "Keluhan utama terkait Akses & Lokasi dan Pemandangan & Alam"
+  },
+  "Mangrove Kurau": {
+    "total_reviews": 140,
+    "sentiment_pct": {
+      "Positif": 77.1,
+      "Negatif": 10.0,
+      "Netral": 12.9
+    },
+    "top_praised": [
+      {
+        "category": "Pemandangan & Alam",
+        "count": 43,
+        "opinions": [
+          "hutan",
+          "mangrove",
+          "alam",
+          "alami",
+          "boat"
+        ]
+      },
+      {
+        "category": "Suasana",
+        "count": 22,
+        "opinions": [
+          "asri",
+          "hutan",
+          "sejuk",
+          "suasana",
+          "alami"
+        ]
+      },
+      {
+        "category": "Akses & Lokasi",
+        "count": 10,
+        "opinions": [
+          "jalan",
+          "kaki",
+          "hutan",
+          "boat",
+          "asri"
+        ]
+      }
+    ],
+    "top_criticized": [
+      {
+        "category": "Pemandangan & Alam",
+        "count": 3,
+        "opinions": [
+          "mangrove",
+          "hutan",
+          "munjang",
+          "liuk",
+          "jalan"
+        ]
+      },
+      {
+        "category": "Akses & Lokasi",
+        "count": 3,
+        "opinions": [
+          "jalan",
+          "sesal",
+          "awat",
+          "setapak",
+          "rusak"
+        ]
+      },
+      {
+        "category": "Kebersihan",
+        "count": 2,
+        "opinions": [
+          "awat",
+          "jalan",
+          "setapak",
+          "rusak",
+          "cari"
+        ]
+      }
+    ],
+    "distinctive_keywords": [
+      "mangrove",
+      "keren",
+      "indah",
+      "hutan",
+      "mantap"
+    ],
+    "headline_positive": "Pengunjung memuji Pemandangan & Alam dan Suasana",
+    "headline_negative": "Keluhan utama terkait Pemandangan & Alam dan Akses & Lokasi"
+  },
+  "Nagari Pariangan": {
+    "total_reviews": 129,
+    "sentiment_pct": {
+      "Positif": 89.1,
+      "Negatif": 9.3,
+      "Netral": 1.6
+    },
+    "top_praised": [
+      {
+        "category": "Pemandangan & Alam",
+        "count": 49,
+        "opinions": [
+          "pandang",
+          "indah",
+          "sawah",
+          "bagus",
+          "view"
+        ]
+      },
+      {
+        "category": "Suasana",
+        "count": 44,
+        "opinions": [
+          "sejuk",
+          "suasana",
+          "indah",
+          "pandang",
+          "udara"
+        ]
+      },
+      {
+        "category": "Kuliner",
+        "count": 17,
+        "opinions": [
+          "kawa",
+          "minum",
+          "daun",
+          "makan",
+          "kopi"
+        ]
+      }
+    ],
+    "top_criticized": [
+      {
+        "category": "Akses & Lokasi",
+        "count": 4,
+        "opinions": [
+          "jalan",
+          "akses",
+          "mobil",
+          "sempit",
+          "kendara"
+        ]
+      },
+      {
+        "category": "Pemandangan & Alam",
+        "count": 2,
+        "opinions": [
+          "viewsnya",
+          "mahal",
+          "alam",
+          "minangkabauu"
+        ]
+      },
+      {
+        "category": "Kebersihan",
+        "count": 2,
+        "opinions": [
+          "bagus",
+          "sayang",
+          "masyarakat",
+          "tamu",
+          "edukasi"
+        ]
+      }
+    ],
+    "distinctive_keywords": [
+      "indah",
+      "pandang",
+      "bagus",
+      "sejuk",
+      "nyaman"
+    ],
+    "headline_positive": "Pengunjung memuji Pemandangan & Alam dan Suasana",
+    "headline_negative": "Keluhan utama terkait Akses & Lokasi dan Pemandangan & Alam"
+  },
+  "Osing": {
+    "total_reviews": 196,
+    "sentiment_pct": {
+      "Positif": 69.9,
+      "Negatif": 16.8,
+      "Netral": 13.3
+    },
+    "top_praised": [
+      {
+        "category": "Budaya & Tradisi",
+        "count": 34,
+        "opinions": [
+          "adat",
+          "budaya",
+          "banyuwangi",
+          "osing",
+          "tradisional"
+        ]
+      },
+      {
+        "category": "Suasana",
+        "count": 31,
+        "opinions": [
+          "sejuk",
+          "suasana",
+          "asri",
+          "nyaman",
+          "bagus"
+        ]
+      },
+      {
+        "category": "Kuliner",
+        "count": 24,
+        "opinions": [
+          "makan",
+          "jajan",
+          "khas",
+          "kuliner",
+          "banyuwangi"
+        ]
+      }
+    ],
+    "top_criticized": [
+      {
+        "category": "Kebersihan",
+        "count": 12,
+        "opinions": [
+          "kotor",
+          "awat",
+          "bersih",
+          "ribu",
+          "kolam"
+        ]
+      },
+      {
+        "category": "Fasilitas",
+        "count": 6,
+        "opinions": [
+          "kolam",
+          "parkir",
+          "fasilitas",
+          "biar",
+          "renang"
+        ]
+      },
+      {
+        "category": "Akses & Lokasi",
+        "count": 6,
+        "opinions": [
+          "ribu",
           "anak",
-          "mobil"
+          "jalan",
+          "tiket",
+          "parkir"
+        ]
+      }
+    ],
+    "distinctive_keywords": [
+      "bagus",
+      "banyuwangi",
+      "mantap",
+      "ramah",
+      "sejuk"
+    ],
+    "headline_positive": "Pengunjung memuji Budaya & Tradisi dan Suasana",
+    "headline_negative": "Keluhan utama terkait Kebersihan dan Fasilitas"
+  },
+  "Pantai Batu Kuda": {
+    "total_reviews": 92,
+    "sentiment_pct": {
+      "Positif": 80.4,
+      "Negatif": 9.8,
+      "Netral": 9.8
+    },
+    "top_praised": [
+      {
+        "category": "Pemandangan & Alam",
+        "count": 21,
+        "opinions": [
+          "pantai",
+          "indah",
+          "pandang",
+          "batu",
+          "kuda"
+        ]
+      },
+      {
+        "category": "Suasana",
+        "count": 17,
+        "opinions": [
+          "nyaman",
+          "indah",
+          "tenang",
+          "pantai",
+          "santa"
+        ]
+      },
+      {
+        "category": "Kebersihan",
+        "count": 5,
+        "opinions": [
+          "kamar",
+          "mandi",
+          "bersih",
+          "baik",
+          "lestari"
+        ]
+      }
+    ],
+    "top_criticized": [
+      {
+        "category": "Pemandangan & Alam",
+        "count": 3,
+        "opinions": [
+          "pantai",
+          "spor",
+          "mandi",
+          "bagus",
+          "karang"
+        ]
+      },
+      {
+        "category": "Kebersihan",
+        "count": 3,
+        "opinions": [
+          "kotor",
+          "bersih",
+          "tingkat",
+          "sampah",
+          "plastik"
+        ]
+      },
+      {
+        "category": "Harga & Tiket",
+        "count": 2,
+        "opinions": [
+          "pantai",
+          "air",
+          "mahal",
+          "panas",
+          "alami"
+        ]
+      }
+    ],
+    "distinctive_keywords": [
+      "indah",
+      "bagus",
+      "pantai",
+      "nyaman",
+      "pandang"
+    ],
+    "headline_positive": "Pengunjung memuji Pemandangan & Alam dan Suasana",
+    "headline_negative": "Keluhan utama terkait Pemandangan & Alam dan Kebersihan"
+  },
+  "Pentingsari": {
+    "total_reviews": 223,
+    "sentiment_pct": {
+      "Positif": 90.6,
+      "Negatif": 2.7,
+      "Netral": 6.7
+    },
+    "top_praised": [
+      {
+        "category": "Suasana",
+        "count": 94,
+        "opinions": [
+          "asri",
+          "sejuk",
+          "nyaman",
+          "suasana",
+          "adem"
+        ]
+      },
+      {
+        "category": "Pelayanan",
+        "count": 59,
+        "opinions": [
+          "ramah",
+          "warga",
+          "masyarakat",
+          "duduk",
+          "kelola"
+        ]
+      },
+      {
+        "category": "Pemandangan & Alam",
+        "count": 39,
+        "opinions": [
+          "alam",
+          "malam",
+          "pohon",
+          "alami",
+          "pentingsari"
+        ]
+      }
+    ],
+    "top_criticized": [
+      {
+        "category": "Fasilitas",
+        "count": 3,
+        "opinions": [
+          "parkir",
+          "batas",
+          "fasilitas",
+          "liku",
+          "tingkat"
+        ]
+      },
+      {
+        "category": "Akses & Lokasi",
+        "count": 3,
+        "opinions": [
+          "jalan",
+          "parkir",
+          "batas",
+          "tunjuk",
+          "liku"
         ]
       },
       {
@@ -150,29 +1968,198 @@
           "sungai",
           "pas"
         ]
-      },
-      {
-        "category": "Kebersihan",
-        "count": 1,
-        "opinions": []
       }
     ],
     "distinctive_keywords": [
+      "sejuk",
       "ramah",
       "asri",
-      "seru",
-      "bagus",
-      "nyaman"
+      "nyaman",
+      "bagus"
     ],
     "headline_positive": "Pengunjung memuji Suasana dan Pelayanan",
-    "headline_negative": "Keluhan utama terkait Akses & Lokasi dan Pemandangan & Alam"
+    "headline_negative": "Keluhan utama terkait Fasilitas dan Akses & Lokasi"
+  },
+  "Pulau Kemaro": {
+    "total_reviews": 183,
+    "sentiment_pct": {
+      "Positif": 73.2,
+      "Negatif": 8.2,
+      "Netral": 18.6
+    },
+    "top_praised": [
+      {
+        "category": "Pemandangan & Alam",
+        "count": 29,
+        "opinions": [
+          "pulau",
+          "sungai",
+          "mus",
+          "maro",
+          "tengah"
+        ]
+      },
+      {
+        "category": "Budaya & Tradisi",
+        "count": 26,
+        "opinions": [
+          "sejarah",
+          "palembang",
+          "pulau",
+          "tarik",
+          "salah"
+        ]
+      },
+      {
+        "category": "Akses & Lokasi",
+        "count": 20,
+        "opinions": [
+          "jalan",
+          "seru",
+          "transportasi",
+          "guncang",
+          "aksesoris"
+        ]
+      }
+    ],
+    "top_criticized": [
+      {
+        "category": "Kebersihan",
+        "count": 9,
+        "opinions": [
+          "sampah",
+          "sera",
+          "bersih",
+          "toilet",
+          "kotor"
+        ]
+      },
+      {
+        "category": "Pemandangan & Alam",
+        "count": 5,
+        "opinions": [
+          "sungai",
+          "mus",
+          "guci",
+          "cinta",
+          "selfi"
+        ]
+      },
+      {
+        "category": "Fasilitas",
+        "count": 3,
+        "opinions": [
+          "jembatan",
+          "taau",
+          "parkir",
+          "komen",
+          "foto"
+        ]
+      }
+    ],
+    "distinctive_keywords": [
+      "bagus",
+      "pulau",
+      "maro",
+      "palembang",
+      "pulau maro"
+    ],
+    "headline_positive": "Pengunjung memuji Pemandangan & Alam dan Budaya & Tradisi",
+    "headline_negative": "Keluhan utama terkait Kebersihan dan Pemandangan & Alam"
+  },
+  "Pulau Kumayan Kota": {
+    "total_reviews": 134,
+    "sentiment_pct": {
+      "Positif": 76.1,
+      "Negatif": 14.9,
+      "Netral": 9.0
+    },
+    "top_praised": [
+      {
+        "category": "Suasana",
+        "count": 39,
+        "opinions": [
+          "asri",
+          "sejuk",
+          "nyaman",
+          "bagus",
+          "adem"
+        ]
+      },
+      {
+        "category": "Pemandangan & Alam",
+        "count": 28,
+        "opinions": [
+          "alam",
+          "bagus",
+          "pohon",
+          "asri",
+          "keluarga"
+        ]
+      },
+      {
+        "category": "Fasilitas",
+        "count": 14,
+        "opinions": [
+          "fasilitas",
+          "parkir",
+          "foto",
+          "luas",
+          "lengkap"
+        ]
+      }
+    ],
+    "top_criticized": [
+      {
+        "category": "Kebersihan",
+        "count": 9,
+        "opinions": [
+          "sampah",
+          "buang",
+          "sembarang",
+          "awat",
+          "kayak"
+        ]
+      },
+      {
+        "category": "Harga & Tiket",
+        "count": 7,
+        "opinions": [
+          "orang",
+          "bayar",
+          "anak",
+          "biaya",
+          "harga"
+        ]
+      },
+      {
+        "category": "Fasilitas",
+        "count": 6,
+        "opinions": [
+          "jembatan",
+          "foto",
+          "fasilitas",
+          "rusak",
+          "kak"
+        ]
+      }
+    ],
+    "distinctive_keywords": [
+      "bagus",
+      "keluarga",
+      "asri",
+      "sejuk",
+      "cocok"
+    ],
+    "headline_positive": "Pengunjung memuji Suasana dan Pemandangan & Alam",
+    "headline_negative": "Keluhan utama terkait Kebersihan dan Harga & Tiket"
   },
   "Pulesari": {
     "total_reviews": 145,
     "sentiment_pct": {
-      "Positif": 82.8,
-      "Negatif": 15.2,
-      "Netral": 2.1
+      "Positif": 86.2,
+      "Negatif": 11.0,
+      "Netral": 2.8
     },
     "top_praised": [
       {
@@ -180,97 +2167,507 @@
         "count": 58,
         "opinions": [
           "sungai",
-          "susur",
           "anak",
-          "outbond",
+          "susur",
+          "seru",
           "ramah"
         ]
       },
       {
         "category": "Suasana",
-        "count": 48,
+        "count": 50,
         "opinions": [
-          "asri",
           "sejuk",
-          "outbond",
+          "asri",
           "sungai",
-          "cocok"
+          "outbond",
+          "seru"
         ]
       },
       {
-        "category": "Fasilitas",
-        "count": 37,
+        "category": "Pelayanan",
+        "count": 45,
         "opinions": [
-          "outbound",
+          "ramah",
           "sungai",
-          "pulesari",
           "anak",
-          "ramah"
+          "makan",
+          "kelola"
         ]
       }
     ],
     "top_criticized": [
       {
-        "category": "Pelayanan",
-        "count": 10,
+        "category": "Kuliner",
+        "count": 7,
         "opinions": [
-          "kurang",
-          "pemandu",
-          "ramah",
-          "baik",
-          "beberapa"
+          "makan",
+          "layan",
+          "sayur",
+          "dokumentasi",
+          "kelola"
         ]
       },
       {
         "category": "Pemandangan & Alam",
-        "count": 9,
+        "count": 6,
         "opinions": [
           "sungai",
-          "kurang",
-          "pemandu",
-          "tim",
-          "trainer"
+          "sayur",
+          "saran",
+          "air",
+          "susur"
         ]
       },
       {
-        "category": "Kuliner",
-        "count": 7,
+        "category": "Harga & Tiket",
+        "count": 4,
         "opinions": [
-          "dokumentasi",
-          "akhirnya",
-          "makanan",
-          "pengelola",
-          "mengecewakan"
+          "bayar",
+          "paket",
+          "outbond",
+          "tangga",
+          "bengok"
         ]
       }
     ],
     "distinctive_keywords": [
       "outbond",
-      "bagus",
       "seru",
+      "bagus",
       "sungai",
-      "asri"
+      "ramah"
     ],
     "headline_positive": "Pengunjung memuji Pemandangan & Alam dan Suasana",
-    "headline_negative": "Keluhan utama terkait Pelayanan dan Pemandangan & Alam"
+    "headline_negative": "Keluhan utama terkait Kuliner dan Pemandangan & Alam"
   },
-  "kampung blekok": {
-    "total_reviews": 533,
+  "Sauwandarek": {
+    "total_reviews": 89,
     "sentiment_pct": {
-      "Positif": 76.2,
-      "Negatif": 11.4,
-      "Netral": 12.4
+      "Positif": 88.8,
+      "Negatif": 2.2,
+      "Netral": 9.0
     },
     "top_praised": [
       {
         "category": "Pemandangan & Alam",
-        "count": 158,
+        "count": 24,
         "opinions": [
+          "laut",
+          "pantai",
+          "indah",
+          "alam",
+          "kampung"
+        ]
+      },
+      {
+        "category": "Pelayanan",
+        "count": 11,
+        "opinions": [
+          "ramah",
+          "duduk",
+          "sauwandarek",
+          "masyarakat",
+          "baik"
+        ]
+      },
+      {
+        "category": "Suasana",
+        "count": 8,
+        "opinions": [
+          "tenang",
+          "santa",
+          "asri",
+          "indah",
+          "pantai"
+        ]
+      }
+    ],
+    "top_criticized": [
+      {
+        "category": "Pemandangan & Alam",
+        "count": 1,
+        "opinions": [
+          "renang",
+          "ikan",
+          "liar",
+          "laut",
+          "lepas"
+        ]
+      }
+    ],
+    "distinctive_keywords": [
+      "bagus",
+      "indah",
+      "ikan",
+      "snorkling",
+      "snorkeling"
+    ],
+    "headline_positive": "Pengunjung memuji Pemandangan & Alam dan Pelayanan",
+    "headline_negative": "Keluhan utama terkait Pemandangan & Alam"
+  },
+  "Setu Babakan": {
+    "total_reviews": 134,
+    "sentiment_pct": {
+      "Positif": 67.9,
+      "Negatif": 23.1,
+      "Netral": 9.0
+    },
+    "top_praised": [
+      {
+        "category": "Suasana",
+        "count": 35,
+        "opinions": [
+          "adem",
+          "nyaman",
+          "betawi",
+          "asri",
+          "setu"
+        ]
+      },
+      {
+        "category": "Kuliner",
+        "count": 26,
+        "opinions": [
+          "betawi",
+          "makan",
+          "jajan",
+          "kuliner",
+          "khas"
+        ]
+      },
+      {
+        "category": "Harga & Tiket",
+        "count": 14,
+        "opinions": [
+          "murah",
+          "riah",
+          "harga",
+          "setu",
+          "gratis"
+        ]
+      }
+    ],
+    "top_criticized": [
+      {
+        "category": "Akses & Lokasi",
+        "count": 14,
+        "opinions": [
+          "jalan",
+          "jelek",
+          "lumpur",
+          "rusak",
+          "lubang"
+        ]
+      },
+      {
+        "category": "Harga & Tiket",
+        "count": 8,
+        "opinions": [
+          "bayar",
+          "parkir",
+          "harga",
+          "warung",
+          "ribu"
+        ]
+      },
+      {
+        "category": "Pemandangan & Alam",
+        "count": 7,
+        "opinions": [
+          "danau",
+          "kotor",
+          "jadi",
+          "hati",
+          "warung"
+        ]
+      }
+    ],
+    "distinctive_keywords": [
+      "bagus",
+      "betawi",
+      "nyaman",
+      "keren",
+      "setu"
+    ],
+    "headline_positive": "Pengunjung memuji Suasana dan Kuliner",
+    "headline_negative": "Keluhan utama terkait Akses & Lokasi dan Harga & Tiket"
+  },
+  "Tanjung Laut": {
+    "total_reviews": 112,
+    "sentiment_pct": {
+      "Positif": 79.5,
+      "Negatif": 10.7,
+      "Netral": 9.8
+    },
+    "top_praised": [
+      {
+        "category": "Pemandangan & Alam",
+        "count": 25,
+        "opinions": [
+          "danau",
+          "alam",
+          "pohon",
           "bagus",
-          "blekok",
+          "tangkas"
+        ]
+      },
+      {
+        "category": "Suasana",
+        "count": 23,
+        "opinions": [
+          "nyaman",
+          "asri",
+          "sejuk",
+          "suasana",
+          "alami"
+        ]
+      },
+      {
+        "category": "Fasilitas",
+        "count": 12,
+        "opinions": [
+          "fasilitas",
+          "danau",
+          "wahana",
+          "tarik",
+          "jembatan"
+        ]
+      }
+    ],
+    "top_criticized": [
+      {
+        "category": "Akses & Lokasi",
+        "count": 9,
+        "opinions": [
+          "jalan",
+          "akses",
+          "rusak",
+          "jelek",
+          "danau"
+        ]
+      },
+      {
+        "category": "Pemandangan & Alam",
+        "count": 5,
+        "opinions": [
+          "danau",
+          "tangkas",
+          "maaf",
+          "kecewa",
+          "kayak"
+        ]
+      },
+      {
+        "category": "Harga & Tiket",
+        "count": 4,
+        "opinions": [
+          "harga",
+          "mahal",
+          "kak",
+          "bayar",
+          "tiket"
+        ]
+      }
+    ],
+    "distinctive_keywords": [
+      "bagus",
+      "mantap",
+      "camping",
+      "cocok",
+      "danau"
+    ],
+    "headline_positive": "Pengunjung memuji Pemandangan & Alam dan Suasana",
+    "headline_negative": "Keluhan utama terkait Akses & Lokasi dan Pemandangan & Alam"
+  },
+  "Tanjung Rappa Pelangi": {
+    "total_reviews": 113,
+    "sentiment_pct": {
+      "Positif": 85.0,
+      "Negatif": 5.3,
+      "Netral": 9.7
+    },
+    "top_praised": [
+      {
+        "category": "Pemandangan & Alam",
+        "count": 42,
+        "opinions": [
+          "pandang",
+          "laut",
+          "bagus",
+          "indah",
+          "malam"
+        ]
+      },
+      {
+        "category": "Suasana",
+        "count": 26,
+        "opinions": [
+          "tenang",
+          "nyaman",
+          "suasana",
+          "santai",
+          "santa"
+        ]
+      },
+      {
+        "category": "Fasilitas",
+        "count": 13,
+        "opinions": [
+          "fasilitas",
+          "cottage",
+          "nginap",
+          "sedia",
+          "parkir"
+        ]
+      }
+    ],
+    "top_criticized": [
+      {
+        "category": "Kebersihan",
+        "count": 3,
+        "opinions": [
+          "bersih",
+          "kamar",
+          "rapi",
+          "minus",
+          "air"
+        ]
+      },
+      {
+        "category": "Pemandangan & Alam",
+        "count": 2,
+        "opinions": [
+          "jawa",
+          "malu",
+          "utara",
+          "sport",
+          "pantai"
+        ]
+      },
+      {
+        "category": "Akses & Lokasi",
+        "count": 2,
+        "opinions": [
+          "akses",
+          "kota",
+          "sulit",
+          "pakai",
+          "kendara"
+        ]
+      }
+    ],
+    "distinctive_keywords": [
+      "bagus",
+      "keren",
+      "pandang",
+      "indah",
+      "libur"
+    ],
+    "headline_positive": "Pengunjung memuji Pemandangan & Alam dan Suasana",
+    "headline_negative": "Keluhan utama terkait Kebersihan dan Pemandangan & Alam"
+  },
+  "Tomok": {
+    "total_reviews": 22,
+    "sentiment_pct": {
+      "Positif": 81.8,
+      "Negatif": 4.5,
+      "Netral": 13.6
+    },
+    "top_praised": [
+      {
+        "category": "Budaya & Tradisi",
+        "count": 6,
+        "opinions": [
+          "adat",
+          "tari",
+          "batak",
+          "sigale",
+          "gale"
+        ]
+      },
+      {
+        "category": "Harga & Tiket",
+        "count": 4,
+        "opinions": [
+          "kak",
+          "tiket",
+          "murah",
+          "jangkau",
+          "kapal"
+        ]
+      },
+      {
+        "category": "Pelayanan",
+        "count": 3,
+        "opinions": [
+          "ramah",
+          "pelihara",
+          "duduk",
+          "jalan",
+          "kiri"
+        ]
+      }
+    ],
+    "top_criticized": [
+      {
+        "category": "Akses & Lokasi",
+        "count": 2,
+        "opinions": [
+          "jalan",
+          "pusat",
+          "belanja",
+          "minim",
+          "tunjuk"
+        ]
+      },
+      {
+        "category": "Pelayanan",
+        "count": 1,
+        "opinions": [
+          "temu",
+          "guide"
+        ]
+      },
+      {
+        "category": "Harga & Tiket",
+        "count": 1,
+        "opinions": [
+          "bayar",
+          "total",
+          "perintah",
+          "tertib",
+          "tiket"
+        ]
+      }
+    ],
+    "distinctive_keywords": [
+      "batak",
+      "bagus",
+      "tari",
+      "tomok",
+      "gale"
+    ],
+    "headline_positive": "Pengunjung memuji Budaya & Tradisi dan Harga & Tiket",
+    "headline_negative": "Keluhan utama terkait Akses & Lokasi dan Pelayanan"
+  },
+  "kampung blekok": {
+    "total_reviews": 531,
+    "sentiment_pct": {
+      "Positif": 75.9,
+      "Negatif": 11.5,
+      "Netral": 12.6
+    },
+    "top_praised": [
+      {
+        "category": "Pemandangan & Alam",
+        "count": 157,
+        "opinions": [
+          "pandang",
+          "bagus",
           "mangrove",
-          "pemandangan",
-          "burung"
+          "pantai",
+          "alam"
         ]
       },
       {
@@ -278,143 +2675,143 @@
         "count": 75,
         "opinions": [
           "nyaman",
-          "blekok",
-          "burung",
-          "tempatnya",
-          "suasana"
+          "suasana",
+          "asri",
+          "sejuk",
+          "blekok"
         ]
       },
       {
         "category": "Akses & Lokasi",
-        "count": 56,
+        "count": 55,
         "opinions": [
           "jalan",
+          "parkir",
           "bagus",
-          "blekok",
-          "mangrove",
-          "burung"
+          "mudah",
+          "mobil"
         ]
       }
     ],
     "top_criticized": [
       {
-        "category": "Fasilitas",
-        "count": 29,
+        "category": "Pemandangan & Alam",
+        "count": 28,
         "opinions": [
-          "area",
-          "baru",
-          "masuk",
+          "mangrove",
           "bakau",
-          "parkir"
+          "burung",
+          "blekok",
+          "hutan"
         ]
       },
       {
-        "category": "Pemandangan & Alam",
-        "count": 27,
+        "category": "Fasilitas",
+        "count": 11,
         "opinions": [
-          "burung",
-          "blekok",
-          "mangrove",
-          "bakau",
-          "kampung"
+          "parkir",
+          "fasilitas",
+          "mobil",
+          "jembatan",
+          "kayu"
         ]
       },
       {
         "category": "Akses & Lokasi",
-        "count": 20,
+        "count": 10,
         "opinions": [
-          "baru",
           "jalan",
-          "area",
-          "kampung",
-          "blekok"
+          "kaki",
+          "lewat",
+          "blekok",
+          "parkir"
         ]
       }
     ],
     "distinctive_keywords": [
       "bagus",
       "indah",
-      "tempatnya",
       "blekok",
-      "keren"
+      "pandang",
+      "cocok"
     ],
     "headline_positive": "Pengunjung memuji Pemandangan & Alam dan Suasana",
-    "headline_negative": "Keluhan utama terkait Fasilitas dan Pemandangan & Alam"
+    "headline_negative": "Keluhan utama terkait Pemandangan & Alam dan Fasilitas"
   },
   "kete kesu": {
-    "total_reviews": 1608,
+    "total_reviews": 1582,
     "sentiment_pct": {
-      "Positif": 88.4,
-      "Negatif": 4.8,
-      "Netral": 6.8
+      "Positif": 84.6,
+      "Negatif": 5.1,
+      "Netral": 10.3
     },
     "top_praised": [
       {
         "category": "Budaya & Tradisi",
-        "count": 432,
+        "count": 397,
         "opinions": [
-          "toraja",
           "adat",
           "budaya",
+          "toraja",
           "rumah",
-          "tongkonan"
+          "sejarah"
         ]
       },
       {
         "category": "Pemandangan & Alam",
-        "count": 186,
+        "count": 144,
         "opinions": [
+          "pandang",
+          "alam",
+          "indah",
           "toraja",
-          "adat",
-          "rumah",
-          "kesu",
-          "tongkonan"
+          "rumah"
         ]
       },
       {
-        "category": "Akses & Lokasi",
-        "count": 147,
+        "category": "Harga & Tiket",
+        "count": 133,
         "opinions": [
-          "toraja",
-          "adat",
-          "lokasi",
-          "rumah",
-          "kesu"
+          "murah",
+          "harga",
+          "tiket",
+          "jangkau",
+          "souvenir"
         ]
       }
     ],
     "top_criticized": [
       {
-        "category": "Fasilitas",
-        "count": 25,
-        "opinions": [
-          "parkir",
-          "parkiran",
-          "kurang",
-          "fasilitas",
-          "tongkonan"
-        ]
-      },
-      {
         "category": "Akses & Lokasi",
-        "count": 21,
+        "count": 16,
         "opinions": [
           "jalan",
           "parkir",
-          "sehingga",
-          "kurang",
-          "bayar"
+          "sempit",
+          "akses",
+          "kendara"
         ]
       },
       {
         "category": "Kebersihan",
-        "count": 17,
+        "count": 13,
         "opinions": [
-          "bagus",
-          "kurang",
-          "tempatnya",
+          "sampah",
+          "buang",
+          "sembarang",
+          "kotor",
+          "bersih"
+        ]
+      },
+      {
+        "category": "Harga & Tiket",
+        "count": 13,
+        "opinions": [
+          "harga",
+          "mahal",
           "bayar",
-          "sampah"
+          "barang",
+          "jual"
         ]
       }
     ],
@@ -422,86 +2819,86 @@
       "bagus",
       "toraja",
       "keren",
-      "tempatnya",
+      "indah",
       "budaya"
     ],
     "headline_positive": "Pengunjung memuji Budaya & Tradisi dan Pemandangan & Alam",
-    "headline_negative": "Keluhan utama terkait Fasilitas dan Akses & Lokasi"
+    "headline_negative": "Keluhan utama terkait Akses & Lokasi dan Kebersihan"
   },
   "penglipuran": {
-    "total_reviews": 2904,
+    "total_reviews": 2900,
     "sentiment_pct": {
-      "Positif": 93.5,
-      "Negatif": 3.7,
-      "Netral": 2.9
+      "Positif": 91.0,
+      "Negatif": 4.1,
+      "Netral": 4.9
     },
     "top_praised": [
       {
         "category": "Kebersihan",
-        "count": 1509,
+        "count": 1474,
         "opinions": [
           "bersih",
-          "bali",
+          "rapi",
+          "tata",
           "ramah",
-          "rumah",
-          "rapi"
+          "dunia"
         ]
       },
       {
         "category": "Suasana",
-        "count": 858,
+        "count": 846,
         "opinions": [
-          "bersih",
           "asri",
-          "bali",
           "nyaman",
-          "ramah"
+          "bersih",
+          "suasana",
+          "sejuk"
         ]
       },
       {
         "category": "Pelayanan",
-        "count": 633,
+        "count": 615,
         "opinions": [
           "ramah",
+          "warga",
+          "duduk",
           "bersih",
-          "bali",
-          "rumah",
-          "warga"
+          "rumah"
         ]
       }
     ],
     "top_criticized": [
       {
         "category": "Kebersihan",
-        "count": 40,
+        "count": 57,
         "opinions": [
-          "terbersih",
           "bersih",
-          "bagus",
-          "desanya",
-          "terlalu"
+          "sampah",
+          "rapi",
+          "jaga",
+          "foto"
         ]
       },
       {
-        "category": "Akses & Lokasi",
-        "count": 36,
+        "category": "Harga & Tiket",
+        "count": 27,
         "opinions": [
-          "jauh",
-          "masuk",
-          "bus",
-          "pengunjung",
-          "bersih"
+          "mahal",
+          "harga",
+          "tiket",
+          "makan",
+          "barang"
         ]
       },
       {
         "category": "Fasilitas",
-        "count": 32,
+        "count": 22,
         "opinions": [
           "parkir",
-          "masuk",
-          "kurang",
-          "spot",
-          "pengunjung"
+          "foto",
+          "susah",
+          "kak",
+          "cari"
         ]
       }
     ],
@@ -509,358 +2906,358 @@
       "bersih",
       "bagus",
       "ramah",
-      "bali",
+      "bal",
       "indah"
     ],
     "headline_positive": "Pengunjung memuji Kebersihan dan Suasana",
-    "headline_negative": "Keluhan utama terkait Kebersihan dan Akses & Lokasi"
+    "headline_negative": "Keluhan utama terkait Kebersihan dan Harga & Tiket"
   },
   "pentingsari": {
-    "total_reviews": 451,
+    "total_reviews": 449,
     "sentiment_pct": {
-      "Positif": 88.2,
+      "Positif": 86.4,
       "Negatif": 6.7,
-      "Netral": 5.1
+      "Netral": 6.9
     },
     "top_praised": [
       {
         "category": "Suasana",
-        "count": 225,
+        "count": 218,
         "opinions": [
           "sejuk",
           "asri",
           "nyaman",
-          "tempatnya",
-          "ramah"
+          "suasana",
+          "adem"
         ]
       },
       {
         "category": "Pelayanan",
-        "count": 97,
+        "count": 96,
         "opinions": [
           "ramah",
-          "asri",
-          "masyarakat",
           "warga",
-          "sejuk"
+          "masyarakat",
+          "duduk",
+          "rumah"
         ]
       },
       {
         "category": "Pemandangan & Alam",
-        "count": 93,
+        "count": 87,
         "opinions": [
-          "sejuk",
           "alam",
-          "ramah",
-          "suasana",
-          "pentingsari"
+          "pohon",
+          "rapi",
+          "gunung",
+          "alami"
         ]
       }
     ],
     "top_criticized": [
       {
-        "category": "Kebersihan",
-        "count": 9,
+        "category": "Pemandangan & Alam",
+        "count": 7,
         "opinions": [
-          "pentingsari",
-          "merapi",
           "gunung",
-          "sebelah",
-          "spot"
+          "rapi",
+          "alam",
+          "belah",
+          "kaki"
+        ]
+      },
+      {
+        "category": "Kebersihan",
+        "count": 7,
+        "opinions": [
+          "gunung",
+          "rapi",
+          "belah",
+          "kaki",
+          "air"
         ]
       },
       {
         "category": "Akses & Lokasi",
-        "count": 9,
+        "count": 5,
         "opinions": [
           "jalan",
-          "spot",
-          "masuk",
-          "asli",
-          "kurang"
-        ]
-      },
-      {
-        "category": "Pemandangan & Alam",
-        "count": 7,
-        "opinions": [
-          "pentingsari",
-          "gunung",
-          "merapi",
-          "sebelah",
-          "alam"
+          "akses",
+          "tunjuk",
+          "sulit",
+          "liku"
         ]
       }
     ],
     "distinctive_keywords": [
       "sejuk",
       "asri",
-      "tempatnya",
       "nyaman",
-      "bagus"
+      "bagus",
+      "ramah"
     ],
     "headline_positive": "Pengunjung memuji Suasana dan Pelayanan",
-    "headline_negative": "Keluhan utama terkait Kebersihan dan Akses & Lokasi"
+    "headline_negative": "Keluhan utama terkait Pemandangan & Alam dan Kebersihan"
   },
   "pujonkidul": {
-    "total_reviews": 2204,
+    "total_reviews": 2194,
     "sentiment_pct": {
-      "Positif": 90.4,
-      "Negatif": 7.3,
-      "Netral": 2.3
+      "Positif": 91.8,
+      "Negatif": 4.9,
+      "Netral": 3.4
     },
     "top_praised": [
       {
         "category": "Suasana",
-        "count": 761,
+        "count": 777,
         "opinions": [
           "sejuk",
-          "bagus",
           "nyaman",
-          "pemandangan",
-          "asri"
+          "suasana",
+          "asri",
+          "udara"
         ]
       },
       {
         "category": "Pemandangan & Alam",
-        "count": 658,
+        "count": 655,
         "opinions": [
-          "pemandangan",
-          "bagus",
+          "pandang",
           "sawah",
-          "masuk",
-          "makanan"
+          "bagus",
+          "alam",
+          "indah"
         ]
       },
       {
         "category": "Kuliner",
-        "count": 488,
+        "count": 466,
         "opinions": [
-          "makanan",
-          "masuk",
-          "bagus",
+          "makan",
+          "cafe",
+          "sawah",
           "murah",
-          "sawah"
+          "harga"
         ]
       }
     ],
     "top_criticized": [
       {
         "category": "Akses & Lokasi",
-        "count": 119,
+        "count": 80,
         "opinions": [
           "jalan",
-          "kurang",
-          "sempit",
           "akses",
-          "parkir"
+          "sempit",
+          "parkir",
+          "mobil"
         ]
       },
       {
         "category": "Fasilitas",
-        "count": 81,
+        "count": 68,
         "opinions": [
           "parkir",
-          "kurang",
+          "wahana",
           "jalan",
-          "masuk",
-          "bagus"
+          "foto",
+          "mobil"
         ]
       },
       {
         "category": "Kuliner",
-        "count": 55,
+        "count": 49,
         "opinions": [
+          "makan",
           "cafe",
-          "jalan",
-          "sawah",
-          "masuk",
-          "kurang"
-        ]
-      }
-    ],
-    "distinctive_keywords": [
-      "bagus",
-      "sejuk",
-      "tempatnya",
-      "indah",
-      "pemandangan"
-    ],
-    "headline_positive": "Pengunjung memuji Suasana dan Pemandangan & Alam",
-    "headline_negative": "Keluhan utama terkait Akses & Lokasi dan Fasilitas"
-  },
-  "umbul ponggok": {
-    "total_reviews": 2019,
-    "sentiment_pct": {
-      "Positif": 88.8,
-      "Negatif": 7.1,
-      "Netral": 4.1
-    },
-    "top_praised": [
-      {
-        "category": "Suasana",
-        "count": 490,
-        "opinions": [
-          "air",
-          "airnya",
-          "dingin",
-          "nyaman",
-          "ikan"
-        ]
-      },
-      {
-        "category": "Pemandangan & Alam",
-        "count": 361,
-        "opinions": [
-          "air",
-          "dalam",
-          "ikan",
-          "kolam",
-          "berenang"
-        ]
-      },
-      {
-        "category": "Harga & Tiket",
-        "count": 269,
-        "opinions": [
-          "air",
-          "harga",
-          "murah",
-          "tiket",
-          "masuk"
-        ]
-      }
-    ],
-    "top_criticized": [
-      {
-        "category": "Fasilitas",
-        "count": 82,
-        "opinions": [
-          "anak",
-          "kolam",
-          "kurang",
-          "parkir",
-          "bayar"
-        ]
-      },
-      {
-        "category": "Kebersihan",
-        "count": 44,
-        "opinions": [
-          "kurang",
-          "kotor",
-          "bersih",
-          "bayar",
-          "renang"
-        ]
-      },
-      {
-        "category": "Harga & Tiket",
-        "count": 28,
-        "opinions": [
-          "tiket",
           "mahal",
-          "masuk",
-          "bayar",
+          "sawah",
           "harga"
         ]
       }
     ],
     "distinctive_keywords": [
       "bagus",
-      "air",
-      "airnya",
-      "tempatnya",
-      "ikan"
+      "sejuk",
+      "indah",
+      "makan",
+      "pandang"
     ],
     "headline_positive": "Pengunjung memuji Suasana dan Pemandangan & Alam",
-    "headline_negative": "Keluhan utama terkait Fasilitas dan Kebersihan"
+    "headline_negative": "Keluhan utama terkait Akses & Lokasi dan Fasilitas"
   },
-  "Semua": {
-    "total_reviews": 10076,
+  "umbul ponggok": {
+    "total_reviews": 2007,
     "sentiment_pct": {
-      "Positif": 89.3,
-      "Negatif": 6.2,
-      "Netral": 4.5
+      "Positif": 87.0,
+      "Negatif": 6.0,
+      "Netral": 6.9
     },
     "top_praised": [
       {
         "category": "Suasana",
-        "count": 2630,
+        "count": 557,
         "opinions": [
-          "sejuk",
-          "nyaman",
-          "bersih",
-          "asri",
-          "bagus"
-        ]
-      },
-      {
-        "category": "Kebersihan",
-        "count": 2077,
-        "opinions": [
-          "bersih",
-          "ramah",
-          "bali",
-          "bagus",
-          "rapi"
-        ]
-      },
-      {
-        "category": "Pemandangan & Alam",
-        "count": 1873,
-        "opinions": [
-          "bagus",
-          "pemandangan",
           "air",
-          "dalam",
-          "masuk"
+          "segar",
+          "dingin",
+          "nyaman",
+          "sejuk"
+        ]
+      },
+      {
+        "category": "Harga & Tiket",
+        "count": 295,
+        "opinions": [
+          "murah",
+          "harga",
+          "tiket",
+          "jangkau",
+          "makan"
+        ]
+      },
+      {
+        "category": "Fasilitas",
+        "count": 288,
+        "opinions": [
+          "kolam",
+          "air",
+          "renang",
+          "fasilitas",
+          "foto"
         ]
       }
     ],
     "top_criticized": [
       {
         "category": "Fasilitas",
-        "count": 263,
+        "count": 51,
         "opinions": [
           "parkir",
-          "kurang",
-          "masuk",
+          "kolam",
           "anak",
-          "bagus"
+          "mobil",
+          "susah"
         ]
       },
       {
-        "category": "Akses & Lokasi",
-        "count": 239,
+        "category": "Harga & Tiket",
+        "count": 37,
         "opinions": [
-          "jalan",
-          "masuk",
-          "kurang",
-          "parkir",
-          "jauh"
+          "mahal",
+          "tiket",
+          "harga",
+          "bayar",
+          "lokal"
         ]
       },
       {
         "category": "Kebersihan",
-        "count": 156,
+        "count": 34,
         "opinions": [
-          "kurang",
           "bersih",
+          "toilet",
+          "bayar",
           "kotor",
+          "kamar"
+        ]
+      }
+    ],
+    "distinctive_keywords": [
+      "air",
+      "bagus",
+      "renang",
+      "ikan",
+      "segar"
+    ],
+    "headline_positive": "Pengunjung memuji Suasana dan Harga & Tiket",
+    "headline_negative": "Keluhan utama terkait Fasilitas dan Harga & Tiket"
+  },
+  "Semua": {
+    "total_reviews": 13278,
+    "sentiment_pct": {
+      "Positif": 86.3,
+      "Negatif": 6.3,
+      "Netral": 7.4
+    },
+    "top_praised": [
+      {
+        "category": "Suasana",
+        "count": 3308,
+        "opinions": [
+          "sejuk",
+          "nyaman",
+          "asri",
+          "suasana",
+          "segar"
+        ]
+      },
+      {
+        "category": "Pemandangan & Alam",
+        "count": 2444,
+        "opinions": [
+          "pandang",
+          "alam",
+          "indah",
           "bagus",
-          "masuk"
+          "alami"
+        ]
+      },
+      {
+        "category": "Kebersihan",
+        "count": 2298,
+        "opinions": [
+          "bersih",
+          "rapi",
+          "tata",
+          "bagus",
+          "ramah"
+        ]
+      }
+    ],
+    "top_criticized": [
+      {
+        "category": "Akses & Lokasi",
+        "count": 267,
+        "opinions": [
+          "jalan",
+          "akses",
+          "parkir",
+          "mobil",
+          "sempit"
+        ]
+      },
+      {
+        "category": "Fasilitas",
+        "count": 215,
+        "opinions": [
+          "parkir",
+          "kolam",
+          "fasilitas",
+          "mobil",
+          "anak"
+        ]
+      },
+      {
+        "category": "Kebersihan",
+        "count": 207,
+        "opinions": [
+          "bersih",
+          "sampah",
+          "kotor",
+          "toilet",
+          "air"
         ]
       }
     ],
     "distinctive_keywords": [
       "bagus",
       "bersih",
-      "tempatnya",
       "indah",
-      "sejuk"
+      "sejuk",
+      "nyaman"
     ],
-    "headline_positive": "Pengunjung memuji Suasana dan Kebersihan",
-    "headline_negative": "Keluhan utama terkait Fasilitas dan Akses & Lokasi"
+    "headline_positive": "Pengunjung memuji Suasana dan Pemandangan & Alam",
+    "headline_negative": "Keluhan utama terkait Akses & Lokasi dan Fasilitas"
   }
 }

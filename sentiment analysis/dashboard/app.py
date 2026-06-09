@@ -2,7 +2,9 @@
 import os
 import io
 import json
+import argparse
 import base64
+import urllib.parse
 from collections import Counter
 
 import pandas as pd
@@ -16,16 +18,52 @@ import dash
 from dash import dcc, html, Input, Output, State, dash_table, callback
 import plotly.express as px
 import plotly.graph_objects as go
+from sklearn.feature_extraction.text import TfidfVectorizer
+
+# ── CLI args ──────────────────────────────────────────────────────────────────
+# parse_known_args supaya tidak konflik dengan flag dari Dash/Jupyter runner
+_parser = argparse.ArgumentParser(add_help=False)
+_parser.add_argument('--mtl-only', action='store_true',
+                     help='Pakai data hasil MTL tanpa fallback (sentiment_labeled_mtl_only.csv)')
+_parser.add_argument('--port', type=int, default=8050)
+ARGS, _ = _parser.parse_known_args()
+DATA_SUFFIX = '_mtl_only' if ARGS.mtl_only else ''
 
 # ── Data ──────────────────────────────────────────────────────────────────────
-DATA_DIR = os.path.join(os.path.dirname(__file__), '..', 'data')
-df = pd.read_csv(os.path.join(DATA_DIR, 'sentiment_labeled.csv'))
+# Auto-deteksi lokasi data supaya app.py IDENTIK di repo skripsi & repo deploy:
+#   deploy (hf_space_repo): data ada di ./data (sebelah app.py)
+#   repo skripsi          : data ada di ../data (sentiment analysis/data)
+DATA_DIR = os.path.join(os.path.dirname(__file__), 'data')
+if not os.path.isdir(DATA_DIR):
+    DATA_DIR = os.path.join(os.path.dirname(__file__), '..', 'data')
+df = pd.read_csv(os.path.join(DATA_DIR, f'sentiment_labeled{DATA_SUFFIX}.csv'))
 
 # Parse aspects_str back to list
 if 'aspects_str' in df.columns:
     df['aspects_list'] = df['aspects_str'].fillna('Lainnya').str.split('|')
 else:
     df['aspects_list'] = [['Lainnya']] * len(df)
+
+# Per-aspect sentiment map (aspek -> sentimen) per row. Sumber: kolom
+# `aspect_sentiments_str` yang pipe-separated paralel ke `aspects_str`.
+# Pakai sentimen per-aspek (MTL bila ada span, fallback ke overall) supaya
+# review pujian kebersihan tidak tersaring sebagai 'keluhan kebersihan' hanya
+# karena overall review-nya Negatif (mis. tiket mahal).
+if 'aspect_sentiments_str' in df.columns:
+    df['aspect_sentiments_list'] = (df['aspect_sentiments_str']
+                                    .fillna('').str.split('|'))
+    df['aspect_sentiment_map'] = df.apply(
+        lambda r: dict(zip(r['aspects_list'], r['aspect_sentiments_list'])),
+        axis=1)
+else:
+    # Backward compatibility kalau CSV belum di-regenerate: fallback ke overall
+    df['aspect_sentiment_map'] = df.apply(
+        lambda r: {a: r['sentiment'] for a in r['aspects_list']}, axis=1)
+
+
+def aspect_sentiment_mask(d, aspect, sentiment):
+    """Boolean mask: row menyebut `aspect` dengan sentimen *per-aspek* `sentiment`."""
+    return d['aspect_sentiment_map'].apply(lambda m: m.get(aspect) == sentiment)
 
 # Load pre-computed JSON files
 def load_json(name):
@@ -35,15 +73,90 @@ def load_json(name):
             return json.load(f)
     return {}
 
-tfidf_data   = load_json('tfidf_keywords.json')
-aspect_data  = load_json('aspect_summary.json')
-insight_data = load_json('insights_summary.json')
-opinion_data = load_json('opinion_words.json')
+tfidf_data   = load_json(f'tfidf_keywords{DATA_SUFFIX}.json')
+aspect_data  = load_json(f'aspect_summary{DATA_SUFFIX}.json')
+insight_data = load_json(f'insights_summary{DATA_SUFFIX}.json')
+opinion_data = load_json(f'opinion_words{DATA_SUFFIX}.json')
+# Word cloud & bigram phrase-based (per desa, sentimen): kata diambil per-KLAUSA
+# dengan sentimen klausa sendiri (hybrid MTL + mdhugol), bukan dari teks full
+# review. Mencegah kata positif ('bagus') bocor ke cloud negatif. Lihat
+# _build_phrase_words.py / SA_AutoLabel.ipynb. Kosong → fallback ke teks review.
+phrase_data  = load_json(f'phrase_words{DATA_SUFFIX}.json')
+
+# Kolom teks untuk analytics (word cloud, bigram). Pakai stemmed kalau ada
+# supaya variasi imbuhan ('pemandangan', 'pemandangannya') ke-collapse jadi 1
+# bentuk dasar di chart frequency. Fallback ke cleaned_review (un-stemmed)
+# untuk backward compatibility dgn CSV lama.
+ANALYTICS_COL = ('cleaned_review_stemmed' if 'cleaned_review_stemmed' in df.columns
+                 else 'cleaned_review')
 
 LABEL_NAME = {0: 'Negatif', 1: 'Positif', 2: 'Netral'}
 COLORS     = {'Positif': '#10b981', 'Negatif': '#ef4444', 'Netral': '#6366f1'}
 COLORS_SOFT = {'Positif': '#34d399', 'Negatif': '#f87171', 'Netral': '#818cf8'}
 DESA_LIST  = sorted(df['nama desa wisata'].dropna().unique().tolist())
+
+# ── Province mapping ──────────────────────────────────────────────────────────
+PROVINCE_MAP = {
+    # Old data (lowercase, from Excel)
+    'kampung blekok':     'Jawa Timur',
+    'umbul ponggok':      'Jawa Tengah',
+    'pujon kidul':        'Jawa Timur',
+    'pujonkidul':         'Jawa Timur',
+    'pentingsari':        'DI Yogyakarta',
+    'penglipuran':        'Bali',
+    'kete kesu':          'Sulawesi Selatan',
+    'osing':              'Jawa Timur',
+    'pulesari':           'DI Yogyakarta',
+    # New data (from scraping)
+    'gampong nusa':                'Aceh',
+    'tomok':                       'Sumatera Utara',
+    'nagari pariangan':            'Sumatera Barat',
+    'buluh cina':                  'Riau',
+    'kampung terih':               'Kepulauan Riau',
+    'tanjung laut':                'Jambi',
+    'pulau kumayan kota':          'Bengkulu',
+    'pulau kemaro':                'Sumatera Selatan',
+    'mangrove kurau':              'Kepulauan Bangka Belitung',
+    'kunjir':                      'Lampung',
+    'setu babakan':                'DKI Jakarta',
+    'kampung naga':                'Jawa Barat',
+    'kampung marengo baduy':       'Banten',
+    'desa sade':                   'Nusa Tenggara Barat',
+    'desa wisata waerebo':         'Nusa Tenggara Timur',
+    'desa wisata sungai utik':     'Kalimantan Barat',
+    'desa wisata sungai sekonyer': 'Kalimantan Tengah',
+    'kampung ketupat':             'Kalimantan Selatan',
+    'desa wisata pampang':         'Kalimantan Timur',
+    'desa wisata setulang':        'Kalimantan Utara',
+    'desa wisata budo':            'Sulawesi Utara',
+    'desa wisata olele':           'Gorontalo',
+    'danau paisu':                 'Sulawesi Tengah',
+    'mamuju city':                 'Sulawesi Barat',
+    'danau napabale':              'Sulawesi Tenggara',
+    'pantai batu kuda':            'Maluku',
+    'tanjung rappa pelangi':       'Maluku Utara',
+    'sauwandarek':                 'Papua Barat',
+    'danau emtofe':                'Papua',
+}
+
+# Fill provinsi column — NaN for old Excel data, already set for new scraped data
+if 'provinsi' not in df.columns:
+    df['provinsi'] = ''
+_mask_prov = df['provinsi'].isna() | (df['provinsi'].astype(str).str.strip() == '')
+df.loc[_mask_prov, 'provinsi'] = (
+    df.loc[_mask_prov, 'nama desa wisata']
+    .str.lower().str.strip()
+    .map(PROVINCE_MAP)
+)
+df['provinsi'] = df['provinsi'].fillna('Tidak Diketahui')
+
+# Build province → desa list mapping (for province dropdown cascade)
+PROVINSI_DESA: dict = {}
+for _desa in DESA_LIST:
+    _prov = df[df['nama desa wisata'] == _desa]['provinsi'].mode()
+    _prov = _prov.iloc[0] if not _prov.empty else 'Tidak Diketahui'
+    PROVINSI_DESA.setdefault(_prov, []).append(_desa)
+PROVINSI_LIST = sorted(PROVINSI_DESA.keys())
 
 # ── Desa images (scanned from assets/images/<desa>/) ─────────────────────────
 IMAGES_DIR = os.path.join(os.path.dirname(__file__), 'assets', 'images')
@@ -187,17 +300,18 @@ def _desa_label(desa_list, is_semua):
 
 
 def _compute_aspect_data(d):
-    """Compute aspect summary on-the-fly from a filtered dataframe."""
+    """Compute aspect summary on-the-fly using per-aspect sentiment."""
     result = {}
     for aspect in ASPECT_ORDER:
-        mask = d['aspects_str'].str.contains(aspect, na=False)
-        subset = d[mask]
+        mention = d['aspects_list'].apply(lambda x: aspect in x)
+        subset = d[mention]
         if subset.empty:
             continue
+        per_asp = subset['aspect_sentiment_map'].apply(lambda m: m.get(aspect))
         total = len(subset)
-        pos = int((subset['sentiment'] == 'Positif').sum())
-        neg = int((subset['sentiment'] == 'Negatif').sum())
-        neu = int((subset['sentiment'] == 'Netral').sum())
+        pos = int((per_asp == 'Positif').sum())
+        neg = int((per_asp == 'Negatif').sum())
+        neu = int((per_asp == 'Netral').sum())
         result[aspect] = {
             'total': total, 'Positif': pos, 'Negatif': neg, 'Netral': neu,
             'positivity_rate': (pos / total * 100) if total else 0,
@@ -227,6 +341,54 @@ def _compute_insight_data(d, asp):
     }
 
 
+def _compute_tfidf_on_fly(desa_list, is_semua, sentiment, top_n=10):
+    """Compute distinctive TF-IDF keywords for multi-desa selection.
+
+    Single-desa case still uses pre-computed JSON. For multi-spec selections,
+    contrast selected reviews against the rest. For 'Semua', no contrast set
+    exists, so fall back to top-frequency words normalized to 0–1.
+    """
+    if is_semua:
+        d_sel = df[df['sentiment'] == sentiment]
+        d_other = df.iloc[0:0]
+    else:
+        d_sel = df[df['nama desa wisata'].isin(desa_list)
+                   & (df['sentiment'] == sentiment)]
+        d_other = df[(~df['nama desa wisata'].isin(desa_list))
+                     & (df['sentiment'] == sentiment)]
+
+    sel_texts = d_sel[ANALYTICS_COL].dropna().astype(str).tolist()
+    if not sel_texts:
+        return []
+    other_texts = d_other[ANALYTICS_COL].dropna().astype(str).tolist()
+
+    if not other_texts:
+        counter = Counter()
+        for t in sel_texts:
+            for word in t.lower().split():
+                if len(word) >= 3 and word.isalpha():
+                    counter[word] += 1
+        if not counter:
+            return []
+        max_c = counter.most_common(1)[0][1]
+        return [[w, c / max_c] for w, c in counter.most_common(top_n)]
+
+    try:
+        n_sel = len(sel_texts)
+        vec = TfidfVectorizer(max_features=500, ngram_range=(1, 1),
+                              min_df=2, token_pattern=r'\b[a-z]{3,}\b')
+        matrix = vec.fit_transform(sel_texts + other_texts)
+        sel_mean = np.asarray(matrix[:n_sel].mean(axis=0)).flatten()
+        other_mean = np.asarray(matrix[n_sel:].mean(axis=0)).flatten()
+        distinctiveness = sel_mean - other_mean
+        features = vec.get_feature_names_out()
+        paired = sorted(zip(features, distinctiveness, sel_mean),
+                        key=lambda x: x[1], reverse=True)
+        return [[w, float(sm)] for w, _, sm in paired[:top_n] if sm > 0]
+    except ValueError:
+        return []
+
+
 def _merge_opinion_data(desa_list, aspect):
     """Merge opinion words from multiple villages for a given aspect."""
     merged = {}
@@ -237,16 +399,12 @@ def _merge_opinion_data(desa_list, aspect):
     return {sent: list(dict.fromkeys(words)) for sent, words in merged.items()}
 
 
-def make_wordcloud(texts, base_color, light_color):
-    text = ' '.join(texts)
-    if not text.strip():
-        return ''
-
+def _new_wordcloud(base_color, light_color):
     def _color_func(word, font_size, position, orientation, random_state=None, **kw):
         # Largest words get darker shade, smaller words get lighter — adds depth
         return base_color if font_size > 36 else light_color
 
-    wc = WordCloud(
+    return WordCloud(
         width=500, height=460,
         mode='RGBA', background_color=None,
         color_func=_color_func,
@@ -256,11 +414,45 @@ def make_wordcloud(texts, base_color, light_color):
         min_font_size=11,
         relative_scaling=0.5,
         margin=6,
-    ).generate(text)
+    )
+
+
+def _wordcloud_to_uri(wc):
     buf = io.BytesIO()
     wc.to_image().save(buf, format='PNG')
     buf.seek(0)
     return f'data:image/png;base64,{base64.b64encode(buf.read()).decode()}'
+
+
+def make_wordcloud(texts, base_color, light_color):
+    text = ' '.join(texts)
+    if not text.strip():
+        return ''
+    return _wordcloud_to_uri(_new_wordcloud(base_color, light_color).generate(text))
+
+
+def make_wordcloud_from_freq(freq, base_color, light_color):
+    """Word cloud dari dict frekuensi {kata: count} (sumber: phrase_words.json)."""
+    freq = {w: c for w, c in (freq or {}).items() if c > 0}
+    if not freq:
+        return ''
+    wc = _new_wordcloud(base_color, light_color).generate_from_frequencies(freq)
+    return _wordcloud_to_uri(wc)
+
+
+def _phrase_freq(desa, sentiment, key):
+    """Gabung dict {token: count} phrase-based untuk (desa, sentimen).
+    key ∈ {'words','bigrams'}. Multi-desa → jumlahkan antar desa terpilih;
+    'Semua' → bucket 'Semua'. Return {} bila data belum ada (fallback ke teks)."""
+    if not phrase_data:
+        return {}
+    desa_list, single_key, is_semua = _normalize_desa(desa)
+    keys = ['Semua'] if is_semua else desa_list
+    merged = {}
+    for dk in keys:
+        for tok, cnt in (phrase_data.get(dk, {}).get(sentiment, {}).get(key, []) or []):
+            merged[tok] = merged.get(tok, 0) + cnt
+    return merged
 
 
 def top_bigrams(texts, n=10):
@@ -309,6 +501,8 @@ app = dash.Dash(
     title='Analisis Sentimen Desa Wisata',
     suppress_callback_exceptions=True,
 )
+# Diekspos untuk WSGI server (gunicorn app:server) saat deploy.
+server = app.server
 
 
 # ══════════════════════════════════════════════════════════════════════════════
@@ -394,6 +588,81 @@ def layout_insight():
     ])
 
 
+def make_review_table(table_id, columns, data=None, page_size=15):
+    """DataTable ulasan dengan styling konsisten. Dipakai mode pengelola
+    (data diisi via callback) maupun mode pengunjung (data statis per-desa)."""
+    extra = {} if data is None else {'data': data}
+    return dash_table.DataTable(
+        id=table_id,
+        columns=columns,
+        page_size=page_size,
+        style_table={
+            'overflowX': 'auto', 'borderRadius': '14px',
+            'overflow': 'hidden',
+            'border': '1px solid #e2e8f0',
+        },
+        style_cell={
+            'textAlign': 'left', 'padding': '14px 16px',
+            'fontFamily': 'Inter, sans-serif', 'fontSize': '13px',
+            'whiteSpace': 'normal', 'height': 'auto', 'maxWidth': '400px',
+            'border': 'none',
+            'borderBottom': '1px solid #f1f5f9',
+            'color': '#334155',
+        },
+        style_header={
+            'background': 'linear-gradient(135deg, #0c1e36, #1e3a5f)',
+            'color': 'white',
+            'fontWeight': '700', 'textAlign': 'left',
+            'padding': '14px 16px',
+            'fontFamily': 'Inter, sans-serif',
+            'fontSize': '12px',
+            'letterSpacing': '0.6px',
+            'textTransform': 'uppercase',
+            'border': 'none',
+        },
+        style_data={'backgroundColor': 'white'},
+        style_filter={
+            'backgroundColor': '#f8fafc',
+            'border': 'none',
+            'borderBottom': '2px solid #e2e8f0',
+        },
+        style_data_conditional=[
+            {'if': {'row_index': 'odd'},
+             'backgroundColor': '#f8fafc'},
+            {'if': {'filter_query': '{sentiment} = "Positif"',
+                    'column_id': 'sentiment'},
+             'color': '#047857', 'fontWeight': '600'},
+            {'if': {'filter_query': '{sentiment} = "Negatif"',
+                    'column_id': 'sentiment'},
+             'color': '#b91c1c', 'fontWeight': '600'},
+            {'if': {'filter_query': '{sentiment} = "Netral"',
+                    'column_id': 'sentiment'},
+             'color': '#4338ca', 'fontWeight': '600'},
+        ],
+        css=[
+            {'selector': '.dash-spreadsheet-container tr:hover td',
+             'rule': 'background-color: #f1f5f9 !important;'},
+            {'selector': '.dash-filter input',
+             'rule': 'border-radius: 6px; padding: 5px 8px; '
+                     'border: 1px solid #cbd5e1 !important; '
+                     'background-color: white !important; '
+                     'color: #334155 !important; '
+                     'font-size: 12px; font-family: Inter, sans-serif;'},
+            {'selector': '.dash-filter input::placeholder',
+             'rule': 'color: #94a3b8 !important;'},
+            {'selector': '.dash-filter input:focus',
+             'rule': 'border-color: #2d6a9f !important; '
+                     'outline: none !important; '
+                     'box-shadow: 0 0 0 3px rgba(45,106,159,.12) !important;'},
+            {'selector': '.dash-filter .column-header--sort',
+             'rule': 'opacity: 1 !important; color: #94a3b8 !important;'},
+        ],
+        sort_action='native',
+        filter_action='native',
+        **extra,
+    )
+
+
 def layout_detail():
     """Page 2: Semua chart dan tabel detail."""
     return html.Div(children=[
@@ -404,7 +673,7 @@ def layout_detail():
         # ── Gambaran Umum ────────────────────────────────────────────────
         html.Div(className='section', children=[
             html.H2('Gambaran Umum', className='section-title'),
-            html.Div(className='chart-row', children=[
+            html.Div(className='chart-row chart-row-same-height', children=[
                 html.Div(className='chart-card wide', children=[
                     dcc.Graph(id='grouped-bar', config={'displayModeBar': False}),
                 ]),
@@ -496,64 +765,325 @@ def layout_detail():
                     className='modern-dropdown modern-dropdown-md',
                 ),
             ]),
-            dash_table.DataTable(
-                id='review-table',
+            make_review_table(
+                'review-table',
                 columns=[
                     {'name': 'Desa Wisata',  'id': 'nama desa wisata'},
                     {'name': 'Sentimen',     'id': 'sentiment'},
                     {'name': 'Aspek',        'id': 'aspects_str'},
                     {'name': 'Review',       'id': 'cleaned_review'},
                 ],
-                page_size=15,
-                style_table={
-                    'overflowX': 'auto', 'borderRadius': '14px',
-                    'overflow': 'hidden',
-                    'border': '1px solid #e2e8f0',
-                },
-                style_cell={
-                    'textAlign': 'left', 'padding': '14px 16px',
-                    'fontFamily': 'Inter, sans-serif', 'fontSize': '13px',
-                    'whiteSpace': 'normal', 'height': 'auto', 'maxWidth': '400px',
-                    'border': 'none',
-                    'borderBottom': '1px solid #f1f5f9',
-                    'color': '#334155',
-                },
-                style_header={
-                    'background': 'linear-gradient(135deg, #0c1e36, #1e3a5f)',
-                    'color': 'white',
-                    'fontWeight': '700', 'textAlign': 'left',
-                    'padding': '14px 16px',
-                    'fontFamily': 'Inter, sans-serif',
-                    'fontSize': '12px',
-                    'letterSpacing': '0.6px',
-                    'textTransform': 'uppercase',
-                    'border': 'none',
-                },
-                style_data={'backgroundColor': 'white'},
-                style_data_conditional=[
-                    {'if': {'row_index': 'odd'},
-                     'backgroundColor': '#f8fafc'},
-                    {'if': {'filter_query': '{sentiment} = "Positif"',
-                            'column_id': 'sentiment'},
-                     'color': '#047857', 'fontWeight': '600'},
-                    {'if': {'filter_query': '{sentiment} = "Negatif"',
-                            'column_id': 'sentiment'},
-                     'color': '#b91c1c', 'fontWeight': '600'},
-                    {'if': {'filter_query': '{sentiment} = "Netral"',
-                            'column_id': 'sentiment'},
-                     'color': '#4338ca', 'fontWeight': '600'},
-                ],
-                css=[
-                    {'selector': '.dash-spreadsheet-container tr:hover td',
-                     'rule': 'background-color: #f1f5f9 !important;'},
-                    {'selector': '.dash-filter input',
-                     'rule': 'border-radius: 8px; padding: 6px 10px; '
-                             'border: 1px solid #e2e8f0; font-size: 12px;'},
-                ],
-                sort_action='native',
-                filter_action='native',
             ),
         ]),
+    ])
+
+
+# ══════════════════════════════════════════════════════════════════════════════
+# VISITOR MODE (Pengunjung) — gallery + destination detail
+# ══════════════════════════════════════════════════════════════════════════════
+
+_VISITOR_SUMMARY_CACHE = {}
+VISITOR_POPULAR_MIN = 500   # ambang badge "Populer" (jumlah ulasan)
+VISITOR_FEW_MAX = 50        # ambang badge "Sedikit ulasan"
+
+
+def _visitor_card_summary(desa):
+    """Ringkasan ringkas per-desa untuk kartu galeri pengunjung (cached)."""
+    if desa in _VISITOR_SUMMARY_CACHE:
+        return _VISITOR_SUMMARY_CACHE[desa]
+    d_tmp = df[df['nama desa wisata'] == desa]
+    total = len(d_tmp)
+    pct_pos = float((d_tmp['sentiment'] == 'Positif').mean() * 100) if total else 0.0
+    asp = aspect_data.get(desa) or _compute_aspect_data(d_tmp)
+    ins = insight_data.get(desa) or _compute_insight_data(d_tmp, asp)
+    praised = ins.get('top_praised', [])
+    top_aspect = praised[0]['category'] if praised else None
+    prov_mode = d_tmp['provinsi'].mode()
+    prov = prov_mode.iloc[0] if not prov_mode.empty else 'Tidak Diketahui'
+    imgs = DESA_IMAGES.get(desa.lower(), [])
+    summary = {
+        'desa': desa, 'pct_pos': pct_pos, 'total': total,
+        'top_aspect': top_aspect, 'province': prov,
+        'cover': imgs[0] if imgs else None,
+        # Skor & jumlah ulasan per-aspek → dipakai untuk filter "unggul di aspek"
+        'aspect_rates': {a: info.get('positivity_rate', 0) for a, info in asp.items()},
+        'aspect_totals': {a: info.get('total', 0) for a, info in asp.items()},
+    }
+    _VISITOR_SUMMARY_CACHE[desa] = summary
+    return summary
+
+
+def _visitor_card(c, aspect=None):
+    """Kartu destinasi (link ke /wisata?d=<desa>).
+
+    Bila `aspect` diberikan (mode filter "unggul di aspek"), badge & ranking
+    memakai skor kepuasan aspek tersebut, bukan kepuasan keseluruhan.
+    """
+    rate = c['aspect_rates'].get(aspect, 0) if aspect else c['pct_pos']
+    _, _, verdict_cls = get_verdict(rate)
+    if c['cover']:
+        cover_el = html.Div(className='visitor-card-cover',
+                            style={'backgroundImage': f'url("{c["cover"]}")'})
+    else:
+        cover_el = html.Div(className='visitor-card-cover no-image',
+                            children=html.Span(c['desa'][:1].upper()))
+
+    meta_children = [html.Span(f'{c["total"]:,} ulasan',
+                               className='visitor-card-count')]
+    chip_aspect = aspect or c['top_aspect']
+    if chip_aspect:
+        icon = ASPECT_ICONS.get(chip_aspect, '◈')
+        meta_children.append(
+            html.Span(f'{icon} {chip_aspect}', className='visitor-card-chip'))
+
+    cover_children = [
+        cover_el,
+        html.Div(f'{rate:.0f}% puas', className=f'visitor-card-badge {verdict_cls}'),
+    ]
+    if c['total'] >= VISITOR_POPULAR_MIN:
+        cover_children.append(
+            html.Div('🔥 Populer', className='visitor-card-tag popular'))
+    elif c['total'] < VISITOR_FEW_MAX:
+        cover_children.append(
+            html.Div('Sedikit ulasan', className='visitor-card-tag few'))
+
+    return dcc.Link(
+        href=f'/wisata?d={urllib.parse.quote(c["desa"])}',
+        className='visitor-card', children=[
+            html.Div(className='visitor-card-cover-wrap', children=cover_children),
+            html.Div(className='visitor-card-body', children=[
+                html.Div(c['desa'].title(), className='visitor-card-name'),
+                html.Div(f'📍 {c["province"]}', className='visitor-card-prov'),
+                html.Div(meta_children, className='visitor-card-meta'),
+            ]),
+        ])
+
+
+def layout_visitor_gallery():
+    """Mode pengunjung: galeri kartu destinasi yang bisa difilter & dicari."""
+    return html.Div(className='visitor-page', children=[
+        html.Div(className='visitor-hero', children=[
+            html.H1('Jelajahi Desa Wisata Indonesia',
+                    className='visitor-hero-title'),
+            html.P('Pilih destinasi dan lihat ringkasan pengalaman langsung dari '
+                   'ribuan ulasan pengunjung sebelumnya.',
+                   className='visitor-hero-sub'),
+        ]),
+        html.Div(className='visitor-filter-row', children=[
+            dcc.Dropdown(
+                id='visitor-prov-filter',
+                options=[{'label': 'Semua Provinsi', 'value': 'Semua'}] +
+                        [{'label': p, 'value': p} for p in PROVINSI_LIST],
+                value='Semua', clearable=False,
+                className='modern-dropdown visitor-prov-dd',
+            ),
+            dcc.Dropdown(
+                id='visitor-aspect-filter',
+                options=[{'label': 'Semua Aspek', 'value': 'Semua'}] +
+                        [{'label': f'Unggul di {a}', 'value': a}
+                         for a in ASPECT_ORDER if a != 'Lainnya'],
+                value='Semua', clearable=False,
+                className='modern-dropdown visitor-aspect-dd',
+            ),
+            dcc.Dropdown(
+                id='visitor-sort',
+                options=[
+                    {'label': 'Urutkan: Kepuasan tertinggi', 'value': 'kepuasan'},
+                    {'label': 'Urutkan: Ulasan terbanyak', 'value': 'ulasan'},
+                    {'label': 'Urutkan: Nama (A–Z)', 'value': 'nama'},
+                ],
+                value='kepuasan', clearable=False,
+                className='modern-dropdown visitor-sort-dd',
+            ),
+            dcc.Input(id='visitor-search', type='text',
+                      placeholder='Cari nama desa wisata…',
+                      className='visitor-search-input'),
+        ]),
+        html.Div(id='visitor-result-count', className='visitor-result-count'),
+        html.Div(id='visitor-gallery-grid', className='visitor-gallery-grid'),
+    ])
+
+
+def layout_visitor_detail(desa):
+    """Mode pengunjung: ringkasan ramah-pengunjung untuk satu destinasi."""
+    back = dcc.Link('Kembali ke daftar destinasi', href='/jelajah',
+                    className='back-link')
+    if not desa or desa not in DESA_LIST:
+        return html.Div(className='visitor-page', children=[
+            back,
+            html.P('Destinasi tidak ditemukan. Silakan pilih dari daftar.',
+                   className='visitor-empty'),
+        ])
+
+    d = df[df['nama desa wisata'] == desa]
+    total = len(d)
+    n_pos = int((d['sentiment'] == 'Positif').sum())
+    n_neg = int((d['sentiment'] == 'Negatif').sum())
+    n_neu = int((d['sentiment'] == 'Netral').sum())
+    pct_pos = (n_pos / total * 100) if total else 0
+    pct_neg = (n_neg / total * 100) if total else 0
+    pct_neu = (n_neu / total * 100) if total else 0
+
+    asp = aspect_data.get(desa) or _compute_aspect_data(d)
+    ins = insight_data.get(desa) or _compute_insight_data(d, asp)
+    verdict_label, verdict_desc, verdict_cls = get_verdict(pct_pos)
+    prov_mode = d['provinsi'].mode()
+    prov = prov_mode.iloc[0] if not prov_mode.empty else 'Tidak Diketahui'
+
+    # ── Hero: carousel/foto + verdict + metrik ──────────────────────────────
+    entries = _build_carousel_entries([desa], False)
+    if entries:
+        first_src, _ = entries[0]
+        hero_media = html.Div(className='visitor-detail-media', children=[
+            dcc.Store(id='visitor-carousel-index', data=0),
+            html.Img(id='visitor-carousel-img', src=first_src,
+                     className='visitor-detail-img', alt=f'Foto {desa.title()}'),
+            html.Button('‹', id='visitor-carousel-prev',
+                        className='carousel-btn carousel-prev',
+                        **{'aria-label': 'Gambar sebelumnya'}),
+            html.Button('›', id='visitor-carousel-next',
+                        className='carousel-btn carousel-next',
+                        **{'aria-label': 'Gambar berikutnya'}),
+            html.Div(f'1 / {len(entries)}', id='visitor-carousel-counter',
+                     className='carousel-counter'),
+        ])
+    else:
+        hero_media = html.Div(className='visitor-detail-media no-image',
+                              children=html.Span(desa[:1].upper()))
+
+    hero = html.Div(className='visitor-detail-hero', children=[
+        hero_media,
+        html.Div(className='visitor-detail-hero-info', children=[
+            html.Div(f'📍 {prov}', className='visitor-detail-prov'),
+            html.H1(desa.title(), className='visitor-detail-title'),
+            html.Div(className=f'visitor-detail-verdict {verdict_cls}', children=[
+                html.Div(verdict_label, className='verdict-text'),
+                html.Div(verdict_desc, className='verdict-desc'),
+            ]),
+            html.Div(f'Berdasarkan {total:,} ulasan pengunjung',
+                     className='verdict-total'),
+            html.Div(className='verdict-metrics', children=[
+                _metric_mini(f'{n_pos:,}', f'{pct_pos:.1f}%', 'Positif', 'positif'),
+                _metric_mini(f'{n_neg:,}', f'{pct_neg:.1f}%', 'Negatif', 'negatif'),
+                _metric_mini(f'{n_neu:,}', f'{pct_neu:.1f}%', 'Netral', 'netral'),
+            ]),
+        ]),
+    ])
+
+    # ── Yang disukai / perlu diperhatikan ───────────────────────────────────
+    def _items(records, sentiment, css, count_label):
+        out = []
+        for i, p in enumerate(records[:3], 1):
+            cat = p['category']
+            info = asp.get(cat, {})
+            kws = p.get('opinions', [])[:4]
+            samples = _pick_sample_reviews(d, cat, sentiment, n=2)
+            samples = [(s[0], '') for s in samples] if samples else None
+            kwargs = {}
+            if sentiment == 'Positif':
+                kwargs['positivity_rate'] = info.get('positivity_rate', 0)
+            else:
+                total_a = info.get('total', 0)
+                kwargs['negativity_rate'] = (
+                    (info.get('Negatif', 0) / total_a * 100) if total_a else 0)
+            out.append(_insight_item(
+                rank=i, category=cat, count=p['count'],
+                count_label=count_label, keywords=kws,
+                sample_reviews=samples, review_css=css, **kwargs))
+        if not out:
+            out = [html.P('Data belum tersedia.', className='visitor-empty')]
+        return out
+
+    likes_dislikes = html.Div(className='praised-criticized-row', children=[
+        html.Div(className='insight-card-compact positif', children=[
+            html.Div(className='insight-mega-title', children=[
+                html.Span(className='insight-mega-icon positif', children='V'),
+                'Yang Disukai Pengunjung',
+            ]),
+            html.Div(_items(ins.get('top_praised', []), 'Positif',
+                            'positif', 'ulasan positif')),
+        ]),
+        html.Div(className='insight-card-compact negatif', children=[
+            html.Div(className='insight-mega-title', children=[
+                html.Span(className='insight-mega-icon negatif', children='!'),
+                'Yang Perlu Diperhatikan',
+            ]),
+            html.Div(_items(ins.get('top_criticized', []), 'Negatif',
+                            'negatif', 'keluhan')),
+        ]),
+    ])
+
+    # ── Rating tiap aspek ───────────────────────────────────────────────────
+    grid_children = []
+    for a in ASPECT_ORDER:
+        if a == 'Lainnya' or a not in asp:
+            continue
+        info = asp[a]
+        rate = info.get('positivity_rate', 0)
+        total_a = info.get('total', 0)
+        h_cls = aspect_health_class(rate)
+        op = opinion_data.get(desa, {}).get(a, {})
+        top_words = (op.get('Positif', [])[:2] + op.get('Negatif', [])[:1])[:3]
+        grid_children.append(html.Div(className=f'aspect-health-card {h_cls}', children=[
+            html.Div(className='aspect-health-header', children=[
+                html.Div(ASPECT_ICONS.get(a, '◈'), className='aspect-health-icon'),
+                html.Div(a, className='aspect-health-name'),
+            ]),
+            html.Div(className='aspect-health-bar-track', children=[
+                html.Div(className=f'aspect-health-bar-fill {h_cls}',
+                         style={'width': f'{rate}%'}),
+            ]),
+            html.Div(className='aspect-health-meta', children=[
+                html.Span(f'{rate:.0f}% puas', className='aspect-health-pct'),
+                html.Span(f'({total_a:,} ulasan)', className='aspect-health-count'),
+            ]),
+            html.Div(', '.join(top_words),
+                     className='aspect-health-words') if top_words else None,
+        ]))
+
+    aspect_section = html.Div(className='section', children=[
+        html.H2('Penilaian Tiap Aspek', className='section-title'),
+        html.P('Seberapa puas pengunjung untuk masing-masing aspek pengalaman.',
+               className='section-caption'),
+        html.Div(grid_children, className='aspect-health-grid'),
+    ])
+
+    # ── Contoh ulasan ───────────────────────────────────────────────────────
+    review_children = [html.H2('Contoh Ulasan Pengunjung', className='section-title')]
+    d_short = d[d['cleaned_review'].str.len().between(20, 150)]
+    for sent, cls in [('Positif', 'positif'), ('Negatif', 'negatif')]:
+        subset = d_short[d_short['sentiment'] == sent]
+        if len(subset) > 0:
+            sample = subset.sample(1, random_state=42).iloc[0]
+            review_children.append(_review_quote(sample['cleaned_review'], cls))
+    if len(review_children) == 1:
+        review_children.append(
+            html.P('Tidak cukup data.', className='visitor-empty'))
+
+    # ── Semua ulasan (tabel) ────────────────────────────────────────────────
+    table_cols = [
+        {'name': 'Sentimen', 'id': 'sentiment'},
+        {'name': 'Aspek',    'id': 'aspects_str'},
+        {'name': 'Ulasan',   'id': 'cleaned_review'},
+    ]
+    table_data = (d[['sentiment', 'aspects_str', 'cleaned_review']]
+                  .dropna(subset=['cleaned_review'])
+                  .to_dict('records'))
+    table_section = html.Div(className='section', children=[
+        html.H2('Semua Ulasan Pengunjung', className='section-title'),
+        html.P('Telusuri seluruh ulasan untuk destinasi ini — ketik di kotak '
+               'filter pada tiap kolom untuk mencari ulasan tertentu.',
+               className='section-caption'),
+        make_review_table('visitor-review-table', table_cols, data=table_data),
+    ])
+
+    return html.Div(className='visitor-page', children=[
+        back,
+        hero,
+        likes_dislikes,
+        aspect_section,
+        html.Div(className='section', children=review_children),
+        table_section,
     ])
 
 
@@ -561,51 +1091,94 @@ def layout_detail():
 # SHELL LAYOUT
 # ══════════════════════════════════════════════════════════════════════════════
 
-app.layout = html.Div(className='page', children=[
+app.layout = html.Div(children=[
     dcc.Location(id='url', refresh=False),
     dcc.Store(id='prev-desa', data=['Semua']),
 
-    # ── Unified Header (title + nav + filter) ─────────────────────────────
+    # ── Header (sticky, nav only) ─────────────────────────────────────────
     html.Div(className='header', children=[
         html.Div(className='header-accent-bar'),
         html.Div(className='header-inner', children=[
             html.Div(className='header-title-block', children=[
                 html.H1('Dashboard Analisis Sentimen'),
-                html.P('Ulasan Desa Wisata Indonesia — IndoBERT Sentiment Analysis'),
+                html.Span(
+                    'Mode: MTL-Only (tanpa fallback)' if ARGS.mtl_only
+                    else 'Mode: Hybrid (default)',
+                    className=('mode-badge mtl-only' if ARGS.mtl_only
+                               else 'mode-badge default'),
+                ),
             ]),
             html.Div(className='header-controls', children=[
-                html.Div(className='header-nav-tabs', children=[
+                html.Div(id='pengelola-nav', className='header-nav-tabs', children=[
                     dcc.Link('Ringkasan', href='/', id='nav-insight',
                               className='header-nav-link active'),
                     dcc.Link('Detail & Grafik', href='/detail', id='nav-detail',
                               className='header-nav-link'),
                 ]),
-                html.Div(className='header-filter', children=[
-                    html.Label('Filter Desa',
-                               className='header-filter-label'),
-                    dcc.Dropdown(
-                        id='desa-dropdown',
-                        options=[{'label': 'Semua Desa Wisata',
-                                  'value': 'Semua'}] +
-                                [{'label': d.title(), 'value': d}
-                                 for d in DESA_LIST],
-                        value=['Semua'],
-                        multi=True,
-                        className='desa-dropdown modern-dropdown',
-                        placeholder='Pilih desa wisata...',
-                    ),
+                html.Div(className='mode-toggle', children=[
+                    dcc.Link('Mode Pengelola', href='/', id='mode-pengelola',
+                              className='mode-toggle-link active'),
+                    dcc.Link('Mode Pengunjung', href='/jelajah',
+                              id='mode-pengunjung',
+                              className='mode-toggle-link'),
                 ]),
             ]),
         ]),
     ]),
 
-    # ── Page Content (swapped by URL) ─────────────────────────────────────
-    html.Div(id='page-content'),
+    # ── App Body: Sidebar + Main ──────────────────────────────────────────
+    html.Div(className='app-body', children=[
 
-    # ── Footer ────────────────────────────────────────────────────────────
-    html.Div(className='footer', children=[
-        html.P('Data: Ulasan Google Maps Desa Wisata Indonesia | '
-               'Model: mdhugol/indonesia-bert-sentiment-classification'),
+        # ── Filter Sidebar ────────────────────────────────────────────────
+        html.Div(id='filter-sidebar', className='filter-sidebar', children=[
+            html.Div('Filter', className='sidebar-section-title'),
+
+            html.Div(className='sidebar-filter-group', children=[
+                html.Label('Provinsi', className='sidebar-filter-label'),
+                html.Div(className='sidebar-filter-options', children=[
+                    dcc.RadioItems(
+                        id='provinsi-dropdown',
+                        options=[{'label': 'Semua Provinsi', 'value': 'Semua'}] +
+                                [{'label': p, 'value': p} for p in PROVINSI_LIST],
+                        value='Semua',
+                        className='sidebar-radio-list',
+                        inputClassName='sidebar-option-input',
+                        labelClassName='sidebar-option-label',
+                    ),
+                ]),
+            ]),
+
+            html.Div(className='sidebar-filter-group', children=[
+                html.Label('Desa Wisata', className='sidebar-filter-label'),
+                html.Div(className='sidebar-filter-options', children=[
+                    dcc.Checklist(
+                        id='desa-dropdown',
+                        options=[{'label': 'Semua Desa Wisata', 'value': 'Semua'}] +
+                                [{'label': d.title(), 'value': d} for d in DESA_LIST],
+                        value=['Semua'],
+                        className='sidebar-checklist',
+                        inputClassName='sidebar-option-input',
+                        labelClassName='sidebar-option-label',
+                    ),
+                ]),
+            ]),
+        ]),
+
+        # ── Page Content + Footer ─────────────────────────────────────────
+        html.Div(className='page', children=[
+            html.Div(id='page-content'),
+
+            html.Div(className='footer', children=[
+                html.P(
+                    'Data: Ulasan Google Maps Desa Wisata Indonesia | '
+                    + ('Label sentimen: H-MTL (IndoBERT-Large-P2 fine-tuned), '
+                       'aspek dari span MTL (tanpa fallback ke baseline)'
+                       if ARGS.mtl_only else
+                       'Label sentimen: hybrid mdhugol/IndoBERT (review-level) '
+                       '+ H-MTL (per-aspek, fallback ke sentence-level bila tidak ada span)')
+                ),
+            ]),
+        ]),
     ]),
 ])
 
@@ -614,22 +1187,61 @@ app.layout = html.Div(className='page', children=[
 # ROUTING CALLBACKS
 # ══════════════════════════════════════════════════════════════════════════════
 
-@callback(Output('page-content', 'children'), Input('url', 'pathname'))
-def display_page(pathname):
+def _is_visitor_path(pathname):
+    """True kalau pathname masuk ke mode pengunjung (/jelajah atau /wisata)."""
+    return bool(pathname) and (pathname.startswith('/jelajah')
+                               or pathname.startswith('/wisata'))
+
+
+def _desa_from_search(search):
+    """Ambil desa terpilih dari query string '?d=<desa>' (URL-encoded)."""
+    if not search:
+        return None
+    qs = urllib.parse.parse_qs(search.lstrip('?'))
+    vals = qs.get('d')
+    return vals[0] if vals else None
+
+
+@callback(
+    Output('page-content', 'children'),
+    Input('url', 'pathname'),
+    Input('url', 'search'),
+)
+def display_page(pathname, search):
     if pathname == '/detail':
         return layout_detail()
+    if pathname == '/jelajah':
+        return layout_visitor_gallery()
+    if pathname == '/wisata':
+        return layout_visitor_detail(_desa_from_search(search))
     return layout_insight()
 
 
 @callback(
     Output('nav-insight', 'className'),
     Output('nav-detail', 'className'),
+    Output('mode-pengelola', 'className'),
+    Output('mode-pengunjung', 'className'),
+    Output('pengelola-nav', 'style'),
+    Output('filter-sidebar', 'style'),
     Input('url', 'pathname'),
 )
 def update_nav_active(pathname):
+    visitor = _is_visitor_path(pathname)
+    hidden = {'display': 'none'}
+    if visitor:
+        # Mode pengunjung: sembunyikan nav & sidebar analitik
+        return ('header-nav-link', 'header-nav-link',
+                'mode-toggle-link', 'mode-toggle-link active',
+                hidden, hidden)
+    # Mode pengelola
     if pathname == '/detail':
-        return 'header-nav-link', 'header-nav-link active'
-    return 'header-nav-link active', 'header-nav-link'
+        nav_ins, nav_det = 'header-nav-link', 'header-nav-link active'
+    else:
+        nav_ins, nav_det = 'header-nav-link active', 'header-nav-link'
+    return (nav_ins, nav_det,
+            'mode-toggle-link active', 'mode-toggle-link',
+            None, None)
 
 
 # ── Smart "Semua" toggle ────────────────────────────────────────────────────
@@ -638,12 +1250,24 @@ def update_nav_active(pathname):
     Output('prev-desa', 'data'),
     Input('desa-dropdown', 'value'),
     Input('prev-desa', 'data'),
+    Input('provinsi-dropdown', 'value'),
     prevent_initial_call=True,
 )
-def smart_semua_toggle(current, prev):
-    """If user adds 'Semua' to specific selections, keep only 'Semua'.
-    If user adds a specific desa while 'Semua' is selected, remove 'Semua'."""
-    from dash import no_update, ctx
+def smart_semua_toggle(current, prev, provinsi):
+    """Province filter auto-selects desa in that province.
+    Desa filter keeps Semua/specific logic intact."""
+    from dash import ctx
+    triggered = ctx.triggered_id
+
+    # Province changed → auto-populate desa dropdown
+    if triggered == 'provinsi-dropdown':
+        if not provinsi or provinsi == 'Semua':
+            return ['Semua'], ['Semua']
+        desa_in_prov = PROVINSI_DESA.get(provinsi, [])
+        val = desa_in_prov if desa_in_prov else ['Semua']
+        return val, val
+
+    # Desa changed → original smart-toggle logic
     if not current:
         return ['Semua'], ['Semua']
     prev = prev or []
@@ -652,10 +1276,8 @@ def smart_semua_toggle(current, prev):
     has_specific = any(v != 'Semua' for v in current)
     if has_semua and has_specific:
         if not had_semua:
-            # User just added Semua → keep only Semua
             return ['Semua'], ['Semua']
         else:
-            # User added specific while Semua was there → remove Semua
             new_val = [v for v in current if v != 'Semua']
             return new_val, new_val
     return current, current
@@ -878,6 +1500,9 @@ def update_insight_page(desa):
     if tfidf_words:
         tfidf_children = [
             html.H2('Kata Paling Khas', className='section-title'),
+            html.P('Kata yang paling sering muncul di review desa ini, '
+                   'namun jarang muncul di desa lain (skor TF-IDF tertinggi).',
+                   className='section-caption'),
             html.Div(className='keyword-tags', children=[
                 html.Span(w[0], className='keyword-tag-sm') for w in tfidf_words
             ]),
@@ -953,10 +1578,8 @@ def _review_quote(text, css_cls, village_name=None):
 
 
 def _pick_sample_reviews(d, category, sentiment, n=3):
-    """Pick up to n representative reviews matching category + sentiment."""
-    mask = d['aspects_str'].str.contains(category, na=False) & \
-           (d['sentiment'] == sentiment)
-    subset = d[mask]
+    """Pick up to n representative reviews matching category + per-aspect sentiment."""
+    subset = d[aspect_sentiment_mask(d, category, sentiment)]
     if subset.empty:
         return []
     medium = subset[subset['cleaned_review'].str.len().between(20, 200)]
@@ -1119,16 +1742,88 @@ def update_carousel_view(desa, idx):
 
 
 # ══════════════════════════════════════════════════════════════════════════════
+# VISITOR MODE CALLBACKS (Pengunjung)
+# ══════════════════════════════════════════════════════════════════════════════
+
+@callback(
+    Output('visitor-gallery-grid', 'children'),
+    Output('visitor-result-count', 'children'),
+    Input('visitor-prov-filter', 'value'),
+    Input('visitor-aspect-filter', 'value'),
+    Input('visitor-sort', 'value'),
+    Input('visitor-search', 'value'),
+)
+def update_visitor_gallery(provinsi, aspect, sort_key, search):
+    if provinsi and provinsi != 'Semua':
+        desas = list(PROVINSI_DESA.get(provinsi, []))
+    else:
+        desas = list(DESA_LIST)
+    if search:
+        s = search.strip().lower()
+        desas = [d for d in desas if s in d.lower()]
+
+    summaries = [_visitor_card_summary(d) for d in desas]
+    aspect_active = bool(aspect) and aspect != 'Semua'
+    if aspect_active:
+        # Hanya desa yang benar-benar membahas aspek tersebut
+        summaries = [c for c in summaries if c['aspect_totals'].get(aspect, 0) > 0]
+
+    def _kepuasan(c):
+        return c['aspect_rates'].get(aspect, 0) if aspect_active else c['pct_pos']
+
+    if sort_key == 'ulasan':
+        summaries.sort(key=lambda c: c['total'], reverse=True)
+    elif sort_key == 'nama':
+        summaries.sort(key=lambda c: c['desa'].lower())
+    else:  # 'kepuasan' (default) — pakai skor aspek bila filter aspek aktif
+        summaries.sort(key=_kepuasan, reverse=True)
+
+    n = len(summaries)
+    if n == 0:
+        return (html.P('Tidak ada desa wisata yang cocok dengan pencarian.',
+                       className='visitor-empty'), '')
+    suffix = f' yang unggul di {aspect}' if aspect_active else ''
+    count_text = f'Menampilkan {n} destinasi{suffix}'
+    cards = [_visitor_card(c, aspect if aspect_active else None) for c in summaries]
+    return cards, count_text
+
+
+@callback(
+    Output('visitor-carousel-img', 'src'),
+    Output('visitor-carousel-counter', 'children'),
+    Output('visitor-carousel-index', 'data'),
+    Input('visitor-carousel-prev', 'n_clicks'),
+    Input('visitor-carousel-next', 'n_clicks'),
+    State('visitor-carousel-index', 'data'),
+    State('url', 'search'),
+    prevent_initial_call=True,
+)
+def update_visitor_carousel(prev_clicks, next_clicks, idx, search):
+    from dash import ctx
+    desa = _desa_from_search(search)
+    entries = _build_carousel_entries([desa], False) if desa else []
+    total = len(entries)
+    if total == 0:
+        return '', '', 0
+    idx = idx or 0
+    if ctx.triggered_id == 'visitor-carousel-prev':
+        idx = (idx - 1) % total
+    elif ctx.triggered_id == 'visitor-carousel-next':
+        idx = (idx + 1) % total
+    src, _ = entries[idx]
+    return src, f'{idx + 1} / {total}', idx
+
+
+# ══════════════════════════════════════════════════════════════════════════════
 # PAGE 2 CALLBACKS (Detail) — unchanged from original
 # ══════════════════════════════════════════════════════════════════════════════
 
 # ── Overview: Grouped bar + Pie ──────────────────────────────────────────────
 @callback(Output('grouped-bar', 'figure'), Input('desa-dropdown', 'value'))
 def update_grouped_bar(desa):
-    desa_list, single_key, is_semua = _normalize_desa(desa)
-    pivot = df.groupby(['nama desa wisata', 'sentiment']).size().reset_index(name='count')
+    d = filter_df(desa)
+    pivot = d.groupby(['nama desa wisata', 'sentiment']).size().reset_index(name='count')
     pivot['nama desa wisata'] = pivot['nama desa wisata'].str.title()
-    selected_names = {d.title() for d in desa_list} if not is_semua else set()
 
     fig = px.bar(
         pivot, x='nama desa wisata', y='count', color='sentiment',
@@ -1142,11 +1837,6 @@ def update_grouped_bar(desa):
         marker=dict(line=dict(width=0), cornerradius=4),
         hovertemplate='<b>%{x}</b><br>%{fullData.name}: %{y}<extra></extra>',
     )
-    if selected_names:
-        for tr in fig.data:
-            opacities = [1.0 if name in selected_names else 0.28
-                         for name in tr.x]
-            tr.marker.opacity = opacities
 
     fig = apply_chart_theme(fig, height=380)
     fig.update_layout(xaxis_tickangle=-18, legend_title_text='',
@@ -1275,17 +1965,18 @@ def update_opinion_bar(desa, aspect):
         return apply_chart_theme(fig, show_legend=False, height=350,
                                  hide_xaxis=True, hide_yaxis=True)
 
-    # Count real occurrences in reviews matching aspect + sentiment
+    # Count real occurrences in reviews matching aspect + per-aspect sentiment
     d = filter_df(desa)
-    d_asp = d[d['aspects_str'].str.contains(aspect, na=False)]
 
     rows = []
     for sent in ['Positif', 'Negatif', 'Netral']:
         words = opinions.get(sent, [])[:12]
         if not words:
             continue
-        d_sent = d_asp[d_asp['sentiment'] == sent]
-        text = ' '.join(d_sent['cleaned_review'].dropna().astype(str)).lower()
+        d_sent = d[aspect_sentiment_mask(d, aspect, sent)]
+        # Match terhadap kolom stemmed (opinion_data dihasilkan dari teks stemmed
+        # juga). Kalau di-match ke un-stem, semua frekuensi akan 0.
+        text = ' '.join(d_sent[ANALYTICS_COL].dropna().astype(str)).lower()
         for word in words:
             pattern = r'\b' + re.escape(word.lower()) + r'\b'
             freq = len(re.findall(pattern, text))
@@ -1351,14 +2042,12 @@ def update_opinion_bar(desa, aspect):
 def update_tfidf_bar(desa, sentiment):
     desa_list, single_key, is_semua = _normalize_desa(desa)
     if single_key:
-        tfidf_key = f'{single_key}_{sentiment}'
+        keywords = tfidf_data.get(f'{single_key}_{sentiment}', [])
     else:
-        tfidf_key = None
-    keywords = tfidf_data.get(tfidf_key, []) if tfidf_key else []
+        keywords = _compute_tfidf_on_fly(desa_list, is_semua, sentiment)
     if not keywords:
         fig = go.Figure()
-        fig.add_annotation(text='Pilih satu desa untuk lihat kata kunci TF-IDF'
-                                if not tfidf_key else 'Data TF-IDF belum tersedia',
+        fig.add_annotation(text='Data TF-IDF belum tersedia',
                            x=0.5, y=0.5, showarrow=False,
                            font=dict(color=THEME_AXIS_COLOR, size=13))
         return apply_chart_theme(fig, show_legend=False, height=420,
@@ -1366,6 +2055,7 @@ def update_tfidf_bar(desa, sentiment):
 
     kw_df = pd.DataFrame(keywords[:10], columns=['Kata Kunci', 'Skor TF-IDF'])
     kw_df = kw_df.iloc[::-1]
+    max_score = float(kw_df['Skor TF-IDF'].max()) if not kw_df.empty else 0
     color = COLORS.get(sentiment, '#475569')
 
     fig = px.bar(
@@ -1383,7 +2073,11 @@ def update_tfidf_bar(desa, sentiment):
     )
     fig = apply_chart_theme(fig, show_legend=False, height=380,
                             show_yaxis_grid=False, hide_xaxis=True)
-    fig.update_layout(bargap=0.35, margin=dict(t=58, b=30, l=14, r=56))
+    fig.update_layout(
+        bargap=0.35,
+        margin=dict(t=58, b=30, l=14, r=72),
+        xaxis=dict(range=[0, max_score * 1.22]) if max_score else {},
+    )
     fig.update_xaxes(automargin=True)
     return fig
 
@@ -1394,10 +2088,15 @@ def update_tfidf_bar(desa, sentiment):
     Input('sentiment-tabs', 'value'),
 )
 def update_wordcloud(desa, sentiment):
-    d = filter_df(desa)
-    subset = d[d['sentiment'] == sentiment]['cleaned_review'].dropna().tolist()
     base = COLORS.get(sentiment, '#475569')
     light = COLORS_SOFT.get(sentiment, '#94a3b8')
+    # Phrase-based: kata per-klausa dengan sentimen klausa sendiri (bagus tidak
+    # bocor ke cloud negatif). Fallback ke teks review bila JSON belum di-generate.
+    freq = _phrase_freq(desa, sentiment, 'words')
+    if freq:
+        return make_wordcloud_from_freq(freq, base, light)
+    d = filter_df(desa)
+    subset = d[d['sentiment'] == sentiment][ANALYTICS_COL].dropna().tolist()
     return make_wordcloud(subset, base, light)
 
 
@@ -1407,16 +2106,24 @@ def update_wordcloud(desa, sentiment):
     Input('sentiment-tabs', 'value'),
 )
 def update_bigram(desa, sentiment):
-    d = filter_df(desa)
-    subset = d[d['sentiment'] == sentiment]['cleaned_review'].dropna().tolist()
-    bg_df = top_bigrams(subset, n=10)
     color = COLORS.get(sentiment, '#475569')
+    # Phrase-based: bigram per-klausa dengan sentimen klausa sendiri. Fallback ke
+    # teks review bila JSON belum di-generate.
+    freq = _phrase_freq(desa, sentiment, 'bigrams')
+    if freq:
+        top = sorted(freq.items(), key=lambda x: x[1], reverse=True)[:10]
+        bg_df = pd.DataFrame(top[::-1], columns=['bigram', 'count'])
+    else:
+        d = filter_df(desa)
+        subset = d[d['sentiment'] == sentiment][ANALYTICS_COL].dropna().tolist()
+        bg_df = top_bigrams(subset, n=10)
     if bg_df.empty:
         fig = go.Figure()
         fig.add_annotation(text='Tidak ada data', x=0.5, y=0.5,
                            showarrow=False, font=dict(color=THEME_AXIS_COLOR))
         return apply_chart_theme(fig, show_legend=False, height=420,
                                  hide_xaxis=True, hide_yaxis=True)
+    max_count = int(bg_df['count'].max()) if not bg_df.empty else 0
     fig = px.bar(
         bg_df, x='count', y='bigram', orientation='h',
         color_discrete_sequence=[color],
@@ -1433,37 +2140,28 @@ def update_bigram(desa, sentiment):
     fig = apply_chart_theme(fig, show_legend=False, height=380,
                             show_yaxis_grid=False, hide_xaxis=True)
     fig.update_layout(
-        yaxis=dict(autorange='reversed'),
         bargap=0.35,
-        margin=dict(t=58, b=30, l=14, r=56),
+        margin=dict(t=58, b=30, l=14, r=90),
+        xaxis=dict(range=[0, max_count * 1.35]) if max_count else {},
     )
     fig.update_xaxes(automargin=True)
     return fig
 
 
-# ── Comparison: Radar + Heatmap (conditional visibility) ─────────────────────
-@callback(
-    Output('comparison-section', 'style'),
-    Input('desa-dropdown', 'value'),
-)
-def toggle_comparison(desa):
-    desa_list, single_key, is_semua = _normalize_desa(desa)
-    if is_semua or len(desa_list) > 1:
-        return {'display': 'block'}
-    return {'display': 'none'}
-
-
+# ── Comparison: Radar + Heatmap ──────────────────────────────────────────────
 @callback(Output('radar-chart', 'figure'), Input('desa-dropdown', 'value'))
 def update_radar(desa):
     desa_list, single_key, is_semua = _normalize_desa(desa)
-    selected = set() if is_semua else {d for d in desa_list}
+    desa_to_show = DESA_LIST if is_semua else desa_list
     aspects_for_radar = [a for a in ASPECT_ORDER if a != 'Lainnya']
 
     fig = go.Figure()
     palette = ['#0c1e36', '#f59e0b', '#10b981', '#ef4444', '#6366f1',
                '#0ea5e9', '#d946ef', '#14b8a6', '#f97316', '#84cc16']
-    for idx, d_name in enumerate(DESA_LIST):
-        asp = aspect_data.get(d_name, {})
+    for idx, d_name in enumerate(desa_to_show):
+        asp = aspect_data.get(d_name)
+        if not asp:
+            asp = _compute_aspect_data(df[df['nama desa wisata'] == d_name])
         values = []
         for a in aspects_for_radar:
             if a in asp and asp[a]['total'] > 0:
@@ -1474,16 +2172,12 @@ def update_radar(desa):
         labels = aspects_for_radar + [aspects_for_radar[0]]
         color = palette[idx % len(palette)]
         r, g, b = int(color[1:3], 16), int(color[3:5], 16), int(color[5:7], 16)
-        is_highlighted = (not selected) or (d_name in selected)
-        opacity = 0.85 if is_highlighted else 0.18
-        fill_alpha = 0.27 if is_highlighted else 0.08
 
         fig.add_trace(go.Scatterpolar(
             r=values, theta=labels,
             fill='toself', name=d_name.title(),
-            fillcolor=f'rgba({r},{g},{b},{fill_alpha})',
-            line=dict(color=color, width=2.5 if is_highlighted else 1),
-            opacity=opacity,
+            fillcolor=f'rgba({r},{g},{b},0.27)',
+            line=dict(color=color, width=2.5),
             hovertemplate='<b>' + d_name.title() + '</b><br>%{theta}: %{r:.1f}%<extra></extra>',
         ))
 
@@ -1523,12 +2217,16 @@ def update_radar(desa):
 
 @callback(Output('heatmap-chart', 'figure'), Input('desa-dropdown', 'value'))
 def update_heatmap(desa):
+    desa_list, single_key, is_semua = _normalize_desa(desa)
+    desa_to_show = DESA_LIST if is_semua else desa_list
     aspects_for_hm = [a for a in ASPECT_ORDER if a != 'Lainnya']
 
     matrix = []
-    for d_name in DESA_LIST:
+    for d_name in desa_to_show:
         row = []
-        asp = aspect_data.get(d_name, {})
+        asp = aspect_data.get(d_name)
+        if not asp:
+            asp = _compute_aspect_data(df[df['nama desa wisata'] == d_name])
         for a in aspects_for_hm:
             if a in asp and asp[a]['total'] > 0:
                 row.append(asp[a]['positivity_rate'])
@@ -1560,7 +2258,7 @@ def update_heatmap(desa):
     fig = go.Figure(data=go.Heatmap(
         z=matrix,
         x=[a for a in aspects_for_hm],
-        y=[d.title() for d in DESA_LIST],
+        y=[d.title() for d in desa_to_show],
         colorscale=custom_scale,
         zmin=0, zmax=100,
         text=text_matrix,
@@ -1606,9 +2304,15 @@ def update_heatmap(desa):
 )
 def update_table(desa, sentiment_filter, aspect_filter):
     d = filter_df(desa)
-    if sentiment_filter != 'Semua':
+    # Kalau dua-duanya difilter: pakai sentimen per-aspek supaya konsisten
+    # dengan section 'Perlu Diperbaiki' (mis. 'Negatif + Kebersihan' = review
+    # yang aspek Kebersihan-nya negatif, bukan review yang overall Negatif &
+    # kebetulan menyebut Kebersihan).
+    if sentiment_filter != 'Semua' and aspect_filter != 'Semua':
+        d = d[aspect_sentiment_mask(d, aspect_filter, sentiment_filter)]
+    elif sentiment_filter != 'Semua':
         d = d[d['sentiment'] == sentiment_filter]
-    if aspect_filter != 'Semua':
+    elif aspect_filter != 'Semua':
         d = d[d['aspects_list'].apply(lambda x: aspect_filter in x)]
     cols = ['nama desa wisata', 'sentiment', 'aspects_str', 'cleaned_review']
     return d[cols].dropna(subset=['cleaned_review']).head(500).to_dict('records')
@@ -1616,4 +2320,7 @@ def update_table(desa, sentiment_filter, aspect_filter):
 
 # ── Run ───────────────────────────────────────────────────────────────────────
 if __name__ == '__main__':
-    app.run(debug=True, port=8050)
+    # host/port via env supaya identik dgn versi deploy; gunicorn (deploy) tidak
+    # memakai blok ini — ia mengimpor `server`. debug hanya berlaku saat run lokal.
+    port = int(os.environ.get('PORT', ARGS.port))
+    app.run(host='0.0.0.0', port=port, debug=True)

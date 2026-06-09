@@ -1,4 +1,4 @@
-# Python
+# ── Python ──────────────────────────────────────────────────────────────────
 __pycache__/
 *.py[cod]
 *.egg-info/
@@ -7,58 +7,65 @@ build/
 *.egg
 .eggs/
 
-# Virtual environments
+# ── Virtual environments ────────────────────────────────────────────────────
 .venv/
 venv/
 env/
 
-# Jupyter Notebook checkpoints
+# ── Jupyter ─────────────────────────────────────────────────────────────────
 .ipynb_checkpoints/
 
-# Model files (too large for git)
+# ── Models & regenerable / large data ───────────────────────────────────────
 models/*.pt
 models/*.pth
 models/*.bin
 models/*.onnx
 models/*.h5
-
-# Processed data (can be regenerated from notebooks)
 data/processed/*.pt
 data/processed/*.json
-
-# Temp / intermediate dataset splits
 data/temp/
 notebooks/integrated_datasets/
-
-# Training checkpoints & logs (large binaries, ephemeral)
 notebooks/checkpoints/
 notebooks/checkpoints.json
 notebooks/logs/
 
-# OS files
+# ── Generated figures (output notebook / analisis) ──────────────────────────
+figures/
+gambar/
+_figs/
+notebooks/*.png
+sentiment analysis/data/*.png
+
+# ── OS / IDE / tooling ──────────────────────────────────────────────────────
 Thumbs.db
 Desktop.ini
 .DS_Store
-
-# IDE
 .vscode/
 .idea/
-
-# Claude
 .claude/
-
-# Docs
-*.pdf
 CLAUDE.md
-
-# Misc
 command.txt
 nul
-draft_bab4/4.1_Pemanfaatan_Data_Sekunder.md
-draft_bab4/4.2_Preprocessing_Data.md
-draft_bab4/4.3_Perancangan_Arsitektur_Model.md
-draft_bab4/4.4_Training_dan_Testing_Model.md
-draft_bab4/4.5_Evaluasi_Kinerja_Model.md
-draft_bab4/4.6_Proof_of_Concept.md
-draft_bab4/4.7_Analisis_Sentimen_Desa_Wisata.md
-draft_bab4/tes.md
+
+# ── Penulisan TA (paper, draft, figur) — di luar repo kode ──────────────────
+*.docx
+*.doc
+*.pdf
+draft_bab3/
+draft_bab4/
+_build_paper.py
+_build_paper_template.py
+_edit_paper.py
+_update_paper.py
+_italicize.py
+_extract_disagreements.py
+_judgment_runthrough.py
+_repro_bar.py
+_tiebreak_sensitivity.py
+_disagreement_dump.txt
+_disagreement_reversal.csv
+_hasil_penilaian_366.csv
+
+# ── Staging deploy / backup sementara (regenerable) ─────────────────────────
+hf_space/
+_opinion_backup/
